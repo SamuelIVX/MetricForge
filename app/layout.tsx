@@ -1,5 +1,7 @@
-import Providers from "./providers"
 import "./globals.css";
+import Providers from "./providers"
+import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
+import { AppSidebar } from "./components/layout/app-sidebar"
 
 export const metadata = {
   title: "MetricForge",
@@ -10,8 +12,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <SidebarTrigger />
+            <Providers>{children}</Providers>
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   )
-} 
+}
