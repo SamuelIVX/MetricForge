@@ -42,7 +42,7 @@ const items = [
 
 export function AppSidebar() {
     return (
-        <Sidebar collapsible="offcanvas">
+        <Sidebar collapsible="icon">
 
             <SidebarHeader> MetricForge </SidebarHeader>
 

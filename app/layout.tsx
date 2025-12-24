@@ -2,6 +2,8 @@ import "./globals.css";
 import Providers from "./providers"
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
 import { AppSidebar } from "./components/layout/app-sidebar"
+import { NavigationBar } from "./components/layout/app-navbar";
+import { Input } from "@/components/ui/input"
 
 export const metadata = {
   title: "MetricForge",
@@ -13,11 +15,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <SidebarProvider>
+
           <AppSidebar />
+
           <SidebarInset>
-            <SidebarTrigger />
-            <Providers>{children}</Providers>
+
+            <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4">
+              <SidebarTrigger className="-ml-1" />
+              <NavigationBar />
+            </header>
+
+            <div className="flex flex-1 flex-col gap-4 p-4">
+              <Providers>{children}</Providers>
+            </div>
+
           </SidebarInset>
+
         </SidebarProvider>
       </body>
     </html>
