@@ -3,7 +3,6 @@ import Providers from "./providers"
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
 import { AppSidebar } from "./components/layout/app-sidebar"
 import { NavigationBar } from "./components/layout/app-navbar";
-import { Input } from "@/components/ui/input"
 
 export const metadata = {
   title: "MetricForge",

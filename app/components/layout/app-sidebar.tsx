@@ -19,7 +19,9 @@ import {
     DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
 
-import { User2, ChevronUp } from "lucide-react"
+import { ChevronUp } from "lucide-react"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 //Menu Items
 const items = [
@@ -70,7 +72,10 @@ export function AppSidebar() {
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <SidebarMenuButton>
-                                    <User2 /> Username
+                                    <Avatar>
+                                        <AvatarImage src="https://github.com/shadcn.png" />
+                                        <AvatarFallback>Default</AvatarFallback>
+                                    </Avatar> Username
                                     <ChevronUp className="ml-auto" />
                                 </SidebarMenuButton>
                             </DropdownMenuTrigger>
