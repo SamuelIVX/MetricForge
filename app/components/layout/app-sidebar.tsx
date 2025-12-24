@@ -72,9 +72,9 @@ export function AppSidebar() {
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <SidebarMenuButton>
-                                    <Avatar>
-                                        <AvatarImage src="https://github.com/shadcn.png" />
-                                        <AvatarFallback>Default</AvatarFallback>
+                                    <Avatar className="h-6 w-6">
+                                        <AvatarImage src="/default_avatar.svg" />
+                                        <AvatarFallback>DF</AvatarFallback>
                                     </Avatar> Username
                                     <ChevronUp className="ml-auto" />
                                 </SidebarMenuButton>
