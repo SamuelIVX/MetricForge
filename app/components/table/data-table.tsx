@@ -59,7 +59,7 @@ export function DataTable<TData, TValue>({
         <div>
 
             <div className="flex justify-between py-4">
-                <div className="">
+                <div>
                     <Input
                         placeholder="Filter tasks..."
                         value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
@@ -69,7 +69,7 @@ export function DataTable<TData, TValue>({
                         className="max-w-sm"
                     />
                 </div>
-                <div className="">
+                <div>
                     <Button
                         variant="outline"
                         size="sm"
@@ -127,29 +127,32 @@ export function DataTable<TData, TValue>({
                 </Table>
             </div>
 
-            <div className="text-muted-foreground flex-1 text-sm">
-                {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                {table.getFilteredRowModel().rows.length} row(s) selected.
+            <div className="flex justify-between py-4">
+                <div className="text-muted-foreground text-sm">
+                    {table.getFilteredSelectedRowModel().rows.length} of{" "}
+                    {table.getFilteredRowModel().rows.length} row(s) selected.
+                </div>
+
+                <div className="items-center">
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => table.previousPage()}
+                        disabled={!table.getCanPreviousPage()}
+                    >
+                        Previous
+                    </Button>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => table.nextPage()}
+                        disabled={!table.getCanNextPage()}
+                    >
+                        Next
+                    </Button>
+                </div>
             </div>
 
-            <div className="flex items-center justify-end space-x-2 py-4">
-                <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => table.previousPage()}
-                    disabled={!table.getCanPreviousPage()}
-                >
-                    Previous
-                </Button>
-                <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => table.nextPage()}
-                    disabled={!table.getCanNextPage()}
-                >
-                    Next
-                </Button>
-            </div>
-        </div>
+        </div >
     )
 }

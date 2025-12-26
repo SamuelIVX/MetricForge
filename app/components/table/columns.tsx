@@ -7,10 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-    task: string
+export type TaskDetails = {
+    taskId: string
     title: string
     status: "Pending" | "Done" | "Todo" | "Ignored"
     priority: string
@@ -18,7 +16,7 @@ export type Payment = {
     reviewer: string
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<TaskDetails>[] = [
     {
         id: "select",
         header: ({ table }) => (
@@ -42,15 +40,15 @@ export const columns: ColumnDef<Payment>[] = [
         enableHiding: false,
     },
     {
-        id: "task",
-        accessorKey: "task",
+        id: "taskId",
+        accessorKey: "taskId",
         header: ({ column }) => {
             return (
                 <Button
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Task #
+                    Task ID
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
@@ -71,9 +69,10 @@ export const columns: ColumnDef<Payment>[] = [
         accessorKey: "status",
         header: "Status",
         cell: ({ row }) => {
-            const status = row.getValue("status") as Payment["status"]
+            const status = row.getValue("status") as TaskDetails["status"]
             let color: "default" | "secondary" | "destructive" | "outline" = "default"
             let Icon: React.ComponentType<LucideProps> | null = null
+
             switch (status) {
                 case "Pending":
                     color = "default"

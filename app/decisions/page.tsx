@@ -1,10 +1,10 @@
-import { columns, Payment } from "../components/table/columns"
+import { columns, TaskDetails } from "../components/table/columns"
 import { DataTable } from "../components/table/data-table"
 
-async function getData(): Promise<Payment[]> {
+async function getData(): Promise<TaskDetails[]> {
     return [
         {
-            task: "728ed52f",
+            taskId: "728ed52f",
             title: "Task 1",
             status: "Pending",
             priority: "High",
@@ -12,7 +12,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "John Doe",
         },
         {
-            task: "829ed52f",
+            taskId: "829ed52f",
             title: "Task 2",
             status: "Done",
             priority: "Medium",
@@ -20,7 +20,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "Jane Smith",
         },
         {
-            task: "930ed52f",
+            taskId: "930ed52f",
             title: "Task 3",
             status: "Ignored",
             priority: "Low",
@@ -28,7 +28,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "John Doe",
         },
         {
-            task: "1040ed52f",
+            taskId: "1040ed52f",
             title: "Task 4",
             status: "Pending",
             priority: "a@example.com",
@@ -36,7 +36,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "Alice Johnson",
         },
         {
-            task: "728ed52f",
+            taskId: "728ed52f",
             title: "Task 5",
             status: "Pending",
             priority: "m@example.com",
@@ -44,7 +44,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "Bob Brown",
         },
         {
-            task: "829ed52f",
+            taskId: "829ed52f",
             title: "Task 6",
             status: "Done",
             priority: "j@example.com",
@@ -52,7 +52,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "John Doe",
         },
         {
-            task: "930ed52f",
+            taskId: "930ed52f",
             title: "Task 7",
             status: "Ignored",
             priority: "s@example.com",
@@ -60,7 +60,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "Alice Johnson",
         },
         {
-            task: "1040ed52f",
+            taskId: "1040ed52f",
             title: "Task 8",
             status: "Pending",
             priority: "a@example.com",
@@ -68,7 +68,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "Alice Johnson",
         },
         {
-            task: "728ed52f",
+            taskId: "728ed52f",
             title: "Task 9",
             status: "Pending",
             priority: "m@example.com",
@@ -76,7 +76,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "Bob Brown",
         },
         {
-            task: "829ed52f",
+            taskId: "829ed52f",
             title: "Task 10",
             status: "Done",
             priority: "j@example.com",
@@ -84,7 +84,7 @@ async function getData(): Promise<Payment[]> {
             reviewer: "John Doe",
         },
         {
-            task: "930ed52f",
+            taskId: "930ed52f",
             title: "Task 11",
             status: "Ignored",
             priority: "s@example.com",
