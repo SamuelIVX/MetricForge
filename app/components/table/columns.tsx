@@ -13,6 +13,7 @@ export type Payment = {
     title: string
     status: "Pending" | "In Progress" | "Done" | "Todo" | "Backlog"
     priority: string
+    confidenceRate: string
     reviewer: string
 }
 
@@ -48,7 +49,7 @@ export const columns: ColumnDef<Payment>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Task
+                    Task #
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
@@ -72,6 +73,10 @@ export const columns: ColumnDef<Payment>[] = [
     {
         accessorKey: "priority",
         header: "Priority",
+    },
+    {
+        accessorKey: "confidenceRate",
+        header: "Confidence Rate",
     },
     {
         accessorKey: "reviewer",
