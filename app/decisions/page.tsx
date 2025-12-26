@@ -22,7 +22,7 @@ async function getData(): Promise<Payment[]> {
         {
             task: "930ed52f",
             title: "Task 3",
-            status: "Backlog",
+            status: "Ignored",
             priority: "Low",
             confidenceRate: "76%",
             reviewer: "John Doe",
@@ -54,7 +54,7 @@ async function getData(): Promise<Payment[]> {
         {
             task: "930ed52f",
             title: "Task 7",
-            status: "Backlog",
+            status: "Ignored",
             priority: "s@example.com",
             confidenceRate: "78%",
             reviewer: "Alice Johnson",
@@ -86,7 +86,7 @@ async function getData(): Promise<Payment[]> {
         {
             task: "930ed52f",
             title: "Task 11",
-            status: "Backlog",
+            status: "Ignored",
             priority: "s@example.com",
             confidenceRate: "80%",
             reviewer: "Alice Johnson",

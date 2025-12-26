@@ -1,7 +1,8 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-import { ArrowUpDown } from "lucide-react"
+import { ArrowUpDown, Timer, CircleCheckBig, Circle, CircleX, LucideProps } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -11,7 +12,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 export type Payment = {
     task: string
     title: string
-    status: "Pending" | "In Progress" | "Done" | "Todo" | "Backlog"
+    status: "Pending" | "Done" | "Todo" | "Ignored"
     priority: string
     confidenceRate: string
     reviewer: string
@@ -69,6 +70,30 @@ export const columns: ColumnDef<Payment>[] = [
     {
         accessorKey: "status",
         header: "Status",
+        cell: ({ row }) => {
+            const status = row.getValue("status") as Payment["status"]
+            let color: "default" | "secondary" | "destructive" | "outline" = "default"
+            let Icon: React.ComponentType<LucideProps> | null = null
+            switch (status) {
+                case "Pending":
+                    color = "default"
+                    Icon = Timer
+                    break
+                case "Done":
+                    color = "secondary"
+                    Icon = CircleCheckBig
+                    break
+                case "Todo":
+                    color = "destructive"
+                    Icon = Circle
+                    break
+                case "Ignored":
+                    color = "outline"
+                    Icon = CircleX
+                    break
+            }
+            return <Badge variant={color}> {Icon && < Icon />} {status}</Badge>
+        },
     },
     {
         accessorKey: "priority",
