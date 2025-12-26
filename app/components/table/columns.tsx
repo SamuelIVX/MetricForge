@@ -1,0 +1,80 @@
+"use client"
+
+import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+
+// This type is used to define the shape of our data.
+// You can use a Zod schema here if you want.
+export type Payment = {
+    task: string
+    title: string
+    status: "Pending" | "In Progress" | "Done" | "Todo" | "Backlog"
+    priority: string
+    reviewer: string
+}
+
+export const columns: ColumnDef<Payment>[] = [
+    {
+        id: "select",
+        header: ({ table }) => (
+            <Checkbox
+                checked={
+                    table.getIsAllPageRowsSelected() ||
+                    (table.getIsSomePageRowsSelected() && "indeterminate")
+                }
+                onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+                aria-label="Select all"
+            />
+        ),
+        cell: ({ row }) => (
+            <Checkbox
+                checked={row.getIsSelected()}
+                onCheckedChange={(value) => row.toggleSelected(!!value)}
+                aria-label="Select row"
+            />
+        ),
+        enableSorting: false,
+        enableHiding: false,
+    },
+    {
+        id: "task",
+        accessorKey: "task",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Task
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
+    },
+    {
+        accessorKey: "title",
+        header: "Title",
+        filterFn: (row, columnId, filterValue) => {
+            const value = row.getValue(columnId) as string
+            return value
+                .toLowerCase()
+                .replace(/\s/g, "")
+                .includes((filterValue as string).toLowerCase().replace(/\s/g, ""))
+        },
+    },
+    {
+        accessorKey: "status",
+        header: "Status",
+    },
+    {
+        accessorKey: "priority",
+        header: "Priority",
+    },
+    {
+        accessorKey: "reviewer",
+        header: "Reviewer",
+    },
+]

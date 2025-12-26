@@ -51,7 +51,7 @@ export function NavigationBar() {
                             </div>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-
+                    {/* 
                     <NavigationMenuItem>
                         <Button
                             variant="outline"
@@ -59,7 +59,7 @@ export function NavigationBar() {
                         >
                             <IconSquarePlus /> Create New Alert
                         </Button>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
 
                     <NavigationMenuItem>
                         <Button
