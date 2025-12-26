@@ -10,7 +10,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
-import { IconRefresh, IconSquarePlus, IconSearch } from "@tabler/icons-react"
+import { IconRefresh, IconSearch } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
@@ -51,15 +51,6 @@ export function NavigationBar() {
                             </div>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-                    {/* 
-                    <NavigationMenuItem>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                        >
-                            <IconSquarePlus /> Create New Alert
-                        </Button>
-                    </NavigationMenuItem> */}
 
                     <NavigationMenuItem>
                         <Button
