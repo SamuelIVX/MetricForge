@@ -5,6 +5,7 @@ async function getData(): Promise<TaskDetails[]> {
     return [
         {
             taskId: "728ed52f",
+            awsService: "EC2",
             title: "Task 1",
             status: "Pending",
             priority: "High",
@@ -13,6 +14,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "829ed52f",
+            awsService: "S3",
             title: "Task 2",
             status: "Done",
             priority: "Medium",
@@ -21,6 +23,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "930ed52f",
+            awsService: "RDS",
             title: "Task 3",
             status: "Ignored",
             priority: "Low",
@@ -29,6 +32,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "1040ed52f",
+            awsService: "Lambda",
             title: "Task 4",
             status: "Pending",
             priority: "a@example.com",
@@ -37,6 +41,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "728ed52f",
+            awsService: "DynamoDB",
             title: "Task 5",
             status: "Pending",
             priority: "m@example.com",
@@ -45,6 +50,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "829ed52f",
+            awsService: "CloudWatch",
             title: "Task 6",
             status: "Done",
             priority: "j@example.com",
@@ -53,6 +59,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "930ed52f",
+            awsService: "SNS",
             title: "Task 7",
             status: "Ignored",
             priority: "s@example.com",
@@ -61,6 +68,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "1040ed52f",
+            awsService: "SQS",
             title: "Task 8",
             status: "Pending",
             priority: "a@example.com",
@@ -69,6 +77,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "728ed52f",
+            awsService: "IAM",
             title: "Task 9",
             status: "Pending",
             priority: "m@example.com",
@@ -77,6 +86,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "829ed52f",
+            awsService: "VPC",
             title: "Task 10",
             status: "Done",
             priority: "j@example.com",
@@ -85,6 +95,7 @@ async function getData(): Promise<TaskDetails[]> {
         },
         {
             taskId: "930ed52f",
+            awsService: "Route53",
             title: "Task 11",
             status: "Ignored",
             priority: "s@example.com",

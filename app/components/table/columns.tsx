@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 export type TaskDetails = {
     taskId: string
+    awsService: string
     title: string
     status: "Pending" | "Done" | "Todo" | "Ignored"
     priority: string
@@ -53,6 +54,13 @@ export const columns: ColumnDef<TaskDetails>[] = [
                 </Button>
             )
         },
+    },
+    {
+        accessorKey: "awsService",
+        header: "Service",
+        cell: ({ row }) => {
+            return <Badge variant="outline">{row.getValue("awsService")}</Badge>
+        }
     },
     {
         accessorKey: "title",
