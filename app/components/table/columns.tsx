@@ -56,13 +56,6 @@ export const columns: ColumnDef<TaskDetails>[] = [
         },
     },
     {
-        accessorKey: "awsService",
-        header: "Service",
-        cell: ({ row }) => {
-            return <Badge variant="outline" className="text-(--pill-text-color)">{row.getValue("awsService")}</Badge>
-        }
-    },
-    {
         accessorKey: "title",
         header: "Title",
         filterFn: (row, columnId, filterValue) => {
@@ -72,6 +65,13 @@ export const columns: ColumnDef<TaskDetails>[] = [
                 .replace(/\s/g, "")
                 .includes((filterValue as string).toLowerCase().replace(/\s/g, ""))
         },
+    },
+    {
+        accessorKey: "awsService",
+        header: "Service",
+        cell: ({ row }) => {
+            return <Badge variant="outline" className="text-(--pill-text-color)">{row.getValue("awsService")}</Badge>
+        }
     },
     {
         accessorKey: "status",
