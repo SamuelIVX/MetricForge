@@ -79,27 +79,28 @@ export const columns: ColumnDef<TaskDetails>[] = [
         cell: ({ row }) => {
             const status = row.getValue("status") as TaskDetails["status"]
             let color: "default" | "secondary" | "destructive" | "outline" = "default"
+            let classColor: "" | "bg-green-500" | "bg-amber-500" | "bg-blue-500" = ""
             let Icon: React.ComponentType<LucideProps> | null = null
 
             switch (status) {
                 case "Pending":
-                    color = "default"
+                    classColor = "bg-amber-500"
                     Icon = Timer
                     break
                 case "Done":
-                    color = "secondary"
+                    classColor = "bg-green-500"
                     Icon = CircleCheckBig
                     break
                 case "Todo":
-                    color = "destructive"
+                    classColor = "bg-blue-500"
                     Icon = Circle
                     break
                 case "Ignored":
-                    color = "outline"
+                    color = "destructive"
                     Icon = CircleX
                     break
             }
-            return <Badge variant={color}> {Icon && < Icon />} {status}</Badge>
+            return <Badge variant={color} className={classColor}> {Icon && <Icon />} {status}</Badge>
         },
     },
     {
