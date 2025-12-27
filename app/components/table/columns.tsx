@@ -59,7 +59,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
         accessorKey: "awsService",
         header: "Service",
         cell: ({ row }) => {
-            return <Badge variant="outline">{row.getValue("awsService")}</Badge>
+            return <Badge variant="outline" className="text-(--pill-text-color)">{row.getValue("awsService")}</Badge>
         }
     },
     {
