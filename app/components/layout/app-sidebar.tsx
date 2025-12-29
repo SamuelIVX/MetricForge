@@ -1,5 +1,13 @@
 'use client'
-import { House, History, Scale } from "lucide-react"
+import {
+    House,
+    History,
+    Scale,
+    LogOut,
+    CircleQuestionMark,
+    Settings,
+    CircleUser
+} from "lucide-react"
 
 import {
     Sidebar,
@@ -18,6 +26,8 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
+
+import { Separator } from "@/components/ui/separator"
 
 import { ChevronUp } from "lucide-react"
 
@@ -82,18 +92,28 @@ export function AppSidebar() {
                             </DropdownMenuTrigger>
 
                             <DropdownMenuContent
-                                side="top"
+                                side="right"
                                 className="w-[--radix-popper-anchor-width]"
                             >
+
                                 <DropdownMenuItem>
-                                    <span>Account</span>
+                                    <CircleUser /> <span>Account</span>
                                 </DropdownMenuItem>
+
                                 <DropdownMenuItem>
-                                    <span>Billing</span>
+                                    <Settings /> <span>Settings</span>
                                 </DropdownMenuItem>
+
                                 <DropdownMenuItem>
-                                    <span>Sign out</span>
+                                    <CircleQuestionMark /> <span>Get Help</span>
                                 </DropdownMenuItem>
+
+                                <Separator />
+
+                                <DropdownMenuItem>
+                                    <LogOut /> <span>Log Out</span>
+                                </DropdownMenuItem>
+
                             </DropdownMenuContent>
 
                         </DropdownMenu>

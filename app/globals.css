@@ -79,7 +79,7 @@
   --table-header: oklch(26.033% 0.00003 271.152);
   --pill-text-color: oklch(0.70 0 0);
   --dropdown-accent-foreground: hsl(0, 0%, 15%);
-  --dropdown-text-color: hsl(0, 0%, 15%);
+  --separator-color: oklch(0.70 0 0);
 }
 
 .dark {
@@ -117,7 +117,7 @@
   --table-header: oklch(26.033% 0.00003 271.152);
   --pill-text-color: oklch(0.70 0 0);
   --dropdown-accent-foreground: hsl(0, 0%, 15%);
-  --dropdown-text-color: hsl(0, 0%, 15%);
+  --separator-color: oklch(0.70 0 0);
 }
 
 @layer base {
