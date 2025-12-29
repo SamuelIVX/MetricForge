@@ -68,6 +68,7 @@ export function AppSidebar() {
 
             <SidebarFooter>
                 <SidebarMenu>
+
                     <SidebarMenuItem>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
@@ -79,6 +80,7 @@ export function AppSidebar() {
                                     <ChevronUp className="ml-auto" />
                                 </SidebarMenuButton>
                             </DropdownMenuTrigger>
+
                             <DropdownMenuContent
                                 side="top"
                                 className="w-[--radix-popper-anchor-width]"
@@ -93,8 +95,10 @@ export function AppSidebar() {
                                     <span>Sign out</span>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
+
                         </DropdownMenu>
                     </SidebarMenuItem>
+
                 </SidebarMenu>
             </SidebarFooter>
 
