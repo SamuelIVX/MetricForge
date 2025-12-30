@@ -24,7 +24,7 @@ export function NavigationBar() {
                 <span className="text-base font-semibold mr-3">Decision Inbox</span>
                 <NavigationMenuList className="flex-wrap">
 
-                    <NavigationMenuItem className="hidden md:block">
+                    {/* <NavigationMenuItem className="hidden md:block">
                         <NavigationMenuTrigger>Sort By</NavigationMenuTrigger>
                         <NavigationMenuContent >
                             <div className="p-4 flex items-center justify-center">
@@ -50,7 +50,7 @@ export function NavigationBar() {
                                 </ul>
                             </div>
                         </NavigationMenuContent>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
 
                     <NavigationMenuItem>
                         <Button
