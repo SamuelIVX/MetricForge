@@ -1,11 +1,25 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-import { ArrowUpDown, Timer, CircleCheckBig, Circle, CircleX, LucideProps } from "lucide-react"
+import {
+    ArrowUpDown,
+    Timer,
+    CircleCheckBig,
+    Circle,
+    CircleX,
+    LucideProps,
+    ChevronDown
+} from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuItem,
+} from "@/components/ui/dropdown-menu"
 
 export type TaskDetails = {
     taskId: string
@@ -114,5 +128,37 @@ export const columns: ColumnDef<TaskDetails>[] = [
     {
         accessorKey: "reviewer",
         header: "Reviewer",
+        cell: ({ row }) => {
+            const reviewers: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];
+            const handleReviewerOnSelect = (reviewer: string) => {
+
+            }
+            return (
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+
+                        <Badge
+                            className="flex items-center cursor-pointer border-(#494949) rounded-md bg-(#292929)"
+                        >
+                            <span className="text-(--pill-text-color) p-1"> Assign Reviewer </span>
+                            <ChevronDown className="cursor-pointer " />
+                        </Badge>
+
+                    </DropdownMenuTrigger>
+
+                    <DropdownMenuContent className="hover:bg-(oklch(0.70 0 0))">
+                        {reviewers.map((reviewer) => (
+                            <DropdownMenuItem
+                                key={reviewer}
+                                onSelect={() => handleReviewerOnSelect(reviewer)}
+                            >
+                                {reviewer}
+                            </DropdownMenuItem>
+                        ))}
+                    </DropdownMenuContent>
+
+                </DropdownMenu>
+            )
+        }
     },
 ]
