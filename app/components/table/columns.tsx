@@ -1,5 +1,4 @@
 "use client"
-
 import { ColumnDef } from "@tanstack/react-table"
 import {
     ArrowUpDown,
@@ -14,6 +13,17 @@ import { Badge } from "@/components/ui/badge"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
+
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
 import {
     DropdownMenu,
     DropdownMenuTrigger,
@@ -130,34 +140,30 @@ export const columns: ColumnDef<TaskDetails>[] = [
         header: "Reviewer",
         cell: ({ row }) => {
             const reviewers: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];
-            const handleReviewerOnSelect = (reviewer: string) => {
 
-            }
             return (
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-
-                        <Badge
-                            className="flex items-center cursor-pointer border-(#494949) rounded-md bg-(#292929)"
-                        >
-                            <span className="text-(--pill-text-color) p-1"> Assign Reviewer </span>
-                            <ChevronDown className="cursor-pointer " />
-                        </Badge>
-
-                    </DropdownMenuTrigger>
-
-                    <DropdownMenuContent className="hover:bg-(oklch(0.70 0 0))">
-                        {reviewers.map((reviewer) => (
-                            <DropdownMenuItem
-                                key={reviewer}
-                                onSelect={() => handleReviewerOnSelect(reviewer)}
-                            >
-                                {reviewer}
-                            </DropdownMenuItem>
-                        ))}
-                    </DropdownMenuContent>
-
-                </DropdownMenu>
+                <Select>
+                    <SelectTrigger className="w-45">
+                        <SelectValue
+                            placeholder="Assign Reviewer"
+                            className="bg-(--pill-text-color)"
+                        />
+                    </SelectTrigger>
+                    <SelectContent className="bg-sidebar">
+                        <SelectGroup>
+                            <SelectLabel>Reviewers</SelectLabel>
+                            {reviewers.map((reviewer) => (
+                                <SelectItem
+                                    key={reviewer}
+                                    value={reviewer}
+                                    className="text-white focus:bg-[#404040] focus:text-white"
+                                >
+                                    {reviewer}
+                                </SelectItem>
+                            ))}
+                        </SelectGroup>
+                    </SelectContent>
+                </Select>
             )
         }
     },
