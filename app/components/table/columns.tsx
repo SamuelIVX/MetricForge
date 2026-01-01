@@ -25,7 +25,6 @@ import {
 
 export type TaskDetails = {
     taskId: string
-    awsService: string
     title: string
     status: "Pending" | "Done" | "Todo" | "Ignored"
     priority: string
@@ -74,19 +73,15 @@ export const columns: ColumnDef<TaskDetails>[] = [
     {
         accessorKey: "title",
         header: "Title",
-        filterFn: (row, columnId, filterValue) => {
-            const value = row.getValue(columnId) as string
-            return value
-                .toLowerCase()
-                .replace(/\s/g, "")
-                .includes((filterValue as string).toLowerCase().replace(/\s/g, ""))
-        },
-    },
-    {
-        accessorKey: "awsService",
-        header: "Service",
         cell: ({ row }) => {
-            return <Badge variant="outline" className="text-(--pill-text-color)">{row.getValue("awsService")}</Badge>
+            const services: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
+
+            return (
+                <span className="font-medium">
+                    <Badge variant="outline" className="text-(--pill-text-color)">{services[Math.floor(Math.random() * services.length)]}</Badge>
+                    {row.getValue("title")}
+                </span>
+            )
         }
     },
     {

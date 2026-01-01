@@ -4,8 +4,7 @@ import { DataTable } from "../components/table/data-table"
 async function getData(): Promise<TaskDetails[]> {
     return [
         {
-            taskId: "728ed52f",
-            awsService: "EC2",
+            taskId: "TASK-001",
             title: "Task 1",
             status: "Pending",
             priority: "High",
@@ -13,8 +12,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "John Doe",
         },
         {
-            taskId: "829ed52f",
-            awsService: "S3",
+            taskId: "TASK-002",
             title: "Task 2",
             status: "Done",
             priority: "Medium",
@@ -22,8 +20,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "Jane Smith",
         },
         {
-            taskId: "930ed52f",
-            awsService: "RDS",
+            taskId: "TASK-003",
             title: "Task 3",
             status: "Ignored",
             priority: "Low",
@@ -31,8 +28,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "John Doe",
         },
         {
-            taskId: "1040ed52f",
-            awsService: "Lambda",
+            taskId: "TASK-004",
             title: "Task 4",
             status: "Todo",
             priority: "High",
@@ -40,8 +36,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "Alice Johnson",
         },
         {
-            taskId: "728ed52f",
-            awsService: "DynamoDB",
+            taskId: "TASK-005",
             title: "Task 5",
             status: "Pending",
             priority: "High",
@@ -49,8 +44,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "Bob Brown",
         },
         {
-            taskId: "829ed52f",
-            awsService: "CloudWatch",
+            taskId: "TASK-006",
             title: "Task 6",
             status: "Done",
             priority: "High",
@@ -58,8 +52,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "John Doe",
         },
         {
-            taskId: "930ed52f",
-            awsService: "SNS",
+            taskId: "TASK-007",
             title: "Task 7",
             status: "Ignored",
             priority: "Medium",
@@ -67,8 +60,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "Alice Johnson",
         },
         {
-            taskId: "1040ed52f",
-            awsService: "SQS",
+            taskId: "TASK-008",
             title: "Task 8",
             status: "Pending",
             priority: "Low",
@@ -76,8 +68,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "Alice Johnson",
         },
         {
-            taskId: "728ed52f",
-            awsService: "IAM",
+            taskId: "TASK-009",
             title: "Task 9",
             status: "Todo",
             priority: "Medium",
@@ -85,8 +76,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "Bob Brown",
         },
         {
-            taskId: "829ed52f",
-            awsService: "VPC",
+            taskId: "TASK-010",
             title: "Task 10",
             status: "Done",
             priority: "High",
@@ -94,8 +84,7 @@ async function getData(): Promise<TaskDetails[]> {
             reviewer: "John Doe",
         },
         {
-            taskId: "930ed52f",
-            awsService: "Route53",
+            taskId: "TASK-011",
             title: "Task 11",
             status: "Ignored",
             priority: "Low",
