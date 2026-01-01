@@ -7,6 +7,9 @@ import {
     Circle,
     CircleX,
     LucideProps,
+    MoveUp,
+    MoveDown,
+    Minus,
 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
@@ -117,6 +120,29 @@ export const columns: ColumnDef<TaskDetails>[] = [
     {
         accessorKey: "priority",
         header: "Priority",
+        cell: ({ row }) => {
+            const priority = row.getValue("priority") as TaskDetails["priority"];
+            let Icon: React.ComponentType<LucideProps> | null = null;
+
+            switch (priority) {
+                case "High":
+                    Icon = MoveUp;
+                    break;
+                case "Medium":
+                    Icon = Minus;
+                    break;
+                case "Low":
+                    Icon = MoveDown;
+                    break;
+            }
+            return (
+                <span
+                    className="flex align-items-center">
+                    {Icon && <Icon className="h-4 w-4 mr-1" style={{ color: "#A1A1A1" }} />}
+                    <span className="ml-1 ">{priority}</span>
+                </span>
+            )
+        }
     },
     {
         accessorKey: "confidenceRate",
