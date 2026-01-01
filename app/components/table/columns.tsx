@@ -81,7 +81,11 @@ export const columns: ColumnDef<TaskDetails>[] = [
 
             return (
                 <span className="font-medium">
-                    <Badge variant="outline" className="text-(--pill-text-color)">{services[Math.floor(Math.random() * services.length)]}</Badge>
+                    <Badge
+                        variant="outline"
+                        className="text-(--pill-text-color) mr-1.5">
+                        {services[Math.floor(Math.random() * services.length)]}
+                    </Badge>
                     {row.getValue("title")}
                 </span>
             )
