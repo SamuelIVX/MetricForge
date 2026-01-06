@@ -3,7 +3,6 @@ import { columns, TaskDetails } from "../components/table/columns"
 import { DataTable } from "../components/table/data-table"
 import { useState } from "react"
 import { AddTaskDialog } from "../components/dialogs/AddTaskDialog"
-// import { Input } from "@/components/ui/input"
 
 const initialData: TaskDetails[] = [
     {
@@ -98,7 +97,6 @@ const initialData: TaskDetails[] = [
 
 export default function DecisionsPage() {
     const [data, setData] = useState<TaskDetails[]>(initialData);
-    // const [filter, setFilter] = useState("");
 
     const handleAddTask = (task: TaskDetails) => {
         setData((prev) => [...prev, task]);
@@ -106,17 +104,11 @@ export default function DecisionsPage() {
 
     return (
         <div className="container mx-auto py-10">
-            {/* <div className="flex justify-between py-4">
-                <Input
-                    placeholder="Filter tasks..."
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                    className="max-w-sm"
-                />
-                <AddTaskDialog onAdd={handleAddTask} />
-            </div> */}
-            <AddTaskDialog onAdd={handleAddTask} />
-            <DataTable columns={columns} data={data} />
+            <DataTable 
+                columns={columns} 
+                data={data}
+                headerActions={<AddTaskDialog onAdd={handleAddTask} />}
+            />
         </div>
     )
 }

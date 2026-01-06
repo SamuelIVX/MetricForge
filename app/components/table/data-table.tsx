@@ -1,5 +1,4 @@
 "use client"
-// import { IconSquarePlus } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import * as React from "react"
@@ -28,11 +27,13 @@ import {
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
+    headerActions?: React.ReactNode
 }
 
 export function DataTable<TData, TValue>({
     columns,
-    data
+    data,
+    headerActions
 }: DataTableProps<TData, TValue>) {
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
@@ -57,26 +58,20 @@ export function DataTable<TData, TValue>({
 
     return (
         <div>
-
             <div className="flex justify-between py-4">
-                <div>
-                    <Input
-                        placeholder="Filter tasks..."
-                        value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
-                        onChange={(event) =>
-                            table.getColumn("title")?.setFilterValue(event.target.value)
-                        }
-                        className="max-w-sm"
-                    />
-                </div>
-                {/* <div>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                    >
-                        <IconSquarePlus /> Add Task
-                    </Button>
-                </div> */}
+                <Input
+                    placeholder="Filter tasks..."
+                    value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
+                    onChange={(event) =>
+                        table.getColumn("title")?.setFilterValue(event.target.value)
+                    }
+                    className="max-w-sm"
+                />
+                {headerActions && (
+                    <div>
+                        {headerActions}
+                    </div>
+                )}
             </div>
 
             <div className="overflow-hidden rounded-md border">
