@@ -29,7 +29,7 @@ import {
 export type TaskDetails = {
     taskId: string
     title: string
-    status: "Pending" | "Done" | "Todo" | "Ignored"
+    status: "Pending" | "Done" | "Todo" | "Ignored" | ""
     priority: string
     confidenceRate: string
     reviewer: string
