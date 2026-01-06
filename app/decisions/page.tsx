@@ -1,104 +1,121 @@
+"use client"
 import { columns, TaskDetails } from "../components/table/columns"
 import { DataTable } from "../components/table/data-table"
+import { useState } from "react"
+import { AddTaskDialog } from "../components/dialogs/AddTaskDialog"
+// import { Input } from "@/components/ui/input"
 
-async function getData(): Promise<TaskDetails[]> {
-    return [
-        {
-            taskId: "TASK-001",
-            title: "Task 1",
-            status: "Pending",
-            priority: "High",
-            confidenceRate: "95%",
-            reviewer: "John Doe",
-        },
-        {
-            taskId: "TASK-002",
-            title: "Task 2",
-            status: "Done",
-            priority: "Medium",
-            confidenceRate: "88%",
-            reviewer: "Jane Smith",
-        },
-        {
-            taskId: "TASK-003",
-            title: "Task 3",
-            status: "Ignored",
-            priority: "Low",
-            confidenceRate: "76%",
-            reviewer: "John Doe",
-        },
-        {
-            taskId: "TASK-004",
-            title: "Task 4",
-            status: "Todo",
-            priority: "High",
-            confidenceRate: "82%",
-            reviewer: "Alice Johnson",
-        },
-        {
-            taskId: "TASK-005",
-            title: "Task 5",
-            status: "Pending",
-            priority: "High",
-            confidenceRate: "90%",
-            reviewer: "Bob Brown",
-        },
-        {
-            taskId: "TASK-006",
-            title: "Task 6",
-            status: "Done",
-            priority: "High",
-            confidenceRate: "85%",
-            reviewer: "John Doe",
-        },
-        {
-            taskId: "TASK-007",
-            title: "Task 7",
-            status: "Ignored",
-            priority: "Medium",
-            confidenceRate: "78%",
-            reviewer: "Alice Johnson",
-        },
-        {
-            taskId: "TASK-008",
-            title: "Task 8",
-            status: "Pending",
-            priority: "Low",
-            confidenceRate: "92%",
-            reviewer: "Alice Johnson",
-        },
-        {
-            taskId: "TASK-009",
-            title: "Task 9",
-            status: "Todo",
-            priority: "Medium",
-            confidenceRate: "89%",
-            reviewer: "Bob Brown",
-        },
-        {
-            taskId: "TASK-010",
-            title: "Task 10",
-            status: "Done",
-            priority: "High",
-            confidenceRate: "87%",
-            reviewer: "John Doe",
-        },
-        {
-            taskId: "TASK-011",
-            title: "Task 11",
-            status: "Ignored",
-            priority: "Low",
-            confidenceRate: "80%",
-            reviewer: "Alice Johnson",
-        },
-    ]
-}
+const initialData: TaskDetails[] = [
+    {
+        taskId: "TASK-001",
+        title: "Task 1",
+        status: "Pending",
+        priority: "High",
+        confidenceRate: "95%",
+        reviewer: "John Doe",
+    },
+    {
+        taskId: "TASK-002",
+        title: "Task 2",
+        status: "Done",
+        priority: "Medium",
+        confidenceRate: "88%",
+        reviewer: "Jane Smith",
+    },
+    {
+        taskId: "TASK-003",
+        title: "Task 3",
+        status: "Ignored",
+        priority: "Low",
+        confidenceRate: "76%",
+        reviewer: "John Doe",
+    },
+    {
+        taskId: "TASK-004",
+        title: "Task 4",
+        status: "Todo",
+        priority: "High",
+        confidenceRate: "82%",
+        reviewer: "Alice Johnson",
+    },
+    {
+        taskId: "TASK-005",
+        title: "Task 5",
+        status: "Pending",
+        priority: "High",
+        confidenceRate: "90%",
+        reviewer: "Bob Brown",
+    },
+    {
+        taskId: "TASK-006",
+        title: "Task 6",
+        status: "Done",
+        priority: "High",
+        confidenceRate: "85%",
+        reviewer: "John Doe",
+    },
+    {
+        taskId: "TASK-007",
+        title: "Task 7",
+        status: "Ignored",
+        priority: "Medium",
+        confidenceRate: "78%",
+        reviewer: "Alice Johnson",
+    },
+    {
+        taskId: "TASK-008",
+        title: "Task 8",
+        status: "Pending",
+        priority: "Low",
+        confidenceRate: "92%",
+        reviewer: "Alice Johnson",
+    },
+    {
+        taskId: "TASK-009",
+        title: "Task 9",
+        status: "Todo",
+        priority: "Medium",
+        confidenceRate: "89%",
+        reviewer: "Bob Brown",
+    },
+    {
+        taskId: "TASK-010",
+        title: "Task 10",
+        status: "Done",
+        priority: "High",
+        confidenceRate: "87%",
+        reviewer: "John Doe",
+    },
+    {
+        taskId: "TASK-011",
+        title: "Task 11",
+        status: "Ignored",
+        priority: "Low",
+        confidenceRate: "80%",
+        reviewer: "Alice Johnson",
+    },
+]
 
-export default async function DecisionsPage() {
-    const data = await getData()
+export default function DecisionsPage() {
+    const [data, setData] = useState<TaskDetails[]>(initialData);
+    // const [filter, setFilter] = useState("");
+
+    const handleAddTask = (task: TaskDetails) => {
+        setData((prev) => [...prev, task]);
+    }
 
     return (
         <div className="container mx-auto py-10">
+            {/* <div className="flex justify-between py-4">
+                <Input
+                    placeholder="Filter tasks..."
+                    value={filter}
+                    onChange={(e) => setFilter(e.target.value)}
+                    className="max-w-sm"
+                />
+                <AddTaskDialog onAdd={handleAddTask} />
+            </div> */}
+            <AddTaskDialog onAdd={handleAddTask} />
             <DataTable columns={columns} data={data} />
         </div>
     )

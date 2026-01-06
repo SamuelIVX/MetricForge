@@ -1,5 +1,5 @@
 "use client"
-import { IconSquarePlus } from "@tabler/icons-react"
+// import { IconSquarePlus } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import * as React from "react"
@@ -32,7 +32,7 @@ interface DataTableProps<TData, TValue> {
 
 export function DataTable<TData, TValue>({
     columns,
-    data,
+    data
 }: DataTableProps<TData, TValue>) {
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
@@ -69,14 +69,14 @@ export function DataTable<TData, TValue>({
                         className="max-w-sm"
                     />
                 </div>
-                <div>
+                {/* <div>
                     <Button
                         variant="outline"
                         size="sm"
                     >
                         <IconSquarePlus /> Add Task
                     </Button>
-                </div>
+                </div> */}
             </div>
 
             <div className="overflow-hidden rounded-md border">
