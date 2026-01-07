@@ -1,5 +1,7 @@
 "use client"
 import { ColumnDef } from "@tanstack/react-table"
+import Link from "next/link"
+
 import {
     ArrowUpDown,
     Timer,
@@ -12,10 +14,6 @@ import {
     Minus,
     Ellipsis
 } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 
 import {
     Select,
@@ -26,6 +24,19 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuItem,
+} from "@/components/ui/dropdown-menu"
+
+import { Separator } from "@/components/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+
 
 export type TaskDetails = {
     taskId: string
@@ -189,13 +200,48 @@ export const columns: ColumnDef<TaskDetails>[] = [
         accessorKey: "edit",
         header: "",
         cell: ({ row }) => {
+            const taskId = row.getValue("taskId");
+            
             return (
-                <Button
-                    variant="outline"
-                    size="sm"
-                >
-                <Ellipsis />
-                </Button>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                        >
+                            <Ellipsis />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent
+                        side="bottom"
+                        className="w-[--radix-popper-anchor-width]"
+                    >
+
+                        <DropdownMenuItem>
+                                <span>Edit</span>
+                        </DropdownMenuItem>
+
+                        <DropdownMenuItem>
+                                <span>Pin</span>
+                        </DropdownMenuItem>
+
+                        <DropdownMenuItem asChild>
+                        <Link href={`/decisions/${taskId}`}>                                
+                            View Task
+                        </Link>
+                        </DropdownMenuItem>
+
+                        <Separator />
+
+                        <DropdownMenuItem
+                            variant="destructive"
+                        >
+                            <span>Delete</span>
+                        </DropdownMenuItem>
+
+                    </DropdownMenuContent>
+
+            </DropdownMenu>
             )
         }
     }
