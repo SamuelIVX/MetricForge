@@ -10,6 +10,7 @@ import {
     MoveUp,
     MoveDown,
     Minus,
+    Ellipsis
 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
@@ -184,4 +185,18 @@ export const columns: ColumnDef<TaskDetails>[] = [
             )
         }
     },
+    {
+        accessorKey: "edit",
+        header: "",
+        cell: ({ row }) => {
+            return (
+                <Button
+                    variant="outline"
+                    size="sm"
+                >
+                <Ellipsis />
+                </Button>
+            )
+        }
+    }
 ]
