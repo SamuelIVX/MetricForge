@@ -102,7 +102,6 @@ export default function DecisionsPage() {
         setData((prev) => [...prev, task])
     }
 
-    // update reviewer by taskId (safe when table is sorted/filtered/paginated)
     const handleUpdateReviewer = (taskId: string, reviewer: string) => {
         setData((prev) => prev.map((t) => (t.taskId === taskId ? { ...t, reviewer } : t)))
     }
@@ -112,8 +111,8 @@ export default function DecisionsPage() {
 
     return (
         <div className="container mx-auto py-10">
-            <DataTable 
-                columns={memoColumns} 
+            <DataTable
+                columns={memoColumns}
                 data={memoData}
                 headerActions={<AddTaskDialog onAdd={handleAddTask} />}
                 meta={{ updateData: handleUpdateReviewer }}

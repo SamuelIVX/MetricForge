@@ -48,7 +48,7 @@ export type TaskDetails = {
 }
 
 interface MyTableMeta {
-  updateData?: (taskId: string, value: string) => void
+    updateData?: (taskId: string, value: string) => void
 }
 
 const SERVICES: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
@@ -176,10 +176,10 @@ export const columns: ColumnDef<TaskDetails>[] = [
         header: "Reviewer",
         cell: ({ row, table }) => {
             const reviewer = row.getValue("reviewer") as string;
-            
+
             return (
                 <Select
-                    value={reviewer}  
+                    value={reviewer}
                     onValueChange={(value) => {
                         table.options.meta?.updateData?.(row.original.taskId, value);
                     }}
