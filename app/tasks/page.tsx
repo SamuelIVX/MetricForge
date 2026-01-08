@@ -1,7 +1,7 @@
 "use client"
 import { columns, TaskDetails } from "../components/table/columns"
 import { DataTable } from "../components/table/data-table"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { AddTaskDialog } from "../components/dialogs/AddTaskDialog"
 
 const initialData: TaskDetails[] = [
@@ -99,15 +99,24 @@ export default function DecisionsPage() {
     const [data, setData] = useState<TaskDetails[]>(initialData);
 
     const handleAddTask = (task: TaskDetails) => {
-        setData((prev) => [...prev, task]);
+        setData((prev) => [...prev, task])
     }
+
+    // update reviewer by taskId (safe when table is sorted/filtered/paginated)
+    const handleUpdateReviewer = (taskId: string, reviewer: string) => {
+        setData((prev) => prev.map((t) => (t.taskId === taskId ? { ...t, reviewer } : t)))
+    }
+
+    const memoData = useMemo(() => data, [data])
+    const memoColumns = useMemo(() => columns, []);
 
     return (
         <div className="container mx-auto py-10">
             <DataTable 
-                columns={columns} 
-                data={data}
+                columns={memoColumns} 
+                data={memoData}
                 headerActions={<AddTaskDialog onAdd={handleAddTask} />}
+                meta={{ updateData: handleUpdateReviewer }}
             />
         </div>
     )

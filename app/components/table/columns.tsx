@@ -47,6 +47,13 @@ export type TaskDetails = {
     reviewer: string
 }
 
+interface MyTableMeta {
+  updateData?: (taskId: string, value: string) => void
+}
+
+const SERVICES: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
+const REVIEWERS: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];
+
 export const columns: ColumnDef<TaskDetails>[] = [
     {
         id: "select",
@@ -89,8 +96,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
         accessorKey: "title",
         header: "Title",
         cell: ({ row }) => {
-            const services: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
-            const service = services[row.index % services.length];
+            const service = SERVICES[row.index % SERVICES.length];
 
             return (
                 <span className="font-medium">
@@ -168,11 +174,16 @@ export const columns: ColumnDef<TaskDetails>[] = [
     {
         accessorKey: "reviewer",
         header: "Reviewer",
-        cell: ({ row }) => {
-            const reviewers: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];
-
+        cell: ({ row, table }) => {
+            const reviewer = row.getValue("reviewer") as string;
+            
             return (
-                <Select>
+                <Select
+                    value={reviewer}  
+                    onValueChange={(value) => {
+                        table.options.meta?.updateData?.(row.original.taskId, value);
+                    }}
+                >
                     <SelectTrigger className="w-45">
                         <SelectValue
                             placeholder="Assign Reviewer"
@@ -182,7 +193,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
                     <SelectContent className="bg-sidebar">
                         <SelectGroup>
                             <SelectLabel>Reviewers</SelectLabel>
-                            {reviewers.map((reviewer) => (
+                            {REVIEWERS.map((reviewer) => (
                                 <SelectItem
                                     key={reviewer}
                                     value={reviewer}

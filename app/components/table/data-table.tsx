@@ -28,20 +28,26 @@ interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
     headerActions?: React.ReactNode
+    meta?: MyTableMeta
+}
+interface MyTableMeta {
+  updateData?: (taskId: string, value: string) => void
 }
 
 export function DataTable<TData, TValue>({
     columns,
     data,
-    headerActions
+    headerActions,
+    meta
 }: DataTableProps<TData, TValue>) {
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
     const [rowSelection, setRowSelection] = React.useState({})
-
-    const table = useReactTable({
+    
+    const table = useReactTable<TData>({
         data,
         columns,
+        meta,
         getCoreRowModel: getCoreRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
         getSortedRowModel: getSortedRowModel(),
@@ -55,15 +61,16 @@ export function DataTable<TData, TValue>({
             rowSelection,
         },
     })
+    const titleColumn = table.getColumn("title");
 
     return (
         <div>
             <div className="flex justify-between py-4">
                 <Input
                     placeholder="Filter tasks..."
-                    value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
+                    value={(titleColumn?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
-                        table.getColumn("title")?.setFilterValue(event.target.value)
+                        titleColumn?.setFilterValue(event.target.value)
                     }
                     className="max-w-sm"
                 />
