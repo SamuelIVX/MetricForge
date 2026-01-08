@@ -28,10 +28,9 @@ interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
     headerActions?: React.ReactNode
-    meta?: MyTableMeta
-}
-interface MyTableMeta {
-  updateData?: (taskId: string, value: string) => void
+    meta?: {
+        updateData?: (taskId: string, value: string) => void
+    }
 }
 
 export function DataTable<TData, TValue>({
@@ -44,7 +43,7 @@ export function DataTable<TData, TValue>({
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
     const [rowSelection, setRowSelection] = React.useState({})
     
-    const table = useReactTable<TData>({
+    const table = useReactTable({
         data,
         columns,
         meta,
