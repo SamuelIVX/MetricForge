@@ -90,13 +90,14 @@ export const columns: ColumnDef<TaskDetails>[] = [
         header: "Title",
         cell: ({ row }) => {
             const services: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
+            const service = services[row.index % services.length];
 
             return (
                 <span className="font-medium">
                     <Badge
                         variant="outline"
                         className="text-(--pill-text-color) mr-1.5">
-                        {services[Math.floor(Math.random() * services.length)]}
+                        {service}
                     </Badge>
                     {row.getValue("title")}
                 </span>
