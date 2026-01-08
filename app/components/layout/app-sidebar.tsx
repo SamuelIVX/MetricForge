@@ -41,11 +41,6 @@ const items = [
         icon: House,
     },
     {
-        title: "Decisions",
-        path: "/decisions",
-        icon: Scale,
-    },
-    {
         title: "History",
         path: "/history",
         icon: History,
