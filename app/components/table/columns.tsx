@@ -201,7 +201,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
         header: "",
         cell: ({ row }) => {
             const taskId = row.getValue("taskId");
-            
+
             return (
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -218,17 +218,17 @@ export const columns: ColumnDef<TaskDetails>[] = [
                     >
 
                         <DropdownMenuItem>
-                                <span>Edit</span>
+                            <span>Edit</span>
                         </DropdownMenuItem>
 
                         <DropdownMenuItem>
-                                <span>Pin</span>
+                            <span>Pin</span>
                         </DropdownMenuItem>
 
                         <DropdownMenuItem asChild>
-                        <Link href={`/decisions/${taskId}`}>                                
-                            View Task
-                        </Link>
+                            <Link href={`/tasks/${taskId}`}>
+                                View Task
+                            </Link>
                         </DropdownMenuItem>
 
                         <Separator />
@@ -241,7 +241,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
 
                     </DropdownMenuContent>
 
-            </DropdownMenu>
+                </DropdownMenu>
             )
         }
     }
