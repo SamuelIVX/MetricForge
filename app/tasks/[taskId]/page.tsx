@@ -10,8 +10,8 @@ export default async function DecisionId({ params }: PageProps) {
     const { taskId } = await params;
 
     return (
-        <div>
-            Task ID : {taskId}
+        <div className="flex items-center">
+            {/* Task ID : {taskId} */}
             <ChartBarStacked />
         </div>
     )

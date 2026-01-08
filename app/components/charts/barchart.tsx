@@ -20,7 +20,7 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart"
 
-export const description = "A stacked bar chart with a legend"
+export const description = "Legend"
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -44,15 +44,15 @@ const chartConfig = {
 
 export function ChartBarStacked() {
   return (
-    <Card>
+    <Card className="w-150 h-120 m-4 bg-#0b0b0d">
       <CardHeader>
-        <CardTitle>Cost and Usage Graph</CardTitle>
+        <CardTitle className="text-white">Cost and Usage Graph</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
+          <BarChart accessibilityLayer data={chartData} className="text-muted-foreground">
+            <CartesianGrid vertical={false} stroke="#333" />
             <XAxis
               dataKey="month"
               tickLine={false}
@@ -60,25 +60,28 @@ export function ChartBarStacked() {
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />
-            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+            <ChartTooltip
+              content={<ChartTooltipContent hideLabel />}
+              cursor={{ fill: '#404040', opacity: 0.3 }}
+            />
             <ChartLegend content={<ChartLegendContent />} />
             <Bar
               dataKey="desktop"
               stackId="a"
-              fill="var(--color-desktop)"
+              fill="#3b82f6"
               radius={[0, 0, 4, 4]}
             />
             <Bar
               dataKey="mobile"
               stackId="a"
-              fill="var(--color-mobile)"
+              fill="#10b981"
               radius={[4, 4, 0, 0]}
             />
           </BarChart>
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 leading-none font-medium">
+        <div className="flex gap-2 leading-none font-medium text-white">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-muted-foreground leading-none">
