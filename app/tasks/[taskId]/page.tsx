@@ -14,7 +14,10 @@ export default async function DecisionId({ params }: PageProps) {
 
     return (
         <div>
-            <span className="font-bold text-2xl flex justify-center">{taskId}</span>
+            <span className="font-bold text-2xl flex justify-center p-4">
+                {taskId}
+            </span>
+
             <div className="grid grid-cols-2 gap-4 items-center">
 
                 <div className="flex justify-center">
@@ -26,7 +29,7 @@ export default async function DecisionId({ params }: PageProps) {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="max-w-150 w-full">
+                    <div className="max-w-150 overflow-hidden border rounded-md">
                         <ServiceUsageTable />
                     </div>
                 </div>
