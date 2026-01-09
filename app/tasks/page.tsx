@@ -1,6 +1,6 @@
 "use client"
-import { columns, TaskDetails } from "../components/table/columns"
-import { DataTable } from "../components/table/data-table"
+import { columns, TaskDetails } from "../components/tables/data_table/columns"
+import { DataTable } from "../components/tables/data_table/data-table"
 import { useState, useMemo } from "react"
 import { AddTaskDialog } from "../components/dialogs/AddTaskDialog"
 
