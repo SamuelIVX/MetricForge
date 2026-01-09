@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { TaskDetails } from "../table/columns";
+import { TaskDetails } from "../tables/data_table/columns";
 
 import {
     Dialog,
