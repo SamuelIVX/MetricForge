@@ -1,16 +1,18 @@
 "use client"
 
-import * as React from "react"
-import TaskTableProps from "./types"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { ChevronDown } from "lucide-react"
 
 import {
+    ColumnDef,
     ColumnFiltersState,
-    SortingState,
+    VisibilityState,
     flexRender,
     getCoreRowModel,
     getFilteredRowModel,
     getPaginationRowModel,
-    getSortedRowModel,
     useReactTable,
 } from "@tanstack/react-table"
 
@@ -22,35 +24,37 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
+import {
+    DropdownMenu,
+    DropdownMenuCheckboxItem,
+    DropdownMenuContent,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
-export function TaskTable<TData, TValue>({
+interface HistoryTableProps<TData, TValue> {
+    columns: ColumnDef<TData, TValue>[]
+    data: TData[]
+}
+
+export function HistoryTable<TData, TValue>({
     columns,
     data,
-    headerActions,
-    meta
-}: TaskTableProps<TData, TValue>) {
-    const [sorting, setSorting] = React.useState<SortingState>([])
-    const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
-    const [rowSelection, setRowSelection] = React.useState({})
+}: HistoryTableProps<TData, TValue>) {
+    const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+    const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})
 
     const table = useReactTable({
         data,
         columns,
-        meta,
         getCoreRowModel: getCoreRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
-        getSortedRowModel: getSortedRowModel(),
         onColumnFiltersChange: setColumnFilters,
         getFilteredRowModel: getFilteredRowModel(),
-        onSortingChange: setSorting,
-        onRowSelectionChange: setRowSelection,
+        onColumnVisibilityChange: setColumnVisibility,
         state: {
-            sorting,
             columnFilters,
-            rowSelection,
+            columnVisibility,
         },
     })
 
@@ -58,25 +62,51 @@ export function TaskTable<TData, TValue>({
 
     return (
         <div>
-            <div className="flex justify-between py-4">
+
+            <div className="flex items-center py-4">
+
                 <Input
-                    placeholder="Filter tasks..."
+                    placeholder="Filter emails..."
                     value={(titleColumn?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
                         titleColumn?.setFilterValue(event.target.value)
                     }
                     className="max-w-sm"
                 />
-                {headerActions && (
-                    <div>
-                        {headerActions}
-                    </div>
-                )}
+
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="outline" className="ml-auto">
+                            Columns
+                            <ChevronDown />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                        {table
+                            .getAllColumns()
+                            .filter(
+                                (column) => column.getCanHide()
+                            )
+                            .map((column) => {
+                                return (
+                                    <DropdownMenuCheckboxItem
+                                        key={column.id}
+                                        className="capitalize"
+                                        checked={column.getIsVisible()}
+                                        onCheckedChange={(value) =>
+                                            column.toggleVisibility(!!value)
+                                        }
+                                    >
+                                        {column.id}
+                                    </DropdownMenuCheckboxItem>
+                                )
+                            })}
+                    </DropdownMenuContent>
+                </DropdownMenu>
             </div>
 
             <div className="overflow-hidden rounded-md border">
                 <Table>
-
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id}>
@@ -95,7 +125,6 @@ export function TaskTable<TData, TValue>({
                             </TableRow>
                         ))}
                     </TableHeader>
-
                     <TableBody>
                         {table.getRowModel().rows?.length ? (
                             table.getRowModel().rows.map((row) => (
@@ -118,36 +147,28 @@ export function TaskTable<TData, TValue>({
                             </TableRow>
                         )}
                     </TableBody>
-
                 </Table>
             </div>
 
-            <div className="flex justify-between py-4">
-                <div className="text-muted-foreground text-sm">
-                    {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                    {table.getFilteredRowModel().rows.length} row(s) selected.
-                </div>
-
-                <div className="items-center">
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.previousPage()}
-                        disabled={!table.getCanPreviousPage()}
-                    >
-                        Previous
-                    </Button>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.nextPage()}
-                        disabled={!table.getCanNextPage()}
-                    >
-                        Next
-                    </Button>
-                </div>
+            <div className="flex items-center justify-end space-x-2 py-4">
+                <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => table.previousPage()}
+                    disabled={!table.getCanPreviousPage()}
+                >
+                    Previous
+                </Button>
+                <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => table.nextPage()}
+                    disabled={!table.getCanNextPage()}
+                >
+                    Next
+                </Button>
             </div>
 
-        </div >
+        </div>
     )
 }
