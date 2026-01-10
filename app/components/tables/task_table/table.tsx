@@ -25,7 +25,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-interface DataTableProps<TData, TValue> {
+interface TaskTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
     headerActions?: React.ReactNode
@@ -34,12 +34,12 @@ interface DataTableProps<TData, TValue> {
     }
 }
 
-export function DataTable<TData, TValue>({
+export function TaskTable<TData, TValue>({
     columns,
     data,
     headerActions,
     meta
-}: DataTableProps<TData, TValue>) {
+}: TaskTableProps<TData, TValue>) {
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
     const [rowSelection, setRowSelection] = React.useState({})

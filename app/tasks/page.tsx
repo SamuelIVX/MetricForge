@@ -1,6 +1,6 @@
 "use client"
-import { columns, TaskDetails } from "../components/tables/data_table/columns"
-import { DataTable } from "../components/tables/data_table/data-table"
+import { columns, TaskDetails } from "../components/tables/task_table/columns"
+import { TaskTable } from "../components/tables/task_table/table"
 import { useState, useMemo } from "react"
 import { AddTaskDialog } from "../components/dialogs/AddTaskDialog"
 
@@ -111,7 +111,7 @@ export default function DecisionsPage() {
 
     return (
         <div className="container mx-auto py-10">
-            <DataTable
+            <TaskTable
                 columns={memoColumns}
                 data={memoData}
                 headerActions={<AddTaskDialog onAdd={handleAddTask} />}
