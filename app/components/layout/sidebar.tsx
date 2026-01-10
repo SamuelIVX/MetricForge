@@ -2,7 +2,6 @@
 import {
     House,
     History,
-    Scale,
     LogOut,
     CircleQuestionMark,
     Settings,
@@ -42,7 +41,7 @@ const items = [
     },
     {
         title: "History",
-        path: "/history",
+        path: "/tasks/history",
         icon: History,
     },
 ]

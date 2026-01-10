@@ -47,7 +47,7 @@ export default function ActionCard() {
                     Accept
                 </Button>
             </CardFooter>
-            <p className="text-xs text-muted-foreground text-center">
+            <p className="text-xs text-muted-foreground text-center italic">
                 Accepting will apply this decision immediately.
             </p>
         </Card>

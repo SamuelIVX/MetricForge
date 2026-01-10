@@ -47,10 +47,6 @@ export type TaskDetails = {
     reviewer: string
 }
 
-interface MyTableMeta {
-    updateData?: (taskId: string, value: string) => void
-}
-
 const SERVICES: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
 const REVIEWERS: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];
 

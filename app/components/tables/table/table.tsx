@@ -1,7 +1,6 @@
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableFooter,
     TableHead,
@@ -64,7 +63,6 @@ const invoices = [
 export function ServiceUsageTable() {
     return (
         <Table>
-            {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
             <TableHeader>
                 <TableRow>
                     <TableHead className="w-25">Instance Type</TableHead>

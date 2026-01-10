@@ -84,7 +84,7 @@ export function ChartBarStacked() {
         <div className="flex gap-2 leading-none font-medium text-white">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
-        <div className="text-muted-foreground leading-none">
+        <div className="text-muted-foreground leading-none italic">
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>

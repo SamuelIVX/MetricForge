@@ -1,8 +1,8 @@
 import "./globals.css";
 import Providers from "./providers"
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
-import { AppSidebar } from "./components/layout/app-sidebar"
-import { NavigationBar } from "./components/layout/app-navbar";
+import { AppSidebar } from "./components/layout/sidebar"
+import { NavigationBar } from "./components/layout/navbar";
 
 export const metadata = {
   title: "MetricForge",
