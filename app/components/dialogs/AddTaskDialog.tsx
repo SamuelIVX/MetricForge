@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { TaskDetails } from "../tables/data_table/columns";
+import { TaskDetails } from "../tables/task_table/columns";
 
 import {
     Dialog,
@@ -28,10 +28,8 @@ import {
 } from "@/components/ui/select"
 
 import { IconSquarePlus } from "@tabler/icons-react"
+import { Props } from "./types";
 
-type Props = {
-    onAdd: (task: TaskDetails) => void;
-};
 
 export function AddTaskDialog({ onAdd }: Props) {
     const [form, setForm] = useState<Omit<TaskDetails, "taskId">>({

@@ -3,11 +3,7 @@ import { ChartPieDonutText } from "@/app/components/charts/piechart-donut";
 import { ServiceUsageTable } from "@/app/components/tables/service_usage_table/table";
 import ActionCard from "@/app/components/cards/action-card";
 
-type PageProps = {
-    params: Promise<{
-        taskId: string,
-    }>
-}
+import { PageProps } from "./types";
 
 export default async function DecisionId({ params }: PageProps) {
     const { taskId } = await params;

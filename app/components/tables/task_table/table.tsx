@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
+import TaskTableProps from "./types"
 
 import {
-    ColumnDef,
     ColumnFiltersState,
     SortingState,
     flexRender,
@@ -25,14 +25,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-interface TaskTableProps<TData, TValue> {
-    columns: ColumnDef<TData, TValue>[]
-    data: TData[]
-    headerActions?: React.ReactNode
-    meta?: {
-        updateData?: (taskId: string, value: string) => void
-    }
-}
 
 export function TaskTable<TData, TValue>({
     columns,
