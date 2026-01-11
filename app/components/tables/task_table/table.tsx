@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import SummaryCards  from "@/app/components/cards/summary-card"
+import SummaryCards  from "@/app/components/cards/taskSummaryCard/card"
 
 export function TaskTable<TData, TValue>({
     columns,

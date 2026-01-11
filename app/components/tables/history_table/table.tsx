@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input"
 import { ChevronDown } from "lucide-react"
 
 import {
-    ColumnDef,
     ColumnFiltersState,
     VisibilityState,
     flexRender,
@@ -32,10 +31,8 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-interface HistoryTableProps<TData, TValue> {
-    columns: ColumnDef<TData, TValue>[]
-    data: TData[]
-}
+import { HistoryTableProps } from "./types"
+
 
 export function HistoryTable<TData, TValue>({
     columns,
@@ -62,6 +59,8 @@ export function HistoryTable<TData, TValue>({
 
     return (
         <div>
+
+            
 
             <div className="flex items-center py-4">
 
