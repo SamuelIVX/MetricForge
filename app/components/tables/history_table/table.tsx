@@ -33,6 +33,7 @@ import {
 
 import { HistoryTableProps } from "./types"
 import HistoryCards from "../../cards/historySummaryCard/card"
+import HistoryTableChartMetrics from "../../charts/historyCharts/historyInsights"
 
 
 export function HistoryTable<TData, TValue>({
@@ -60,6 +61,8 @@ export function HistoryTable<TData, TValue>({
 
     return (
         <div>
+
+            <HistoryTableChartMetrics />
 
             <HistoryCards />
 
