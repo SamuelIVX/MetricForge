@@ -1,5 +1,5 @@
-import { ChartBarStacked } from "@/app/components/charts/barchart";
-import { ChartPieDonutText } from "@/app/components/charts/piechart-donut";
+import { ChartBarStacked } from "@/app/components/charts/[taskId]Charts/barchart";
+import { ChartPieDonutText } from "@/app/components/charts/[taskId]Charts/piechart-donut";
 import { ServiceUsageTable } from "@/app/components/tables/service_usage_table/table";
 import ActionCard from "@/app/components/cards/actionCard";
 
