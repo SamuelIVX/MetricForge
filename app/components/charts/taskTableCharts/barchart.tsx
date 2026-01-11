@@ -40,7 +40,7 @@ export function ChartBarHorizontal() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Bar Chart - Horizontal</CardTitle>
+                <CardTitle>Priority Insights</CardTitle>
                 <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent>

@@ -40,7 +40,7 @@ export function ChartLineLinear() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Line Chart - Linear</CardTitle>
+                <CardTitle>Avg. Confidence Rate </CardTitle>
                 <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent>

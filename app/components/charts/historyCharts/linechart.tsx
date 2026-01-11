@@ -40,7 +40,7 @@ export function ChartLineLinear() {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Line Chart - Linear</CardTitle>
+                <CardTitle>Total Tasks Completed Per Week</CardTitle>
                 <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent>
