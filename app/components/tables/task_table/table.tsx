@@ -24,7 +24,8 @@ import {
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import SummaryCards  from "@/app/components/cards/taskSummaryCard/card"
+import SummaryCards from "@/app/components/cards/taskSummaryCard/card"
+import TaskTableChartMetrics from "@/app/components/charts/taskTableCharts/taskInsights"
 
 export function TaskTable<TData, TValue>({
     columns,
@@ -58,9 +59,11 @@ export function TaskTable<TData, TValue>({
 
     return (
         <div>
-            
+
             <SummaryCards />
-            
+
+            <TaskTableChartMetrics />
+
             <div className="flex justify-between py-4">
                 <Input
                     placeholder="Filter tasks..."
