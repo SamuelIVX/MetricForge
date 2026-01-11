@@ -1,6 +1,5 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, XAxis, YAxis } from "recharts"
 
 import {
@@ -38,19 +37,21 @@ const chartConfig = {
 
 export function ChartBarHorizontal() {
     return (
-        <Card>
-            <CardHeader>
-                <CardTitle>Priority Insights</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
+        <Card className="p-3">
+            <CardHeader className="p-0 pb-2">
+                <CardTitle className="text-sm">Priority Insights</CardTitle>
+                <CardDescription className="text-xs">Jan - Jun 2024</CardDescription>
             </CardHeader>
-            <CardContent>
-                <ChartContainer config={chartConfig}>
+            <CardContent className="p-0">
+                <ChartContainer config={chartConfig} className="h-32">
                     <BarChart
                         accessibilityLayer
                         data={chartData}
                         layout="vertical"
                         margin={{
                             left: -20,
+                            top: 5,
+                            bottom: 5,
                         }}
                     >
                         <XAxis type="number" dataKey="desktop" hide />
@@ -58,26 +59,19 @@ export function ChartBarHorizontal() {
                             dataKey="month"
                             type="category"
                             tickLine={false}
-                            tickMargin={10}
+                            tickMargin={5}
                             axisLine={false}
                             tickFormatter={(value) => value.slice(0, 3)}
+                            fontSize={10}
                         />
                         <ChartTooltip
                             cursor={false}
                             content={<ChartTooltipContent hideLabel />}
                         />
-                        <Bar dataKey="desktop" fill="var(--color-desktop)" radius={5} />
+                        <Bar dataKey="desktop" fill="var(--color-desktop)" radius={3} />
                     </BarChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col items-start gap-2 text-sm">
-                <div className="flex gap-2 leading-none font-medium">
-                    Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-                </div>
-                <div className="text-muted-foreground leading-none">
-                    Showing total visitors for the last 6 months
-                </div>
-            </CardFooter>
         </Card>
     )
 }
