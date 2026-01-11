@@ -4,9 +4,9 @@ import {
     CardTitle
 } from "@/components/ui/card";
 
-import { SummaryCardProps } from "./types";
+import { HistoryCardProps } from "./types";
 
-export function SummaryCard({title, value}: SummaryCardProps){
+export function HistoryCard({title, value}: HistoryCardProps){
     return (
     <Card className="bg-[#0b0b0d] w-full h-15">
 
@@ -23,41 +23,41 @@ export function SummaryCard({title, value}: SummaryCardProps){
         )
 }
 
-export default function SummaryCards(){
+export default function HistoryCards(){
     return (
         <div className="grid grid-cols-5 gap-3 p-4">
 
             <div>
-                <SummaryCard 
-                    title="Total Tasks: "
+                <HistoryCard 
+                    title="Total Completed: "
                     value="8"
                 />
             </div>
 
             <div>
-                <SummaryCard 
-                    title="In Progress: "
+                <HistoryCard 
+                    title="Avg. Confidence Rate: "
                     value="12"
                 />
             </div>
 
             <div>
-                <SummaryCard 
-                    title="Needs Decision: "
+                <HistoryCard 
+                    title="Accepted: "
                     value="3"
                 />
             </div>
 
             <div>
-                <SummaryCard 
-                    title="Low Severity: "
+                <HistoryCard 
+                    title="Ignored: "
                     value="1"
                 />
             </div>
 
             <div>
-                <SummaryCard 
-                    title="High Severity: "
+                <HistoryCard 
+                    title="Deferred: "
                     value="4"
                 />
             </div>

@@ -32,6 +32,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { HistoryTableProps } from "./types"
+import HistoryCards from "../../cards/historySummaryCard/card"
 
 
 export function HistoryTable<TData, TValue>({
@@ -60,7 +61,7 @@ export function HistoryTable<TData, TValue>({
     return (
         <div>
 
-            
+            <HistoryCards />
 
             <div className="flex items-center py-4">
 
