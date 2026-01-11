@@ -1,6 +1,5 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Pie, PieChart } from "recharts"
 
 import {
@@ -56,15 +55,15 @@ const chartConfig = {
 
 export function ChartPieLabel() {
     return (
-        <Card className="flex flex-col">
-            <CardHeader className="items-center pb-0">
-                <CardTitle>Task Status Distribution</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
+        <Card className="flex flex-col p-3">
+            <CardHeader className="items-center p-0 pb-2">
+                <CardTitle className="text-sm">Task Status Distribution</CardTitle>
+                <CardDescription className="text-xs">Jan - Jun 2024</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 pb-0">
+            <CardContent className="flex-1 p-0">
                 <ChartContainer
                     config={chartConfig}
-                    className="[&_.recharts-pie-label-text]:fill-foreground mx-auto aspect-square max-h-[250px] pb-0"
+                    className="[&_.recharts-pie-label-text]:fill-foreground mx-auto aspect-square h-32 pb-0"
                 >
                     <PieChart>
                         <ChartTooltip content={<ChartTooltipContent hideLabel />} />
@@ -72,14 +71,6 @@ export function ChartPieLabel() {
                     </PieChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col gap-2 text-sm">
-                <div className="flex items-center gap-2 leading-none font-medium">
-                    Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-                </div>
-                <div className="text-muted-foreground leading-none">
-                    Showing total visitors for the last 6 months
-                </div>
-            </CardFooter>
         </Card>
     )
 }

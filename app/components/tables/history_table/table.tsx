@@ -62,9 +62,9 @@ export function HistoryTable<TData, TValue>({
     return (
         <div>
 
-            <HistoryTableChartMetrics />
-
             <HistoryCards />
+
+            <HistoryTableChartMetrics />
 
             <div className="flex items-center py-4">
 
