@@ -1,4 +1,4 @@
 export interface SummaryCardProps{
     title: string;
-    content: string;
+    value: number | string;
 }

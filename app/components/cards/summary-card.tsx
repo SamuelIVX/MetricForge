@@ -9,66 +9,59 @@ import { Separator } from "@/components/ui/separator";
 
 import { SummaryCardProps } from "./types";
 
-export function SummaryCard({title, content}: SummaryCardProps){
+export function SummaryCard({title, value}: SummaryCardProps){
     return (
-    <Card className="h-full max-w-150 bg-[#0b0b0d]">
+    <Card className="bg-[#0b0b0d] w-full h-15">
 
             <CardHeader>
-                <CardTitle
-                    className="flex font-bold justify-center items-center rounded-md bg-red-500/20 text-red-400 py-4">
+                <CardTitle className="text-white font-bold">
+
                     {title}
+                    <span className="text-muted-foreground italic">{value}</span>
+
                 </CardTitle>
+    
             </CardHeader>
-
-            <CardContent className="text-white ">
-                {content}
-            </CardContent>
-
-            <CardDescription className="ml-6 font-bold italic flex items-center">
-                Confidence Rate: 95%
-            </CardDescription>
-
-            <Separator className="bg-gray-800" />
         </Card>
         )
 }
 
 export default function SummaryCards(){
     return (
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-5 gap-3">
 
             <div>
                 <SummaryCard 
-                    title="Total: "
-                    content="lorem ipsum"
+                    title="Total Tasks: "
+                    value="8"
                 />
             </div>
 
             <div>
                 <SummaryCard 
                     title="In Progress: "
-                    content="lorem ipsum"
+                    value="12"
                 />
             </div>
 
             <div>
                 <SummaryCard 
                     title="Needs Decision: "
-                    content="lorem ipsum"
+                    value="3"
                 />
             </div>
 
             <div>
                 <SummaryCard 
                     title="Low Severity: "
-                    content="lorem ipsum"
+                    value="1"
                 />
             </div>
 
             <div>
                 <SummaryCard 
                     title="High Severity: "
-                    content="lorem ipsum"
+                    value="4"
                 />
             </div>
 
