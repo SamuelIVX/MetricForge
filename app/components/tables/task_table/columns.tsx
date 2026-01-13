@@ -205,8 +205,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
         }
     },
     {
-        accessorKey: "edit",
-        header: "",
+        id: "actions",
         cell: ({ row }) => {
             const taskId = row.getValue("taskId");
 
@@ -214,7 +213,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button
-                            variant="outline"
+                            variant="ghost"
                             size="sm"
                         >
                             <Ellipsis />

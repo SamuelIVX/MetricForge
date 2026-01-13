@@ -25,7 +25,7 @@ export default async function DecisionId({ params }: PageProps) {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="max-w-150 overflow-hidden border rounded-md">
+                    <div className="w-150 overflow-hidden border rounded-md">
                         <ServiceUsageTable />
                     </div>
                 </div>

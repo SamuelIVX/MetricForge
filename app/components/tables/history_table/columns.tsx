@@ -1,7 +1,7 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-import { MoreHorizontal } from "lucide-react"
+import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -12,6 +12,9 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+
+import { Ellipsis } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
 
 export type HistoryDetails = {
     taskId: string
@@ -45,29 +48,49 @@ export const columns: ColumnDef<HistoryDetails>[] = [
     {
         id: "actions",
         cell: ({ row }) => {
-            const payment = row.original
+            const taskId = row.getValue("taskId");
 
             return (
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" className="h-8 w-8 p-0">
-                            <span className="sr-only">Open menu</span>
-                            <MoreHorizontal className="h-4 w-4" />
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                        >
+                            <Ellipsis />
                         </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuItem
-                            onClick={() => navigator.clipboard.writeText(payment.taskId)}
-                        >
-                            Copy payment ID
+                    <DropdownMenuContent
+                        side="bottom"
+                        className="w-[--radix-popper-anchor-width]"
+                    >
+
+                        <DropdownMenuItem>
+                            <span>Edit</span>
                         </DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>View customer</DropdownMenuItem>
-                        <DropdownMenuItem>View payment details</DropdownMenuItem>
+
+                        <DropdownMenuItem>
+                            <span>Pin</span>
+                        </DropdownMenuItem>
+
+                        <DropdownMenuItem asChild>
+                            <Link href={`/tasks/${taskId}`}>
+                                View Task
+                            </Link>
+                        </DropdownMenuItem>
+
+                        <Separator />
+
+                        <DropdownMenuItem
+                            variant="destructive"
+                        >
+                            <span>Delete</span>
+                        </DropdownMenuItem>
+
                     </DropdownMenuContent>
+
                 </DropdownMenu>
             )
-        },
-    },
+        }
+    }
 ]
