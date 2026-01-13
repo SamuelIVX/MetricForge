@@ -36,16 +36,9 @@ import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
+import { TaskDetails } from "./types"
 
 
-export type TaskDetails = {
-    taskId: string
-    title: string
-    status: "Pending" | "Done" | "Todo" | "Ignored" | ""
-    priority: string
-    confidenceRate: string
-    reviewer: string
-}
 
 const SERVICES: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
 const REVIEWERS: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];

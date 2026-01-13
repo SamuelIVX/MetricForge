@@ -15,14 +15,7 @@ import {
 
 import { Ellipsis } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
-
-export type HistoryDetails = {
-    taskId: string
-    title: string
-    status: "Accepted" | "Ignored" | "Expired"
-    time: string
-    reviewer: string
-}
+import { HistoryDetails } from "./types"
 
 export const columns: ColumnDef<HistoryDetails>[] = [
     {
