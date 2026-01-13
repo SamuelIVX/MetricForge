@@ -37,9 +37,9 @@ const chartConfig = {
 
 export function ChartBarHorizontal() {
     return (
-        <Card className="p-3">
+        <Card className="p-3 bg-[#0b0b0d]">
             <CardHeader className="p-0 pb-2">
-                <CardTitle className="text-sm">Reviewer Performance</CardTitle>
+                <CardTitle className="text-sm text-white">Reviewer Performance</CardTitle>
                 <CardDescription className="text-xs">Jan - Jun 2024</CardDescription>
             </CardHeader>
             <CardContent className="p-0">

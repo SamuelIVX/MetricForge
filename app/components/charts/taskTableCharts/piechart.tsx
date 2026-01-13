@@ -55,9 +55,9 @@ const chartConfig = {
 
 export function ChartPieLabel() {
     return (
-        <Card className="flex flex-col p-3">
+        <Card className="flex flex-col p-3 bg-[#0b0b0d]">
             <CardHeader className="items-center p-0 pb-2">
-                <CardTitle className="text-sm">Status Insights</CardTitle>
+                <CardTitle className="text-sm text-white">Status Insights</CardTitle>
                 <CardDescription className="text-xs">Jan - Jun 2024</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 p-0">
