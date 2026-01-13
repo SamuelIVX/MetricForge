@@ -38,12 +38,12 @@ const chartConfig = {
 export function ChartLineLinear() {
     return (
         <Card className="p-3 bg-[#0b0b0d]">
-            <CardHeader className="p-0 pb-2">
+            <CardHeader className="p-0">
                 <CardTitle className="text-sm text-white">Average Confidence Rate</CardTitle>
                 <CardDescription className="text-xs">Jan - Jun 2024</CardDescription>
             </CardHeader>
             <CardContent className="p-0">
-                <ChartContainer config={chartConfig} className="h-32">
+                <ChartContainer config={chartConfig} className="h-32 w-full">
                     <LineChart
                         accessibilityLayer
                         data={chartData}

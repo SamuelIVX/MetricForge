@@ -56,14 +56,14 @@ const chartConfig = {
 export function ChartPieLabel() {
     return (
         <Card className="flex flex-col p-3 bg-[#0b0b0d]">
-            <CardHeader className="items-center p-0 pb-2">
+            <CardHeader className="items-center p-0">
                 <CardTitle className="text-sm text-white">Task Status Distribution</CardTitle>
                 <CardDescription className="text-xs">Jan - Jun 2024</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 p-0">
                 <ChartContainer
                     config={chartConfig}
-                    className="[&_.recharts-pie-label-text]:fill-foreground mx-auto aspect-square h-32 pb-0"
+                    className="[&_.recharts-pie-label-text]:fill-foreground mx-auto aspect-square h-32 w-full pb-0"
                 >
                     <PieChart>
                         <ChartTooltip content={<ChartTooltipContent hideLabel />} />
