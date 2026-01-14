@@ -63,7 +63,9 @@ const invoices = [
 export function ServiceUsageTable() {
     return (
         <Table>
+
             <TableHeader>
+
                 <TableRow>
                     <TableHead className="w-25">Instance Type</TableHead>
                     <TableHead>Month 1</TableHead>
@@ -72,9 +74,13 @@ export function ServiceUsageTable() {
                     <TableHead>Month 4</TableHead>
                     <TableHead className="text-right">Amount</TableHead>
                 </TableRow>
+
             </TableHeader>
-            <TableBody>
+
+            <TableBody className="text-white">
+
                 {invoices.map((invoice) => (
+
                     <TableRow key={invoice.invoice}>
                         <TableCell className="font-medium">{invoice.invoice}</TableCell>
                         <TableCell>{invoice.paymentStatus}</TableCell>
@@ -83,14 +89,18 @@ export function ServiceUsageTable() {
                         <TableCell>{invoice.placeholder}</TableCell>
                         <TableCell className="text-right">{invoice.totalAmount}</TableCell>
                     </TableRow>
+
                 ))}
+
             </TableBody>
+
             <TableFooter>
                 <TableRow>
                     <TableCell colSpan={5}>Total</TableCell>
                     <TableCell className="text-right">$2,500.00</TableCell>
                 </TableRow>
             </TableFooter>
+
         </Table>
     )
 }

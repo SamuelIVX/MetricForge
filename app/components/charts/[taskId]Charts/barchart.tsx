@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
 import {
   ChartContainer,
   ChartLegend,
@@ -45,11 +46,14 @@ const chartConfig = {
 export function ChartBarStacked() {
   return (
     <Card className="w-150 h-120 m-4 bg-#0b0b0d">
+
       <CardHeader>
         <CardTitle className="text-white">Cost and Usage Graph</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
+
       <CardContent>
+        
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData} className="text-muted-foreground">
             <CartesianGrid vertical={false} stroke="#333" />
@@ -79,7 +83,9 @@ export function ChartBarStacked() {
             />
           </BarChart>
         </ChartContainer>
+        
       </CardContent>
+
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 leading-none font-medium text-white">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
@@ -88,6 +94,7 @@ export function ChartBarStacked() {
           Showing total visitors for the last 6 months
         </div>
       </CardFooter>
+
     </Card>
   )
 }
