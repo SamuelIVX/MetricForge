@@ -3,20 +3,17 @@ import MetaDataCards from "./components/cards";
 import MainContent from "./components/charts";
 
 import { PageProps } from "./types";
-
-import { 
-  ArrowLeft,
-} from "lucide-react"
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import Link from "next/link";
 
 export default async function DecisionId({ params }: PageProps) {
     const { taskId } = await params;
 
     return (
-        <div className="min-h screen bg-background p-6">
+        <div className="min-h screen p-6">
 
             <Button variant="ghost" className="mb-4">
                 <Link href="/tasks">
