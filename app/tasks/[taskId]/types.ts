@@ -3,3 +3,6 @@ export type PageProps = {
         taskId: string,
     }>
 }
+export type HeaderProps = {
+    id: string
+}

@@ -1,40 +1,41 @@
-import { ChartBarStacked } from "@/app/components/charts/[taskId]Charts/barchart";
-import { ChartPieDonutText } from "@/app/components/charts/[taskId]Charts/piechart-donut";
-import { ServiceUsageTable } from "@/app/components/tables/service_usage_table/table";
-import ActionCard from "@/app/components/cards/actionCard";
+import Header from "./components/header";
+import MetaDataCards from "./components/cards";
+import MainContent from "./components/charts";
 
 import { PageProps } from "./types";
+
+import { 
+  ArrowLeft,
+} from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+import Link from "next/link";
 
 export default async function DecisionId({ params }: PageProps) {
     const { taskId } = await params;
 
     return (
-        <div>
-            <span className="font-bold text-2xl flex justify-center p-4">
-                {taskId}
-            </span>
+        <div className="min-h screen bg-background p-6">
 
-            <div className="grid grid-cols-2 gap-4 items-center">
+            <Button variant="ghost" className="mb-4">
+                <Link href="/tasks">
+                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    Back to Home
+                </Link>
+            </Button>
 
-                <div className="flex justify-center">
-                    <ChartBarStacked />
-                </div>
+            {/* Header Section */}
+            <Header id={taskId}/>
 
-                <div className="flex justify-center">
-                    <ChartPieDonutText />
-                </div>
+            {/* Metadata Cards */}
+            <MetaDataCards />
 
-                <div className="flex justify-center">
-                    <div className="w-150 overflow-hidden border rounded-md">
-                        <ServiceUsageTable />
-                    </div>
-                </div>
+            <Separator className="my-6" />
+            
+            {/* Main Content Area */}
+            <MainContent />
 
-                <div className="flex justify-center">
-                    <ActionCard />
-                </div>
-
-            </div>
         </div>
     )
 }
