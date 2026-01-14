@@ -1,8 +1,9 @@
 "use client"
-import { columns, TaskDetails } from "../components/tables/task_table/columns"
+import { columns } from "../components/tables/task_table/columns"
 import { TaskTable } from "../components/tables/task_table/table"
 import { useState, useMemo } from "react"
 import { AddTaskDialog } from "../components/dialogs/AddTaskDialog"
+import { TaskDetails } from "../components/tables/task_table/types"
 
 const initialData: TaskDetails[] = [
     {

@@ -1,7 +1,8 @@
 import { useMemo } from "react";
 
-import { columns, HistoryDetails } from "@/app/components/tables/history_table/columns"
+import { columns } from "@/app/components/tables/history_table/columns"
 import { HistoryTable } from "@/app/components/tables/history_table/table"
+import { HistoryDetails } from "@/app/components/tables/history_table/types";
 
 const initialData: HistoryDetails[] = [
     {
