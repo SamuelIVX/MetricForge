@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Separator } from "@/components/ui/separator"
 import SummaryCards from "@/app/components/cards/taskSummaryCard/card"
 import TaskTableChartMetrics from "@/app/components/charts/taskTableCharts/taskInsights"
 
@@ -63,6 +64,8 @@ export function TaskTable<TData, TValue>({
             <SummaryCards />
 
             <TaskTableChartMetrics />
+
+            <Separator className="my-6 bg-gray-800" />
 
             <div className="flex justify-between py-4">
                 <Input

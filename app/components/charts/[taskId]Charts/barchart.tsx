@@ -45,7 +45,7 @@ const chartConfig = {
 
 export function ChartBarStacked() {
   return (
-    <Card className="w-full bg-#0b0b0d">
+    <Card className="w-full bg-[#0b0b0d]">
 
       <CardHeader>
         <CardTitle className="text-white">Cost and Usage Graph</CardTitle>
@@ -72,13 +72,13 @@ export function ChartBarStacked() {
             <Bar
               dataKey="desktop"
               stackId="a"
-              fill="#3b82f6"
+              fill="var(--chart-1)"
               radius={[0, 0, 4, 4]}
             />
             <Bar
               dataKey="mobile"
               stackId="a"
-              fill="#10b981"
+              fill="var(--chart-2)"
               radius={[4, 4, 0, 0]}
             />
           </BarChart>

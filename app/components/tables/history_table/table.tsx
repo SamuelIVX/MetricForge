@@ -34,6 +34,7 @@ import {
 import { HistoryTableProps } from "./types"
 import HistoryCards from "../../cards/historySummaryCard/card"
 import HistoryTableChartMetrics from "../../charts/historyCharts/historyInsights"
+import { Separator } from "@/components/ui/separator"
 
 
 export function HistoryTable<TData, TValue>({
@@ -65,6 +66,8 @@ export function HistoryTable<TData, TValue>({
             <HistoryCards />
 
             <HistoryTableChartMetrics />
+
+            <Separator className="my-6 bg-gray-800" />
 
             <div className="flex items-center py-4">
 
