@@ -6,6 +6,12 @@ export default function LeftColumnContent() {
     return (
         <div className="lg:col-span-2 space-y-6">
             <Card className="bg-[#0b0b0d]">
+
+                <CardHeader>
+                    <CardTitle className="text-lg text-white">Cost and Usage Trends</CardTitle>
+                    <CardDescription>Resource consumption over the last 6 months</CardDescription>
+                </CardHeader>
+
                 <CardContent>
                     <ChartBarStacked />
                 </CardContent>
