@@ -6,20 +6,7 @@ export default function RightColumnContent() {
     return (
         <div className="space-y-6">
 
-            <Card className="bg-[#0b0b0d]">
-
-                <CardHeader>
-                    <CardTitle className="text-lg text-white">Resource Distribution</CardTitle>
-                    <CardDescription>Distribution by service type</CardDescription>
-                </CardHeader>
-
-                <CardContent>
-                    <div className="w-full h-full flex">
-                        <ChartPieDonutText />
-                    </div>
-                </CardContent>
-
-            </Card>
+            <ChartPieDonutText />
 
             <Card className="bg-[#0b0b0d]">
 

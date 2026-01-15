@@ -63,23 +63,19 @@ export function ChartPieDonutText() {
     }, [])
 
     return (
-        <Card className="flex flex-col bg-#0b0b0d w-150 h-120">
-            <CardHeader className="items-center pb-0">
-                <CardTitle className="text-white">Month-To-Date Service Summary</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
-            </CardHeader>
+        <Card className="flex flex-col bg-#0b0b0d w-full">
+
+            <CardHeader>
+                <CardTitle className="text-lg text-white">Resource Distribution</CardTitle>
+                <CardDescription> Distribution by service type</CardDescription>
+            </CardHeader >
+
             <CardContent className="flex-1 pb-0">
-                <ChartContainer
-                    config={chartConfig}
-                    className="mx-auto aspect-square max-h-62.5"
-                >
-                    <PieChart
-                        className="text-muted-foreground"
-                    >
-                        <ChartTooltip
-                            cursor={false}
-                            content={<ChartTooltipContent hideLabel />}
-                        />
+
+                <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-62.5">
+                    <PieChart className="text-muted-foreground">
+                        <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
+
                         <Pie
                             data={chartData}
                             dataKey="visitors"
@@ -123,16 +119,23 @@ export function ChartPieDonutText() {
                             className="-translate-y-2 flex-wrap gap-2 *:basis-1/4 *:justify-center mt-5"
                         />
                     </PieChart>
+
                 </ChartContainer>
+
             </CardContent>
+
             <CardFooter className="flex-col gap-2 text-sm">
+
                 <div className="flex items-center gap-2 leading-none font-medium text-white">
                     Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
                 </div>
+
                 <div className="text-muted-foreground leading-none italic">
                     Showing total visitors for the last 6 months
                 </div>
+
             </CardFooter>
-        </Card>
+
+        </Card >
     )
 }

@@ -45,7 +45,7 @@ const chartConfig = {
 
 export function ChartBarStacked() {
   return (
-    <Card className="w-150 h-120 m-4 bg-#0b0b0d">
+    <Card className="w-full bg-#0b0b0d">
 
       <CardHeader>
         <CardTitle className="text-white">Cost and Usage Graph</CardTitle>
@@ -53,7 +53,7 @@ export function ChartBarStacked() {
       </CardHeader>
 
       <CardContent>
-        
+
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData} className="text-muted-foreground">
             <CartesianGrid vertical={false} stroke="#333" />
@@ -83,7 +83,7 @@ export function ChartBarStacked() {
             />
           </BarChart>
         </ChartContainer>
-        
+
       </CardContent>
 
       <CardFooter className="flex-col items-start gap-2 text-sm">
