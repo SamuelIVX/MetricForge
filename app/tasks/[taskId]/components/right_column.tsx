@@ -1,5 +1,6 @@
 import { ChartPieDonutText } from "@/app/components/charts/[taskId]Charts/piechart-donut"
 import RecommendedActionsCard from "./recommended_actions"
+import RelatedTasks from "./related_tasks"
 
 export default function RightColumnContent() {
     return (
@@ -8,6 +9,8 @@ export default function RightColumnContent() {
             <ChartPieDonutText />
 
             <RecommendedActionsCard />
+
+            <RelatedTasks />
 
         </div>
     )
