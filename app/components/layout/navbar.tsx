@@ -17,8 +17,11 @@ export function NavigationBar() {
 
     return (
         <div className="flex items-center gap-4 w-full">
+
             <NavigationMenu viewport={isMobile}>
+
                 <span className="text-base font-semibold mr-3">Decision Inbox</span>
+
                 <NavigationMenuList className="flex-wrap">
 
                     <NavigationMenuItem>
@@ -31,13 +34,16 @@ export function NavigationBar() {
                     </NavigationMenuItem>
 
                 </NavigationMenuList>
+
             </NavigationMenu>
 
             <div className="relative flex-1 hidden md:block">
+
                 <Input
                     placeholder="Search alerts..."
                     className="pr-10"
                 />
+
                 <Button
                     variant="ghost"
                     size="icon"
@@ -45,6 +51,7 @@ export function NavigationBar() {
                 >
                     <IconSearch className="h-4 w-4" />
                 </Button>
+
             </div>
 
         </div>

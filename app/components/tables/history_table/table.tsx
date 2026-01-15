@@ -81,12 +81,14 @@ export function HistoryTable<TData, TValue>({
                 />
 
                 <DropdownMenu>
+
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" className="ml-auto">
                             Columns
                             <ChevronDown />
                         </Button>
                     </DropdownMenuTrigger>
+
                     <DropdownMenuContent align="end">
                         {table
                             .getAllColumns()
@@ -108,11 +110,13 @@ export function HistoryTable<TData, TValue>({
                                 )
                             })}
                     </DropdownMenuContent>
+
                 </DropdownMenu>
             </div>
 
             <div className="overflow-hidden rounded-md border">
                 <Table>
+
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id}>
@@ -131,6 +135,7 @@ export function HistoryTable<TData, TValue>({
                             </TableRow>
                         ))}
                     </TableHeader>
+
                     <TableBody>
                         {table.getRowModel().rows?.length ? (
                             table.getRowModel().rows.map((row) => (
@@ -153,10 +158,13 @@ export function HistoryTable<TData, TValue>({
                             </TableRow>
                         )}
                     </TableBody>
+
                 </Table>
+
             </div>
 
             <div className="flex items-center justify-end space-x-2 py-4">
+
                 <Button
                     variant="outline"
                     size="sm"
@@ -165,6 +173,7 @@ export function HistoryTable<TData, TValue>({
                 >
                     Previous
                 </Button>
+
                 <Button
                     variant="outline"
                     size="sm"
@@ -173,6 +182,7 @@ export function HistoryTable<TData, TValue>({
                 >
                     Next
                 </Button>
+
             </div>
 
         </div>

@@ -1,5 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { RecommendedActionProps } from "./types"
+
+export function RecommendedAction({ action, description }: RecommendedActionProps) {
+    return (
+        <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040]">
+            <p className="text-sm font-medium mb-1 text-white">{action}</p>
+            <p className="text-xs text-muted-foreground">
+                {description}
+            </p>
+        </div>
+    )
+}
 
 export default function RecommendedActionsCard() {
     return (
@@ -11,24 +23,21 @@ export default function RecommendedActionsCard() {
             </CardHeader>
 
             <CardContent className="space-y-3">
-                <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040]">
-                    <p className="text-sm font-medium mb-1 text-white">1. Review bucket policy</p>
-                    <p className="text-xs text-muted-foreground">
-                        Check for overly permissive access rules
-                    </p>
-                </div>
-                <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040]">
-                    <p className="text-sm font-medium mb-1 text-white">2. Update IAM permissions</p>
-                    <p className="text-xs text-muted-foreground">
-                        Restrict access to authorized users only
-                    </p>
-                </div>
-                <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040]">
-                    <p className="text-sm font-medium mb-1 text-white">3. Enable encryption</p>
-                    <p className="text-xs text-muted-foreground">
-                        Add an extra layer of security
-                    </p>
-                </div>
+
+                <RecommendedAction
+                    action="1. Review Bucket Policy"
+                    description="Check for overly permissive access rules"
+                />
+
+                <RecommendedAction
+                    action="2. Update IAM Permissions"
+                    description="Restrict access to authorized users only"
+                />
+
+                <RecommendedAction
+                    action="3. Enable Encryption"
+                    description="Add an extra layer of security"
+                />
 
                 <Button variant="default" className="w-full mt-2 hover:bg-blue-600 cursor-pointer">
                     Apply All Recommendations
