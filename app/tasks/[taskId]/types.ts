@@ -1,5 +1,3 @@
-import { LucideIcon } from "lucide-react"
-
 export type PageProps = {
     params: Promise<{
         taskId: string,
@@ -14,4 +12,9 @@ export type MetaDataProps = {
     title: string,
     subcontent: string,
     color: string
+}
+
+export type RecommendedActionProps = {
+    action: string,
+    description: string
 }

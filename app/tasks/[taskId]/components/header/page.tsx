@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Trash2 } from "lucide-react"
-import { HeaderProps } from "../types"
+import { HeaderProps } from "../../types"
 
 
 export default function Header({ id }: HeaderProps) {
@@ -20,7 +20,6 @@ export default function Header({ id }: HeaderProps) {
 
                     <Badge variant="outline" className="text-red-500 border-red-500/30">
                         Severity
-
                     </Badge>
                 </div>
 

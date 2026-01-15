@@ -1,6 +1,6 @@
-import Header from "./components/header";
-import MetaDataCards from "./components/cards";
-import MainContent from "./components/charts";
+import Header from "./components/header/page";
+import MetaDataCards from "./components/header/cards";
+import MainContent from "./components/page";
 
 import { PageProps } from "./types";
 import Link from "next/link";

@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Activity, Calendar, User } from "lucide-react"
-import { MetaDataProps } from "../types"
+import { MetaDataProps } from "../../types"
 
 export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) {
     return (

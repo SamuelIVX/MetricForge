@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { RecommendedActionProps } from "./types"
+import { RecommendedActionProps } from "../../types"
 
 export function RecommendedAction({ action, description }: RecommendedActionProps) {
     return (
