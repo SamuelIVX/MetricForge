@@ -72,7 +72,7 @@ export const columns: ColumnDef<HistoryDetails>[] = [
                             </Link>
                         </DropdownMenuItem>
 
-                        <Separator />
+                        <Separator className="bg-[#4b4b4b]" />
 
                         <DropdownMenuItem
                             variant="destructive"

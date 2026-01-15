@@ -23,13 +23,13 @@ export default async function DecisionId({ params }: PageProps) {
             </Button>
 
             {/* Header Section */}
-            <Header id={taskId}/>
+            <Header id={taskId} />
 
             {/* Metadata Cards */}
             <MetaDataCards />
 
-            <Separator className="my-6" />
-            
+            <Separator className="my-6 bg-gray-800" />
+
             {/* Main Content Area */}
             <MainContent />
 

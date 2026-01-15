@@ -231,7 +231,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
                             </Link>
                         </DropdownMenuItem>
 
-                        <Separator />
+                        <Separator className="bg-[#4b4b4b]" />
 
                         <DropdownMenuItem
                             variant="destructive"

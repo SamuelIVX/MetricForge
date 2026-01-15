@@ -102,7 +102,7 @@ export function AppSidebar() {
                                     <CircleQuestionMark /> <span>Get Help</span>
                                 </DropdownMenuItem>
 
-                                <Separator />
+                                <Separator className="bg-[#4b4b4b]" />
 
                                 <DropdownMenuItem>
                                     <LogOut /> <span>Log Out</span>
