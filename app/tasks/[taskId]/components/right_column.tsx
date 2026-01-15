@@ -2,18 +2,26 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { ChartPieDonutText } from "@/app/components/charts/[taskId]Charts/piechart-donut"
 import { Button } from "@/components/ui/button"
 
-export default function RightColumnContent(){
+export default function RightColumnContent() {
     return (
-        <div className="space-y-14">
-            <Card className="bg-[#0b0b0d] border-[#404040] justify-center items-center">
+        <div className="space-y-6">
+
+            <Card className="bg-[#0b0b0d]">
+
+                <CardHeader>
+                    <CardTitle className="text-lg text-white">Resource Distribution</CardTitle>
+                    <CardDescription>Distribution by service type</CardDescription>
+                </CardHeader>
 
                 <CardContent>
-                    <ChartPieDonutText />
+                    <div className="w-full h-full flex">
+                        <ChartPieDonutText />
+                    </div>
                 </CardContent>
 
             </Card>
 
-            <Card className="bg-[#0b0b0d] border-[#404040]">
+            <Card className="bg-[#0b0b0d]">
 
                 <CardHeader>
                     <CardTitle className="text-lg text-white">Recommended Actions</CardTitle>
@@ -43,7 +51,7 @@ export default function RightColumnContent(){
                     <Button className="w-full mt-2">
                         Apply All Recommendations
                     </Button>
-                    
+
                 </CardContent>
 
             </Card>
