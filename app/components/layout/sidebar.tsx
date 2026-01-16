@@ -31,12 +31,14 @@ import { Separator } from "@/components/ui/separator"
 import { ChevronUp } from "lucide-react"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 //Menu Items
 const items = [
     {
         title: "Home",
-        path: "/",
+        path: "/tasks",
         icon: House,
     },
     {
@@ -47,6 +49,9 @@ const items = [
 ]
 
 export function AppSidebar() {
+
+    const pathname = usePathname();
+
     return (
         <Sidebar collapsible="icon">
 
@@ -58,11 +63,11 @@ export function AppSidebar() {
                     <SidebarMenu>
                         {items.map((item) => (
                             <SidebarMenuItem key={item.title}>
-                                <SidebarMenuButton asChild>
-                                    <a href={item.path}>
+                                <SidebarMenuButton asChild isActive={pathname == item.path}>
+                                    <Link href={item.path}>
                                         <item.icon />
                                         <span>{item.title}</span>
-                                    </a>
+                                    </Link>
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                         ))}
