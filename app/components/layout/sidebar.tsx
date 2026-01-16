@@ -17,6 +17,7 @@ import {
     SidebarMenu,
     SidebarMenuItem,
     SidebarMenuButton,
+    useSidebar,
 } from "@/components/ui/sidebar"
 
 import {
@@ -52,34 +53,52 @@ export function AppSidebar() {
 
     const pathname = usePathname();
 
+    const { open } = useSidebar();
+
     return (
         <Sidebar collapsible="icon">
 
-            <SidebarHeader> MetricForge </SidebarHeader>
+            <SidebarHeader className="font-bold">
+                {open ? "MetricForge" : "M"}
+            </SidebarHeader>
 
             <SidebarContent>
 
                 <SidebarGroupContent>
+
                     <SidebarMenu>
+
                         {items.map((item) => (
+
                             <SidebarMenuItem key={item.title}>
+
                                 <SidebarMenuButton asChild isActive={pathname == item.path}>
+
                                     <Link href={item.path}>
                                         <item.icon />
                                         <span>{item.title}</span>
                                     </Link>
+
                                 </SidebarMenuButton>
+
                             </SidebarMenuItem>
+
                         ))}
+
                     </SidebarMenu>
+
                 </SidebarGroupContent>
+
             </SidebarContent>
 
             <SidebarFooter>
+
                 <SidebarMenu>
 
                     <SidebarMenuItem>
+
                         <DropdownMenu>
+
                             <DropdownMenuTrigger asChild>
                                 <SidebarMenuButton>
                                     <Avatar className="h-6 w-6">
@@ -116,9 +135,11 @@ export function AppSidebar() {
                             </DropdownMenuContent>
 
                         </DropdownMenu>
+
                     </SidebarMenuItem>
 
                 </SidebarMenu>
+
             </SidebarFooter>
 
         </Sidebar>

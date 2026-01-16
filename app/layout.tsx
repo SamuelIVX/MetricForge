@@ -1,4 +1,5 @@
 import "./globals.css";
+import { cookies } from "next/headers";
 import Providers from "./providers"
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar"
 import { AppSidebar } from "./components/layout/sidebar"
@@ -9,11 +10,15 @@ export const metadata = {
   description: "Autonomous Metrics for Teams",
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+
+  const cookieStore = await cookies();
+  const defaultOpen = cookieStore.get("siderbar_state")?.value == "true";
+
   return (
     <html lang="en">
       <body>
-        <SidebarProvider>
+        <SidebarProvider defaultOpen={defaultOpen}>
 
           <AppSidebar />
 
