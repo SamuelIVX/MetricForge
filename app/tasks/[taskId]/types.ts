@@ -18,3 +18,10 @@ export type RecommendedActionProps = {
     action: string,
     description: string
 }
+
+export type RelatedTaskProps = {
+    task: string,
+    status: string,
+    status_color: string,
+    issue: string,
+}
