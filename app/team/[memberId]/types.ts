@@ -14,3 +14,10 @@ export type MemberDataCardProps = {
     subcontent: string,
     color: string
 }
+
+export type CurrentTaskProps = {
+    task: string,
+    status: string,
+    status_color: string,
+    issue: string
+}
