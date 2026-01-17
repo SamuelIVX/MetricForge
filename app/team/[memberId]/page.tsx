@@ -1,6 +1,6 @@
 import Header from "./components/header/page";
 import MemberDataCards from "./components/header/cards";
-// import MainContent from "./components/page";
+import MainContent from "./components/page";
 
 import { PageProps } from "./types";
 import Link from "next/link";
@@ -18,7 +18,7 @@ export default async function Member({ params }: PageProps) {
             <Button variant="ghost" className="mb-4">
                 <Link href="/team">
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    Back to Team Page
+                    Back to Team
                 </Link>
             </Button>
 
