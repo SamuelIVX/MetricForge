@@ -1,8 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Activity, Calendar, User } from "lucide-react"
-import { MetaDataProps } from "../../types"
+import { MemberDataCardProps } from "../../types"
 
-export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) {
+
+export function MemberDataCard({ Icon, title, subcontent, color }: MemberDataCardProps) {
     return (
         <Card className="bg-[#0b0b0d]">
             <CardContent className="p-4 flex items-center gap-3">
@@ -21,33 +22,33 @@ export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) 
     )
 }
 
-export default function MetaDataCards() {
+export default function MemberDataCards() {
     return (
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-            <MetaDataCard
+            <MemberDataCard
                 Icon={AlertTriangle}
                 title="Priority"
                 subcontent="lorem ipsum"
                 color="text-red-500"
             />
 
-            <MetaDataCard
+            <MemberDataCard
                 Icon={Activity}
                 title="Confidence"
                 subcontent="lorem ipsum"
                 color="text-blue-500"
             />
 
-            <MetaDataCard
+            <MemberDataCard
                 Icon={User}
                 title="Reviewer"
                 subcontent="lorem ipsum"
                 color="text-purple-500"
             />
 
-            <MetaDataCard
+            <MemberDataCard
                 Icon={Calendar}
                 title="Created"
                 subcontent="lorem ipsum"
