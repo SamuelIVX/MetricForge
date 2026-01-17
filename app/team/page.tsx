@@ -75,7 +75,7 @@ const teamMembers = [
     team: "DevOps"
   },
   {
-    id: "1",
+    id: "7",
     name: "John Doe",
     initials: "JD",
     role: "Senior Developer",
@@ -87,7 +87,7 @@ const teamMembers = [
     team: "Frontend"
   },
   {
-    id: "2",
+    id: "8",
     name: "Alice Johnson",
     initials: "AJ",
     role: "DevOps Engineer",
@@ -99,7 +99,7 @@ const teamMembers = [
     team: "DevOps"
   },
   {
-    id: "3",
+    id: "9",
     name: "Bob Smith",
     initials: "BS",
     role: "Backend Developer",
@@ -111,7 +111,7 @@ const teamMembers = [
     team: "Backend"
   },
   {
-    id: "4",
+    id: "10",
     name: "Carol White",
     initials: "CW",
     role: "Frontend Developer",
@@ -122,42 +122,18 @@ const teamMembers = [
     availability: "Away",
     team: "Frontend"
   },
-  {
-    id: "5",
-    name: "David Lee",
-    initials: "DL",
-    role: "Backend Developer",
-    activeTasks: 10,
-    completedTasks: 38,
-    commits: 167,
-    status: "Active",
-    availability: "Available",
-    team: "Backend"
-  },
-  {
-    id: "6",
-    name: "Emma Davis",
-    initials: "ED",
-    role: "DevOps Engineer",
-    activeTasks: 7,
-    completedTasks: 44,
-    commits: 178,
-    status: "Active",
-    availability: "Available",
-    team: "DevOps"
-  }
 ]
 
-export default function MainTeamPage(){
-    return (
+export default function MainTeamPage() {
+  return (
 
-        <div className="space-y-3">
+    <div className="space-y-3">
 
-          {teamMembers.map((member) => (
-            <MemberCard {...member}/>
-          ))}
-          
-        </div>
+      {teamMembers.map((member) => (
+        <MemberCard key={member.id} {...member} />
+      ))}
 
-    )
+    </div>
+
+  )
 }

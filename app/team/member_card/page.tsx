@@ -5,26 +5,26 @@ import { ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { MemberCardProps } from "./types"
 
-export default function MemberCard( 
-    {  
+export default function MemberCard(
+    {
         id,
-        name, 
+        name,
         initials,
         role,
         activeTasks,
         completedTasks,
-        commits, 
+        commits,
         status,
         availability,
         team
-    } 
-    :
-    MemberCardProps
-){
+    }
+        :
+        MemberCardProps
+) {
     return (
-        <Card 
+        <Card
             key={id}
-            className="bg-[#262626] border-[#404040] hover:border-[#505050] transition-colors cursor-pointer"
+            className="bg-[#0b0b0d hover:bg-[#262626] border-[#404040] hover:border-[#505050] transition-colors cursor-pointer"
         >
 
             <Link href={`/team/${id}`}>
@@ -36,9 +36,9 @@ export default function MemberCard(
                         <div className="flex items-center gap-4 flex-1">
 
                             <Avatar className="h-12 w-12">
-                            <AvatarFallback className="bg-[#404040] text-white">
-                                {initials}
-                            </AvatarFallback>
+                                <AvatarFallback className="bg-[#404040] text-white">
+                                    {initials}
+                                </AvatarFallback>
                             </Avatar>
 
                             <div className="flex-1">
@@ -47,7 +47,7 @@ export default function MemberCard(
                             </div>
 
                         </div>
-                        
+
                         <div className="flex items-center gap-8">
 
                             <div className="text-center">
@@ -65,16 +65,16 @@ export default function MemberCard(
                                 <p className="text-xs text-muted-foreground">Commits</p>
                             </div>
 
-                            <Badge 
+                            <Badge
                                 variant="outline"
                                 className={
-                                    availability === "Available" 
-                                    ? "text-green-500 border-green-500/30 bg-green-500/10" 
-                                    : availability === "In Meeting"
-                                    ? "text-amber-500 border-amber-500/30 bg-amber-500/10"
-                                    : "text-gray-500 border-gray-500/30 bg-gray-500/10"
+                                    availability === "Available"
+                                        ? "text-green-500 border-green-500/30 bg-green-500/10"
+                                        : availability === "In Meeting"
+                                            ? "text-amber-500 border-amber-500/30 bg-amber-500/10"
+                                            : "text-gray-500 border-gray-500/30 bg-gray-500/10"
                                 }
-                                >
+                            >
                                 {availability}
                             </Badge>
 
