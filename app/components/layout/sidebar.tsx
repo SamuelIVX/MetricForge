@@ -5,7 +5,8 @@ import {
     LogOut,
     CircleQuestionMark,
     Settings,
-    CircleUser
+    CircleUser,
+    Users
 } from "lucide-react"
 
 import {
@@ -41,6 +42,11 @@ const items = [
         title: "Home",
         path: "/tasks",
         icon: House,
+    },
+    {
+        title: "Team",
+        path: "/team",
+        icon: Users,
     },
     {
         title: "History",
