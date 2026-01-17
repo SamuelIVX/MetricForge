@@ -16,6 +16,8 @@ import {
     ChartContainer,
     ChartTooltip,
     ChartTooltipContent,
+    ChartLegend,
+    ChartLegendContent,
     type ChartConfig,
 } from "@/components/ui/chart"
 
@@ -118,6 +120,12 @@ export function ChartPieDonutText() {
                                 }}
                             />
                         </Pie>
+
+                        <ChartLegend
+                            content={<ChartLegendContent nameKey="browser" />}
+                            className="-translate-y-2 flex-wrap gap-2 *:basis-1/4 *:justify-center mt-5"
+                        />
+
                     </PieChart>
 
                 </ChartContainer>
