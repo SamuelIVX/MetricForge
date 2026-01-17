@@ -63,7 +63,7 @@ export function ChartPieDonutText() {
     }, [])
 
     return (
-        <Card className="flex flex-col bg-#0b0b0d w-full">
+        <Card className="flex flex-col bg-[#0b0b0d] w-full">
 
             <CardHeader>
                 <CardTitle className="text-lg text-white">Resource Distribution</CardTitle>
