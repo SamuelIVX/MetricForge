@@ -2,6 +2,7 @@ import ActiveHoursLineChart from "./charts/developer_active_hours/page"
 import DeveloperGitStats from "./charts/developer_stats/page"
 import DeveloperCurrentTasks from "./charts/developer_tasks/page"
 import CurrentTasks from "./charts/developer_current_tasks/page"
+import RecentActivity from "./charts/developer_recent_activity/page"
 
 export default function MainContent() {
     return (
@@ -20,6 +21,10 @@ export default function MainContent() {
 
                 <div>
                     <CurrentTasks />
+                </div>
+
+                <div>
+                    <RecentActivity />
                 </div>
 
             </div>

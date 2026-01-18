@@ -21,3 +21,9 @@ export type CurrentTaskProps = {
     status_color: string,
     issue: string
 }
+
+export type ActivityProps = {
+    color: string,
+    assignment: string,
+    time_completed: string
+}
