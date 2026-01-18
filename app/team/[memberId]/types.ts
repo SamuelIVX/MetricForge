@@ -27,3 +27,8 @@ export type ActivityProps = {
     assignment: string,
     time_completed: string
 }
+
+export type MemberInfoProps = {
+    Icon: React.ElementType,
+    info: string
+}

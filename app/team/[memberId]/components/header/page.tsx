@@ -8,6 +8,16 @@ import {
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { HeaderProps } from "../../types"
+import { MemberInfoProps } from "../../types"
+
+export function MemberInfo({ Icon, info } : MemberInfoProps){
+    return (
+        <span className="flex items-center gap-1">
+            <Icon className="h-4 w-4"/>
+            {info}
+        </span>
+    )
+}
 
 
 export default function Header({ id }: HeaderProps) {
@@ -31,20 +41,20 @@ export default function Header({ id }: HeaderProps) {
 
                 <div className="flex items-center text-xs text-muted-foreground gap-6">
 
-                    <span className="flex items-center gap-1">
-                        <Mail className="h-4 w-4"/>
-                        @johndoe@gmail.com
-                    </span>
+                    <MemberInfo 
+                        Icon={Mail}
+                        info="johndoe@gmail.com"
+                    />
 
-                    <span className="flex items-center gap-1">
-                        <MapPin className="h-4 w-4"/>
-                        Staten Island, NY
-                    </span>
+                    <MemberInfo 
+                        Icon={MapPin}
+                        info="Staten Island, NY"
+                    />
 
-                    <span className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4"/>
-                        Joined Apr 2005
-                    </span>
+                    <MemberInfo 
+                        Icon={Calendar}
+                        info="Joined Apr 2005"
+                    />
 
                 </div>
 
