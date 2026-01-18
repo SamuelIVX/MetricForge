@@ -1,6 +1,12 @@
+import { 
+    Trash2,
+    Mail,
+    MapPin,
+    Calendar,
+    MessageSquare
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2, Trash2 } from "lucide-react"
 import { HeaderProps } from "../../types"
 
 
@@ -12,21 +18,35 @@ export default function Header({ id }: HeaderProps) {
 
                 <div className="flex items-center gap-3 mb-2">
 
-                    <h1 className="text-3xl font-bold">{id}</h1>
+                    <h1 className="text-3xl font-bold">Developer: {id}</h1>
 
-                    <Badge className="bg-amber-500">
-                        status
+                    <Badge className="bg-green-500">
+                        Online
                     </Badge>
 
                     <Badge variant="outline" className="text-red-500 border-red-500/30">
-                        Severity
+                        Not-Available
                     </Badge>
                 </div>
 
-                <h2 className="text-xl text-muted-foreground mb-4">title</h2>
-                <p className="text-sm text-muted-foreground max-w-3xl">
-                    description
-                </p>
+                <div className="flex items-center text-xs text-muted-foreground gap-6">
+
+                    <span className="flex items-center gap-1">
+                        <Mail className="h-4 w-4"/>
+                        @johndoe@gmail.com
+                    </span>
+
+                    <span className="flex items-center gap-1">
+                        <MapPin className="h-4 w-4"/>
+                        Staten Island, NY
+                    </span>
+
+                    <span className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4"/>
+                        Joined Apr 2005
+                    </span>
+
+                </div>
 
             </div>
 
@@ -34,7 +54,7 @@ export default function Header({ id }: HeaderProps) {
             <div className="flex gap-2">
 
                 <Button variant="outline" size="sm">
-                    <CheckCircle2 className="h-4 w-4 mr-2" /> Mark as Done
+                    <MessageSquare className="h-4 w-4" /> Message
                 </Button>
 
                 <Button variant="outline" size="sm" className="text-red-500 border-red-500/30">

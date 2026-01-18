@@ -74,7 +74,7 @@ export function ChartPieDonutText() {
 
                 <ChartContainer
                     config={chartConfig}
-                    className="mx-auto aspect-square h-103.5"
+                    className="mx-auto aspect-square h-160"
                 >
 
                     <PieChart className="text-muted-foreground">

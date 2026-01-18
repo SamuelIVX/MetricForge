@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { AlertTriangle, Activity, Calendar, User } from "lucide-react"
+import { CheckCircle, Clock, Code, GitCommit } from "lucide-react"
 import { MemberDataCardProps } from "../../types"
 
 
@@ -28,29 +28,29 @@ export default function MemberDataCards() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
             <MemberDataCard
-                Icon={AlertTriangle}
-                title="Priority"
-                subcontent="lorem ipsum"
-                color="text-red-500"
-            />
-
-            <MemberDataCard
-                Icon={Activity}
-                title="Confidence"
+                Icon={CheckCircle}
+                title="Active Tasks"
                 subcontent="lorem ipsum"
                 color="text-blue-500"
             />
 
             <MemberDataCard
-                Icon={User}
-                title="Reviewer"
+                Icon={Clock}
+                title="Pending"
+                subcontent="lorem ipsum"
+                color="text-orange-500"
+            />
+
+            <MemberDataCard
+                Icon={GitCommit}
+                title="Commits"
                 subcontent="lorem ipsum"
                 color="text-purple-500"
             />
 
             <MemberDataCard
-                Icon={Calendar}
-                title="Created"
+                Icon={Code}
+                title="Lines of Code"
                 subcontent="lorem ipsum"
                 color="text-green-500"
             />

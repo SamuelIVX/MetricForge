@@ -38,13 +38,13 @@ export default function RecentActivity() {
 
                     <Activity
                         color="bg-blue-500"
-                        assignment="Completed task TASK-045"
+                        assignment="Completed TASK-045"
                         time_completed="2 hours ago"
                     />
 
                     <Activity
                         color="bg-purple-500"
-                        assignment="Pushed 3 commits to main branch"
+                        assignment="Pushed 3 commits to Main Branch"
                         time_completed="5 hours ago"
                     />
 
@@ -56,7 +56,7 @@ export default function RecentActivity() {
 
                     <Activity
                         color="bg-orange-500"
-                        assignment="Pull commit #3rf23d"
+                        assignment="Pulled commit #3rf23d"
                         time_completed="2 days ago"
                     />
 
