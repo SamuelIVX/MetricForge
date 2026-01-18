@@ -5,6 +5,14 @@ import {
     Calendar,
     MessageSquare
 } from "lucide-react"
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+
+
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { HeaderProps } from "../../types"
@@ -27,6 +35,14 @@ export default function Header({ id }: HeaderProps) {
             <div className="flex-1">
 
                 <div className="flex items-center gap-3 mb-2">
+
+                    <Avatar className="h-15 w-15 rounded-md">
+                        <AvatarImage 
+                            src="/default_avatar.svg" 
+                            alt="@membername" 
+                    />
+                        <AvatarFallback>MI</AvatarFallback> 
+                    </Avatar>
 
                     <h1 className="text-3xl font-bold">Developer: {id}</h1>
 
