@@ -1,0 +1,919 @@
+{
+  "teamMembers": [
+    {
+      "id": "user-1",
+      "name": "Maryann Huels-Davis",
+      "email": "Ova.Hartmann@gmail.com",
+      "role": "Backend Developer",
+      "team": "Backend",
+      "activeTasks": 15,
+      "completedTasks": 37,
+      "commits": 90,
+      "linesOfCode": 38143,
+      "availability": "In Meeting",
+      "joinedDate": "2024-03-18"
+    },
+    {
+      "id": "user-2",
+      "name": "Eula West",
+      "email": "Marquis.Shields@gmail.com",
+      "role": "Backend Developer",
+      "team": "Backend",
+      "activeTasks": 15,
+      "completedTasks": 58,
+      "commits": 240,
+      "linesOfCode": 38968,
+      "availability": "Away",
+      "joinedDate": "2024-11-17"
+    },
+    {
+      "id": "user-3",
+      "name": "Kyle Feest",
+      "email": "Syble.Schroeder@yahoo.com",
+      "role": "Senior Developer",
+      "team": "DevOps",
+      "activeTasks": 4,
+      "completedTasks": 75,
+      "commits": 216,
+      "linesOfCode": 12991,
+      "availability": "Away",
+      "joinedDate": "2024-02-02"
+    },
+    {
+      "id": "user-4",
+      "name": "Kari Thiel I",
+      "email": "Kaylee.Jones@hotmail.com",
+      "role": "Backend Developer",
+      "team": "Frontend",
+      "activeTasks": 16,
+      "completedTasks": 65,
+      "commits": 80,
+      "linesOfCode": 7313,
+      "availability": "Available",
+      "joinedDate": "2025-04-10"
+    },
+    {
+      "id": "user-5",
+      "name": "Doreen Klocko",
+      "email": "Shaniya.Muller60@yahoo.com",
+      "role": "Frontend Developer",
+      "team": "Frontend",
+      "activeTasks": 10,
+      "completedTasks": 26,
+      "commits": 102,
+      "linesOfCode": 23546,
+      "availability": "In Meeting",
+      "joinedDate": "2025-12-06"
+    },
+    {
+      "id": "user-6",
+      "name": "Geraldine Witting",
+      "email": "Haven_Frami@yahoo.com",
+      "role": "DevOps Engineer",
+      "team": "Backend",
+      "activeTasks": 19,
+      "completedTasks": 38,
+      "commits": 180,
+      "linesOfCode": 23236,
+      "availability": "Away",
+      "joinedDate": "2024-02-20"
+    },
+    {
+      "id": "user-7",
+      "name": "Meghan Little",
+      "email": "Jacklyn.Kihn52@gmail.com",
+      "role": "Backend Developer",
+      "team": "Frontend",
+      "activeTasks": 16,
+      "completedTasks": 52,
+      "commits": 127,
+      "linesOfCode": 13040,
+      "availability": "Away",
+      "joinedDate": "2025-06-07"
+    },
+    {
+      "id": "user-8",
+      "name": "Jan Fisher",
+      "email": "Raymundo_Roberts8@gmail.com",
+      "role": "Backend Developer",
+      "team": "Backend",
+      "activeTasks": 8,
+      "completedTasks": 72,
+      "commits": 154,
+      "linesOfCode": 28331,
+      "availability": "Away",
+      "joinedDate": "2025-11-15"
+    },
+    {
+      "id": "user-9",
+      "name": "Wayne Stanton",
+      "email": "Kenyatta_Koepp@hotmail.com",
+      "role": "Backend Developer",
+      "team": "Backend",
+      "activeTasks": 3,
+      "completedTasks": 23,
+      "commits": 138,
+      "linesOfCode": 26411,
+      "availability": "Away",
+      "joinedDate": "2025-01-20"
+    },
+    {
+      "id": "user-10",
+      "name": "Chester Barton",
+      "email": "Wilburn.Macejkovic@gmail.com",
+      "role": "Senior Developer",
+      "team": "Frontend",
+      "activeTasks": 16,
+      "completedTasks": 70,
+      "commits": 59,
+      "linesOfCode": 15406,
+      "availability": "In Meeting",
+      "joinedDate": "2024-02-20"
+    },
+    {
+      "id": "user-11",
+      "name": "Spencer Jacobi-Denesik",
+      "email": "Maude_Feeney@hotmail.com",
+      "role": "Frontend Developer",
+      "team": "Frontend",
+      "activeTasks": 3,
+      "completedTasks": 46,
+      "commits": 173,
+      "linesOfCode": 31286,
+      "availability": "Away",
+      "joinedDate": "2024-09-22"
+    },
+    {
+      "id": "user-12",
+      "name": "Jessica Hackett",
+      "email": "Santina91@gmail.com",
+      "role": "Senior Developer",
+      "team": "Backend",
+      "activeTasks": 16,
+      "completedTasks": 60,
+      "commits": 125,
+      "linesOfCode": 40983,
+      "availability": "Available",
+      "joinedDate": "2025-12-02"
+    },
+    {
+      "id": "user-13",
+      "name": "Sonja Blanda",
+      "email": "Aracely.Boehm@yahoo.com",
+      "role": "Senior Developer",
+      "team": "Backend",
+      "activeTasks": 18,
+      "completedTasks": 28,
+      "commits": 248,
+      "linesOfCode": 12113,
+      "availability": "In Meeting",
+      "joinedDate": "2024-07-07"
+    },
+    {
+      "id": "user-14",
+      "name": "Monique Greenfelder",
+      "email": "Rodrick.Spinka76@gmail.com",
+      "role": "Frontend Developer",
+      "team": "Frontend",
+      "activeTasks": 6,
+      "completedTasks": 52,
+      "commits": 232,
+      "linesOfCode": 28359,
+      "availability": "Available",
+      "joinedDate": "2025-02-25"
+    },
+    {
+      "id": "user-15",
+      "name": "Teri Braun",
+      "email": "Kiana.Swaniawski@yahoo.com",
+      "role": "DevOps Engineer",
+      "team": "Frontend",
+      "activeTasks": 13,
+      "completedTasks": 26,
+      "commits": 256,
+      "linesOfCode": 31318,
+      "availability": "Away",
+      "joinedDate": "2024-06-08"
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": "TASK-001",
+      "title": "DynamoDB security issue",
+      "status": "Pending",
+      "priority": "Low",
+      "confidenceRate": "85%",
+      "reviewer": "user-14",
+      "service": "RDS",
+      "createdDate": "2026-01-19T10:50:13.202Z"
+    },
+    {
+      "taskId": "TASK-002",
+      "title": "CloudFront policy issue",
+      "status": "Done",
+      "priority": "Low",
+      "confidenceRate": "81%",
+      "reviewer": "user-4",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-02T17:39:37.895Z"
+    },
+    {
+      "taskId": "TASK-003",
+      "title": "RDS optimization issue",
+      "status": "Ignored",
+      "priority": "Low",
+      "confidenceRate": "72%",
+      "reviewer": "user-12",
+      "service": "Lambda",
+      "createdDate": "2025-12-29T13:41:40.593Z"
+    },
+    {
+      "taskId": "TASK-004",
+      "title": "CloudFront policy issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "97%",
+      "reviewer": "user-2",
+      "service": "CloudFront",
+      "createdDate": "2026-01-04T02:27:02.525Z"
+    },
+    {
+      "taskId": "TASK-005",
+      "title": "S3 configuration issue",
+      "status": "Ignored",
+      "priority": "High",
+      "confidenceRate": "76%",
+      "reviewer": "user-1",
+      "service": "S3",
+      "createdDate": "2026-01-19T03:26:18.468Z"
+    },
+    {
+      "taskId": "TASK-006",
+      "title": "S3 optimization issue",
+      "status": "Done",
+      "priority": "Medium",
+      "confidenceRate": "98%",
+      "reviewer": "user-11",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-12T15:20:29.674Z"
+    },
+    {
+      "taskId": "TASK-007",
+      "title": "DynamoDB policy issue",
+      "status": "Todo",
+      "priority": "Medium",
+      "confidenceRate": "81%",
+      "reviewer": "user-10",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-10T09:09:57.397Z"
+    },
+    {
+      "taskId": "TASK-008",
+      "title": "CloudFront optimization issue",
+      "status": "Ignored",
+      "priority": "High",
+      "confidenceRate": "96%",
+      "reviewer": "user-4",
+      "service": "Lambda",
+      "createdDate": "2026-01-17T02:37:58.932Z"
+    },
+    {
+      "taskId": "TASK-009",
+      "title": "RDS security issue",
+      "status": "Todo",
+      "priority": "Medium",
+      "confidenceRate": "93%",
+      "reviewer": "user-2",
+      "service": "Lambda",
+      "createdDate": "2026-01-15T12:52:32.363Z"
+    },
+    {
+      "taskId": "TASK-010",
+      "title": "CloudFront configuration issue",
+      "status": "Done",
+      "priority": "Low",
+      "confidenceRate": "73%",
+      "reviewer": "user-8",
+      "service": "EC2",
+      "createdDate": "2026-01-11T19:46:55.229Z"
+    },
+    {
+      "taskId": "TASK-011",
+      "title": "CloudFront policy issue",
+      "status": "Pending",
+      "priority": "High",
+      "confidenceRate": "76%",
+      "reviewer": "user-9",
+      "service": "RDS",
+      "createdDate": "2026-01-09T15:21:24.328Z"
+    },
+    {
+      "taskId": "TASK-012",
+      "title": "EC2 configuration issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "70%",
+      "reviewer": "user-11",
+      "service": "RDS",
+      "createdDate": "2025-12-21T07:22:09.294Z"
+    },
+    {
+      "taskId": "TASK-013",
+      "title": "S3 security issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "78%",
+      "reviewer": "user-6",
+      "service": "Lambda",
+      "createdDate": "2025-12-29T09:30:21.814Z"
+    },
+    {
+      "taskId": "TASK-014",
+      "title": "CloudFront configuration issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "84%",
+      "reviewer": "user-4",
+      "service": "CloudFront",
+      "createdDate": "2025-12-26T16:50:20.224Z"
+    },
+    {
+      "taskId": "TASK-015",
+      "title": "RDS security issue",
+      "status": "Done",
+      "priority": "Low",
+      "confidenceRate": "87%",
+      "reviewer": "user-11",
+      "service": "EC2",
+      "createdDate": "2025-12-29T09:08:01.644Z"
+    },
+    {
+      "taskId": "TASK-016",
+      "title": "Lambda optimization issue",
+      "status": "Pending",
+      "priority": "Medium",
+      "confidenceRate": "91%",
+      "reviewer": "user-12",
+      "service": "CloudFront",
+      "createdDate": "2025-12-21T06:37:28.923Z"
+    },
+    {
+      "taskId": "TASK-017",
+      "title": "RDS optimization issue",
+      "status": "Done",
+      "priority": "Medium",
+      "confidenceRate": "73%",
+      "reviewer": "user-10",
+      "service": "CloudFront",
+      "createdDate": "2026-01-05T05:11:23.571Z"
+    },
+    {
+      "taskId": "TASK-018",
+      "title": "DynamoDB configuration issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "78%",
+      "reviewer": "user-11",
+      "service": "Lambda",
+      "createdDate": "2026-01-09T21:51:12.048Z"
+    },
+    {
+      "taskId": "TASK-019",
+      "title": "RDS configuration issue",
+      "status": "Todo",
+      "priority": "High",
+      "confidenceRate": "82%",
+      "reviewer": "user-6",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-12T03:00:17.769Z"
+    },
+    {
+      "taskId": "TASK-020",
+      "title": "RDS optimization issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "71%",
+      "reviewer": "user-2",
+      "service": "EC2",
+      "createdDate": "2026-01-17T20:21:21.291Z"
+    },
+    {
+      "taskId": "TASK-021",
+      "title": "S3 security issue",
+      "status": "Pending",
+      "priority": "Low",
+      "confidenceRate": "80%",
+      "reviewer": "user-8",
+      "service": "CloudFront",
+      "createdDate": "2025-12-28T12:11:26.855Z"
+    },
+    {
+      "taskId": "TASK-022",
+      "title": "CloudFront policy issue",
+      "status": "Todo",
+      "priority": "Medium",
+      "confidenceRate": "93%",
+      "reviewer": "user-7",
+      "service": "Lambda",
+      "createdDate": "2026-01-03T02:27:21.680Z"
+    },
+    {
+      "taskId": "TASK-023",
+      "title": "Lambda configuration issue",
+      "status": "Pending",
+      "priority": "Low",
+      "confidenceRate": "83%",
+      "reviewer": "user-10",
+      "service": "Lambda",
+      "createdDate": "2026-01-05T02:06:58.866Z"
+    },
+    {
+      "taskId": "TASK-024",
+      "title": "CloudFront optimization issue",
+      "status": "Todo",
+      "priority": "High",
+      "confidenceRate": "88%",
+      "reviewer": "user-9",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-11T08:11:10.646Z"
+    },
+    {
+      "taskId": "TASK-025",
+      "title": "Lambda optimization issue",
+      "status": "Done",
+      "priority": "High",
+      "confidenceRate": "95%",
+      "reviewer": "user-13",
+      "service": "CloudFront",
+      "createdDate": "2026-01-19T10:38:17.655Z"
+    },
+    {
+      "taskId": "TASK-026",
+      "title": "DynamoDB optimization issue",
+      "status": "Todo",
+      "priority": "Medium",
+      "confidenceRate": "71%",
+      "reviewer": "user-9",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-07T14:58:01.212Z"
+    },
+    {
+      "taskId": "TASK-027",
+      "title": "CloudFront optimization issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "71%",
+      "reviewer": "user-12",
+      "service": "S3",
+      "createdDate": "2026-01-18T20:18:20.721Z"
+    },
+    {
+      "taskId": "TASK-028",
+      "title": "S3 configuration issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "73%",
+      "reviewer": "user-12",
+      "service": "S3",
+      "createdDate": "2026-01-12T17:47:51.594Z"
+    },
+    {
+      "taskId": "TASK-029",
+      "title": "RDS configuration issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "76%",
+      "reviewer": "user-7",
+      "service": "CloudFront",
+      "createdDate": "2026-01-09T09:43:45.271Z"
+    },
+    {
+      "taskId": "TASK-030",
+      "title": "EC2 policy issue",
+      "status": "Done",
+      "priority": "Low",
+      "confidenceRate": "92%",
+      "reviewer": "user-5",
+      "service": "S3",
+      "createdDate": "2026-01-07T05:45:27.370Z"
+    },
+    {
+      "taskId": "TASK-031",
+      "title": "CloudFront optimization issue",
+      "status": "Done",
+      "priority": "Low",
+      "confidenceRate": "82%",
+      "reviewer": "user-13",
+      "service": "CloudFront",
+      "createdDate": "2026-01-13T02:31:26.062Z"
+    },
+    {
+      "taskId": "TASK-032",
+      "title": "Lambda optimization issue",
+      "status": "Pending",
+      "priority": "Low",
+      "confidenceRate": "71%",
+      "reviewer": "user-1",
+      "service": "S3",
+      "createdDate": "2026-01-16T19:16:18.219Z"
+    },
+    {
+      "taskId": "TASK-033",
+      "title": "EC2 security issue",
+      "status": "Ignored",
+      "priority": "Low",
+      "confidenceRate": "81%",
+      "reviewer": "user-2",
+      "service": "S3",
+      "createdDate": "2026-01-05T23:46:29.663Z"
+    },
+    {
+      "taskId": "TASK-034",
+      "title": "DynamoDB optimization issue",
+      "status": "Ignored",
+      "priority": "Low",
+      "confidenceRate": "83%",
+      "reviewer": "user-5",
+      "service": "RDS",
+      "createdDate": "2026-01-15T00:21:57.075Z"
+    },
+    {
+      "taskId": "TASK-035",
+      "title": "Lambda configuration issue",
+      "status": "Todo",
+      "priority": "Medium",
+      "confidenceRate": "89%",
+      "reviewer": "user-4",
+      "service": "S3",
+      "createdDate": "2026-01-06T06:39:13.746Z"
+    },
+    {
+      "taskId": "TASK-036",
+      "title": "CloudFront policy issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "95%",
+      "reviewer": "user-11",
+      "service": "DynamoDB",
+      "createdDate": "2025-12-22T07:43:53.226Z"
+    },
+    {
+      "taskId": "TASK-037",
+      "title": "Lambda optimization issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "97%",
+      "reviewer": "user-13",
+      "service": "Lambda",
+      "createdDate": "2025-12-24T01:30:41.927Z"
+    },
+    {
+      "taskId": "TASK-038",
+      "title": "Lambda optimization issue",
+      "status": "Pending",
+      "priority": "Medium",
+      "confidenceRate": "96%",
+      "reviewer": "user-6",
+      "service": "Lambda",
+      "createdDate": "2026-01-01T10:57:26.527Z"
+    },
+    {
+      "taskId": "TASK-039",
+      "title": "DynamoDB security issue",
+      "status": "Done",
+      "priority": "High",
+      "confidenceRate": "85%",
+      "reviewer": "user-7",
+      "service": "RDS",
+      "createdDate": "2025-12-28T10:16:18.153Z"
+    },
+    {
+      "taskId": "TASK-040",
+      "title": "DynamoDB security issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "74%",
+      "reviewer": "user-5",
+      "service": "S3",
+      "createdDate": "2025-12-23T12:31:51.522Z"
+    },
+    {
+      "taskId": "TASK-041",
+      "title": "RDS configuration issue",
+      "status": "Todo",
+      "priority": "Medium",
+      "confidenceRate": "91%",
+      "reviewer": "user-15",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-08T22:30:13.044Z"
+    },
+    {
+      "taskId": "TASK-042",
+      "title": "CloudFront optimization issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "82%",
+      "reviewer": "user-3",
+      "service": "RDS",
+      "createdDate": "2026-01-01T12:30:27.401Z"
+    },
+    {
+      "taskId": "TASK-043",
+      "title": "DynamoDB optimization issue",
+      "status": "Ignored",
+      "priority": "Medium",
+      "confidenceRate": "84%",
+      "reviewer": "user-14",
+      "service": "DynamoDB",
+      "createdDate": "2026-01-01T23:08:15.426Z"
+    },
+    {
+      "taskId": "TASK-044",
+      "title": "DynamoDB configuration issue",
+      "status": "Ignored",
+      "priority": "High",
+      "confidenceRate": "83%",
+      "reviewer": "user-10",
+      "service": "CloudFront",
+      "createdDate": "2025-12-31T01:44:15.580Z"
+    },
+    {
+      "taskId": "TASK-045",
+      "title": "DynamoDB configuration issue",
+      "status": "Todo",
+      "priority": "Low",
+      "confidenceRate": "75%",
+      "reviewer": "user-3",
+      "service": "RDS",
+      "createdDate": "2026-01-19T19:42:48.383Z"
+    },
+    {
+      "taskId": "TASK-046",
+      "title": "EC2 optimization issue",
+      "status": "Pending",
+      "priority": "High",
+      "confidenceRate": "71%",
+      "reviewer": "user-4",
+      "service": "S3",
+      "createdDate": "2025-12-26T14:24:16.028Z"
+    },
+    {
+      "taskId": "TASK-047",
+      "title": "S3 optimization issue",
+      "status": "Done",
+      "priority": "High",
+      "confidenceRate": "74%",
+      "reviewer": "user-15",
+      "service": "CloudFront",
+      "createdDate": "2026-01-06T05:53:40.180Z"
+    },
+    {
+      "taskId": "TASK-048",
+      "title": "DynamoDB security issue",
+      "status": "Pending",
+      "priority": "High",
+      "confidenceRate": "88%",
+      "reviewer": "user-13",
+      "service": "RDS",
+      "createdDate": "2026-01-12T20:01:42.093Z"
+    },
+    {
+      "taskId": "TASK-049",
+      "title": "DynamoDB configuration issue",
+      "status": "Pending",
+      "priority": "High",
+      "confidenceRate": "83%",
+      "reviewer": "user-5",
+      "service": "S3",
+      "createdDate": "2026-01-12T01:22:38.942Z"
+    },
+    {
+      "taskId": "TASK-050",
+      "title": "EC2 configuration issue",
+      "status": "Ignored",
+      "priority": "High",
+      "confidenceRate": "87%",
+      "reviewer": "user-11",
+      "service": "RDS",
+      "createdDate": "2025-12-26T21:53:26.496Z"
+    }
+  ],
+  "awsCosts": [
+    {
+      "month": "January",
+      "service": "S3",
+      "cost": 771.2938912253935,
+      "usage": 1911
+    },
+    {
+      "month": "January",
+      "service": "EC2",
+      "cost": 351.849090681607,
+      "usage": 6327
+    },
+    {
+      "month": "January",
+      "service": "Lambda",
+      "cost": 945.2443927935136,
+      "usage": 5362
+    },
+    {
+      "month": "January",
+      "service": "DynamoDB",
+      "cost": 561.4245413421484,
+      "usage": 7909
+    },
+    {
+      "month": "January",
+      "service": "RDS",
+      "cost": 902.627464731501,
+      "usage": 9931
+    },
+    {
+      "month": "January",
+      "service": "CloudFront",
+      "cost": 871.5146319353016,
+      "usage": 6214
+    },
+    {
+      "month": "February",
+      "service": "S3",
+      "cost": 631.6072077840591,
+      "usage": 5776
+    },
+    {
+      "month": "February",
+      "service": "EC2",
+      "cost": 794.5856946192581,
+      "usage": 1838
+    },
+    {
+      "month": "February",
+      "service": "Lambda",
+      "cost": 377.8305890133102,
+      "usage": 3778
+    },
+    {
+      "month": "February",
+      "service": "DynamoDB",
+      "cost": 149.4479156087993,
+      "usage": 4104
+    },
+    {
+      "month": "February",
+      "service": "RDS",
+      "cost": 619.5294129604725,
+      "usage": 8285
+    },
+    {
+      "month": "February",
+      "service": "CloudFront",
+      "cost": 252.43067183951163,
+      "usage": 4816
+    },
+    {
+      "month": "March",
+      "service": "S3",
+      "cost": 419.8553969677009,
+      "usage": 2361
+    },
+    {
+      "month": "March",
+      "service": "EC2",
+      "cost": 566.6674203068455,
+      "usage": 6326
+    },
+    {
+      "month": "March",
+      "service": "Lambda",
+      "cost": 611.6284337221491,
+      "usage": 9405
+    },
+    {
+      "month": "March",
+      "service": "DynamoDB",
+      "cost": 183.4384547392674,
+      "usage": 7917
+    },
+    {
+      "month": "March",
+      "service": "RDS",
+      "cost": 705.2148826359528,
+      "usage": 1974
+    },
+    {
+      "month": "March",
+      "service": "CloudFront",
+      "cost": 383.38003442560944,
+      "usage": 9298
+    },
+    {
+      "month": "April",
+      "service": "S3",
+      "cost": 465.6222421470509,
+      "usage": 7626
+    },
+    {
+      "month": "April",
+      "service": "EC2",
+      "cost": 144.38347382807467,
+      "usage": 6015
+    },
+    {
+      "month": "April",
+      "service": "Lambda",
+      "cost": 566.7455381243421,
+      "usage": 9920
+    },
+    {
+      "month": "April",
+      "service": "DynamoDB",
+      "cost": 232.8477741372375,
+      "usage": 4506
+    },
+    {
+      "month": "April",
+      "service": "RDS",
+      "cost": 735.821295689147,
+      "usage": 3798
+    },
+    {
+      "month": "April",
+      "service": "CloudFront",
+      "cost": 360.7342639063729,
+      "usage": 3888
+    },
+    {
+      "month": "May",
+      "service": "S3",
+      "cost": 810.2446777998989,
+      "usage": 2263
+    },
+    {
+      "month": "May",
+      "service": "EC2",
+      "cost": 265.40148332811816,
+      "usage": 5281
+    },
+    {
+      "month": "May",
+      "service": "Lambda",
+      "cost": 997.3143318018474,
+      "usage": 4680
+    },
+    {
+      "month": "May",
+      "service": "DynamoDB",
+      "cost": 970.7733693967609,
+      "usage": 4758
+    },
+    {
+      "month": "May",
+      "service": "RDS",
+      "cost": 837.0444199457518,
+      "usage": 8697
+    },
+    {
+      "month": "May",
+      "service": "CloudFront",
+      "cost": 360.72630996204094,
+      "usage": 1923
+    },
+    {
+      "month": "June",
+      "service": "S3",
+      "cost": 613.5626777289518,
+      "usage": 2973
+    },
+    {
+      "month": "June",
+      "service": "EC2",
+      "cost": 527.4116905713256,
+      "usage": 7907
+    },
+    {
+      "month": "June",
+      "service": "Lambda",
+      "cost": 896.6032634835065,
+      "usage": 9392
+    },
+    {
+      "month": "June",
+      "service": "DynamoDB",
+      "cost": 854.6983141249079,
+      "usage": 9471
+    },
+    {
+      "month": "June",
+      "service": "RDS",
+      "cost": 748.1654931072667,
+      "usage": 7002
+    },
+    {
+      "month": "June",
+      "service": "CloudFront",
+      "cost": 873.0264787879008,
+      "usage": 7941
+    }
+  ]
+}
