@@ -61,7 +61,7 @@ const tasks = Array.from({ length: NUMBER_OF_TASKS }, (_, i) => ({
   status: faker.helpers.arrayElement(statuses),
   priority: faker.helpers.arrayElement(priorities),
   confidenceRate: `${faker.number.int({ min: 0, max: 99 })}%`,
-  reviewer: faker.helpers.arrayElement(teamMembers).id,
+  reviewer: Math.random() <= .40 ? faker.helpers.arrayElement(teamMembers).firstName : "",
   service: faker.helpers.arrayElement(services),
   createdDate: faker.date.recent({ days: 30 }).toISOString()
 }));
