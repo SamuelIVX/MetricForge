@@ -1,3 +1,7 @@
+/*
+ npm run generate-data 
+ npm run mock-api
+*/
 import { faker } from '@faker-js/faker';
 import fs from 'fs';
 
@@ -20,11 +24,25 @@ const availability = ['Available', 'In Meeting', 'Away'];
 const type = ['configuration', 'policy', 'security', 'optimization'];
 const months = ['January', 'February', 'March', 'April', 'May', 'June'];
 
+const NUMBER_OF_MEMBERS = 15
+const NUMBER_OF_TASKS = 50
+
+const fullNames = []
+function generateNames(){
+   for (let i = 0; i < NUMBER_OF_MEMBERS; i++) {
+      fullNames.push([faker.person.firstName(), faker.person.lastName()]);
+   }
+
+   return fullNames;
+}
+generateNames();
+
 // Generate team members
-const teamMembers = Array.from({ length: 15 }, (_, i) => ({
+const teamMembers = Array.from({ length: NUMBER_OF_MEMBERS }, (_, i) => ({
   id: `user-${i + 1}`,
-  name: faker.person.fullName(),
-  email: faker.internet.email(),
+  firstName: fullNames[i][0],
+  lastName: fullNames[i][1],
+  email: faker.internet.email({firstName: fullNames[i][0], lastName: fullNames[i][1]}),
   role: faker.helpers.arrayElement(role),
   team: faker.helpers.arrayElement(team),
   activeTasks: faker.number.int({ min: 3, max: 20 }),
@@ -36,12 +54,12 @@ const teamMembers = Array.from({ length: 15 }, (_, i) => ({
 }));
 
 // Generate tasks
-const tasks = Array.from({ length: 50 }, (_, i) => ({
+const tasks = Array.from({ length: NUMBER_OF_TASKS }, (_, i) => ({
   taskId: `TASK-${String(i + 1).padStart(3, '0')}`,
   title: `${faker.helpers.arrayElement(services)} ${faker.helpers.arrayElement(type)} issue`,
   status: faker.helpers.arrayElement(statuses),
   priority: faker.helpers.arrayElement(priorities),
-  confidenceRate: `${faker.number.int({ min: 70, max: 99 })}%`,
+  confidenceRate: `${faker.number.int({ min: 0, max: 99 })}%`,
   reviewer: faker.helpers.arrayElement(teamMembers).id,
   service: faker.helpers.arrayElement(services),
   createdDate: faker.date.recent({ days: 30 }).toISOString()
