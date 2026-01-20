@@ -14,7 +14,7 @@ export function CurrentTask({ task, status, status_color, issue }: CurrentTaskPr
     )
 }
 
-export default function CurrentTasks() {
+export default function ListCurrentTasks() {
     return (
         <Card className="bg-[#0b0b0d]">
 

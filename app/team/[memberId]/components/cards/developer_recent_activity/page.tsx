@@ -15,7 +15,7 @@ export function Activity({ color, assignment, time_completed }: ActivityProps) {
                 <div className="w-px flex-1 bg-[#404040] mt-2 mb-2" />
             </div>
 
-            <div className="flex-1 pb-4">
+            <div className="flex-1 pb-2.5">
                 <p className="text-sm font-semibold text-white">{assignment}</p>
                 <p className="text-xs text-muted-foreground">{time_completed}</p>
             </div>
