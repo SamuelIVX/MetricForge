@@ -1,9 +1,18 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardContent } from "@/components/ui/card"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { MemberCardProps } from "./types"
+import { MemberCardProps, MemberDetailsProps } from "./types"
+
+export function MemberDetails({ statistic, title, color } : MemberDetailsProps){
+    return (
+        <div className="text-center">
+            <p className={`text-lg font-bold ${color}`}>{statistic}</p>
+            <p className="text-xs text-muted-foreground">{title}</p>
+        </div>
+    )
+}
 
 export default function MemberCard(
     {
@@ -49,30 +58,31 @@ export default function MemberCard(
                         </div>
 
                         <div className="flex items-center gap-8">
+                            
+                            <MemberDetails 
+                                statistic={activeTasks}
+                                title="Active"
+                                color="text-blue-500"
+                            />
 
-                            <div className="text-center">
-                                <p className="text-lg font-bold text-blue-500">{activeTasks}</p>
-                                <p className="text-xs text-muted-foreground">Active</p>
-                            </div>
+                            <MemberDetails 
+                                statistic={completedTasks}
+                                title="Done"
+                                color="text-green-500"
+                            />
 
-                            <div className="text-center">
-                                <p className="text-lg font-bold text-green-500">{completedTasks}</p>
-                                <p className="text-xs text-muted-foreground">Done</p>
-                            </div>
-
-                            <div className="text-center">
-                                <p className="text-lg font-bold text-purple-500">{commits}</p>
-                                <p className="text-xs text-muted-foreground">Commits</p>
-                            </div>
+                            <MemberDetails 
+                                statistic={commits}
+                                title="Commits"
+                                color="text-purple-500"
+                            />
 
                             <Badge
                                 variant="outline"
                                 className={
-                                    availability === "Available"
-                                        ? "text-green-500 border-green-500/30 bg-green-500/10"
-                                        : availability === "In Meeting"
-                                            ? "text-amber-500 border-amber-500/30 bg-amber-500/10"
-                                            : "text-gray-500 border-gray-500/30 bg-gray-500/10"
+                                    availability === "Available" ? "text-green-500 border-green-500/30 bg-green-500/10"
+                                    : availability === "In Meeting" ? "text-amber-500 border-amber-500/30 bg-amber-500/10"
+                                    : "text-gray-500 border-gray-500/30 bg-gray-500/10"
                                 }
                             >
                                 {availability}

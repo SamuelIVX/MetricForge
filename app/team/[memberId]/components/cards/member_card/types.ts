@@ -10,3 +10,9 @@ export type MemberCardProps = {
     availability: string
     team: string
 }
+
+export type MemberDetailsProps = {
+    statistic: number,
+    title: string,
+    color: string
+}
