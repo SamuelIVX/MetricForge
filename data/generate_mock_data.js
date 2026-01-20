@@ -43,12 +43,13 @@ const teamMembers = Array.from({ length: NUMBER_OF_MEMBERS }, (_, i) => ({
   firstName: fullNames[i][0],
   lastName: fullNames[i][1],
   email: faker.internet.email({firstName: fullNames[i][0], lastName: fullNames[i][1]}),
+  location: `${faker.location.city}, ${faker.location.state({abbreviated: true})}`,
   role: faker.helpers.arrayElement(role),
   team: faker.helpers.arrayElement(team),
-  activeTasks: faker.number.int({ min: 3, max: 20 }),
-  completedTasks: faker.number.int({ min: 20, max: 80 }),
-  commits: faker.number.int({ min: 50, max: 300 }),
-  linesOfCode: faker.number.int({ min: 5000, max: 50000 }),
+  activeTasks: faker.number.int({ min: 1, max: 3 }),
+  completedTasks: faker.number.int({ min: 5, max: 20 }),
+  commits: faker.number.int({ min: 3, max: 12 }),
+  linesOfCode: faker.number.int({ min: 500, max: 3000 }),
   availability: faker.helpers.arrayElement(availability),
   joinedDate: faker.date.past({ years: 2 }).toISOString().split('T')[0]
 }));
