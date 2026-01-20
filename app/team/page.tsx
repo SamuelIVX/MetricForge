@@ -1,4 +1,4 @@
-import MemberCard from "./member_card/page"
+import MemberCard from "./[memberId]/components/cards/member_card/page"
 
 // Mock Data
 const teamMembers = [
