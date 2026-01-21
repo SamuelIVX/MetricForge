@@ -1,8 +1,8 @@
-import ActiveHoursLineChart from "./charts/developer_active_hours/page"
-import DeveloperGitStats from "./charts/developer_stats/page"
-import DeveloperCurrentTasks from "./charts/developer_tasks/page"
-import ListCurrentTasks from "./cards/developer_current_tasks/page"
-import RecentActivity from "./cards/developer_recent_activity/page"
+import ActiveHoursLineChart from "./charts/developer_active_hours/chart"
+import DeveloperGitStats from "./charts/developer_stats/chart"
+import DeveloperCurrentTasks from "./charts/developer_tasks/chart"
+import ListCurrentTasks from "./cards/developer_current_tasks/card"
+import RecentActivity from "./cards/developer_recent_activity/card"
 import DeveloperHealthCard from "./cards/developer_performance/card"
 
 export default function MainContent() {
