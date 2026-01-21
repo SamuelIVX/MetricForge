@@ -1,6 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2 } from "lucide-react"
+import { DeveloperMetricsProps, DeveloperStatutesProps } from "./types"
+
+export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps){
+    return (
+         <div className="text-center p-2 bg-[#1a1a1a] rounded border border-[#404040]">
+            <p className={`text-xl font-bold ${color}`}>{stat}</p>
+            <p className="text-xs text-muted-foreground">{title}</p>
+        </div>
+    )
+}
+
+export function DeveloperStatuses({ title, status, color } : DeveloperStatutesProps){
+    return (
+        <div className="flex items-center justify-between text-xs p-2 bg-[#1a1a1a] rounded border border-[#404040]">
+            <span className="text-muted-foreground">{title}</span>
+            <span className={`${color}`}>{status}</span>
+        </div>
+    )
+}
 
 export default function DeveloperHealthCard(){
     return (
@@ -9,6 +28,7 @@ export default function DeveloperHealthCard(){
             <CardHeader>
                 
                 <div className="flex">
+
                     <CardTitle className="text-lg text-white">Developer Health</CardTitle>
 
                         <div className="ml-2">
@@ -27,50 +47,61 @@ export default function DeveloperHealthCard(){
                 {/* Compact metrics */}
                 <div className="grid grid-cols-4 gap-2">
 
-                    <div className="text-center p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                        <p className="text-xl font-bold text-green-500">92%</p>
-                        <p className="text-xs text-muted-foreground">Completion Rate</p>
-                    </div>
+                    <DeveloperMetrics 
+                        title="Completion Rate"
+                        stat="92%"
+                        color="text-green-500"
+                    />
 
-                    <div className="text-center p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                        <p className="text-xl font-bold text-blue-500">11 / 14</p>
-                        <p className="text-xs text-muted-foreground">Active Days</p>
-                    </div>
+                      <DeveloperMetrics 
+                        title="Active Days"
+                        stat="11/14"
+                        color="text-blue-500"
+                    />
 
-                    <div className="text-center p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                        <p className="text-xl font-bold text-purple-500">1.6</p>
-                        <p className="text-xs text-muted-foreground">Average Review Time</p>
-                    </div>
 
-                    <div className="text-center p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                        <p className="text-xl font-bold text-amber-500">2</p>
-                        <p className="text-xs text-muted-foreground">OverDue Tasks</p>
-                    </div>
+                    <DeveloperMetrics 
+                        title="Average Review Time"
+                        stat="1.6"
+                        color="text-purple-500"
+                    />
+
+                    <DeveloperMetrics 
+                        title="Overdue Tasks"
+                        stat="2"
+                        color="text-amber-500"
+                    />
 
                 </div>
 
                 {/* Status row */}
-                <div className="flex items-center justify-between text-xs p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                    <span className="text-muted-foreground">Workload</span>
-                    <span className="text-blue-500">Balanced</span>
-                </div>
 
-                <div className="flex items-center justify-between text-xs p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                    <span className="text-muted-foreground">Burnout Risk</span>
-                    <span className="text-green-500">Low</span>
-                </div>
+                <DeveloperStatuses 
+                    title="Workload"
+                    status="Balanced"
+                    color="text-blue-500"
+                />
 
-                <div className="flex items-center justify-between text-xs p-2 bg-[#1a1a1a] rounded border border-[#404040]">
-                    <span className="text-muted-foreground">Context Switching</span>
-                    <span className="text-blue-500">Normal</span>
-                </div>
+                <DeveloperStatuses 
+                    title="Burnout Risk"
+                    status="Low"
+                    color="text-green-500"
+                />
+
+                <DeveloperStatuses 
+                    title="Context Switching"
+                    status="Normal"
+                    color="text-blue-500"
+                />
 
                 {/* Risk indicators */}
                 <div className="p-1 bg-green-500/10 border border-green-500/30 rounded-lg">
+
                     <div className="flex items-center gap-2 text-sm text-green-500">
                         <CheckCircle2 className="h-4 w-4" />
                         <span>No action required. Re-evaluate in 7-days.</span>
                     </div>
+                    
                 </div>
 
             </CardContent>
