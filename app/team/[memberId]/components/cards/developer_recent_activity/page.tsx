@@ -15,7 +15,7 @@ export function Activity({ color, assignment, time_completed }: ActivityProps) {
                 <div className="w-px flex-1 bg-[#404040] mt-2 mb-2" />
             </div>
 
-            <div className="flex-1 pb-2.5">
+            <div className="flex-1 pb-2">
                 <p className="text-sm font-semibold text-white">{assignment}</p>
                 <p className="text-xs text-muted-foreground">{time_completed}</p>
             </div>
@@ -28,7 +28,7 @@ export default function RecentActivity() {
         <Card className="bg-[#0b0b0b]">
 
             <CardHeader>
-                <CardTitle className="text-white">Recent Activity</CardTitle>
+                <CardTitle className="text-lg text-white">Recent Activity</CardTitle>
                 <CardDescription>Latest actions and updates</CardDescription>
             </CardHeader>
 

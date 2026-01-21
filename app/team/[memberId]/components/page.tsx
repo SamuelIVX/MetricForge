@@ -3,6 +3,7 @@ import DeveloperGitStats from "./charts/developer_stats/page"
 import DeveloperCurrentTasks from "./charts/developer_tasks/page"
 import ListCurrentTasks from "./cards/developer_current_tasks/page"
 import RecentActivity from "./cards/developer_recent_activity/page"
+import DeveloperHealthCard from "./cards/developer_performance/card"
 
 export default function MainContent() {
     return (
@@ -33,7 +34,7 @@ export default function MainContent() {
                 </div>
 
                 <div>
-                    Content
+                    <DeveloperHealthCard />
                 </div>
             </div>
 
