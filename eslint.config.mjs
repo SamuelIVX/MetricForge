@@ -6,8 +6,13 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
+    settings: {
+      react: {
+        version: "detect",
+      }
+    },
     rules: {
-      'n/no-missing-import': 'off',
+      'n/no-missing-import': 0,
     }
   },
   // Override default ignores of eslint-config-next.
