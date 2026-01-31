@@ -28,10 +28,9 @@ import {
 } from "@/components/ui/select"
 
 import { IconSquarePlus } from "@tabler/icons-react"
-import { Props } from "./types";
+import { AddTaskDialogProps } from "./types";
 
-
-export function AddTaskDialog({ onAdd }: Props) {
+export function AddTaskDialog({ onAdd }: AddTaskDialogProps) {
     const [form, setForm] = useState<Omit<TaskDetails, "taskId">>({
         title: "",
         status: "",
