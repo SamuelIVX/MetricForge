@@ -122,8 +122,12 @@ export function ChartPieDonutText() {
                         </Pie>
 
                         <ChartLegend
-                            content={<ChartLegendContent nameKey="browser" />}
-                            className="-translate-y-2 flex-wrap gap-2 *:basis-1/4 *:justify-center mt-5"
+                            content={
+                                <ChartLegendContent
+                                    nameKey="browser"
+                                    className="-translate-y-2 flex-wrap gap-2 *:basis-1/4 *:justify-center mt-5"
+                                />
+                            }
                         />
 
                     </PieChart>
