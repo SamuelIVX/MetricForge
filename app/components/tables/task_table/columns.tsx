@@ -173,7 +173,10 @@ export const columns: ColumnDef<TaskDetails>[] = [
                         table.options.meta?.updateData?.(row.original.taskId, value);
                     }}
                 >
-                    <SelectTrigger className="w-45">
+                    <SelectTrigger
+                        aria-label={`Reviewer for ${row.original.title}`}
+                        className="w-45"
+                    >
                         <SelectValue
                             placeholder="Assign Reviewer"
                             className="bg-(--pill-text-color)"
@@ -208,6 +211,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
                         <Button
                             variant="ghost"
                             size="sm"
+                            aria-label="Task actions"
                         >
                             <Ellipsis />
                         </Button>
