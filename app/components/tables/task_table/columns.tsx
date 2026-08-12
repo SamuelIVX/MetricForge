@@ -211,7 +211,7 @@ export const columns: ColumnDef<TaskDetails>[] = [
                         <Button
                             variant="ghost"
                             size="sm"
-                            aria-label="Task actions"
+                            aria-label={`Task actions for ${row.original.title}`}
                         >
                             <Ellipsis />
                         </Button>
