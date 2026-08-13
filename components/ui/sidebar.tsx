@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui Sidebar primitives powering the app shell.
+ */
+
+/**
  * shadcn/ui Sidebar system (provider, trigger, inset, menu primitives).
  * Persists open state in a cookie (`sidebar_state`).
  */

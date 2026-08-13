@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui Separator primitive for visual dividers.
+ */
+
+/**
  * shadcn/ui Separator for visual dividers.
  */
 import * as React from "react"

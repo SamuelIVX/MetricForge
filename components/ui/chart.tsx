@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui chart helpers wrapping Recharts for themed charts.
+ */
+
+/**
  * shadcn/ui Recharts helpers (ChartContainer, tooltip, legend, config).
  */
 import * as React from "react"

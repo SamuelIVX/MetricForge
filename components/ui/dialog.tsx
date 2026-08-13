@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui Dialog primitive for modal workflows.
+ */
+
+/**
  * shadcn/ui Dialog (modal) primitives built on Radix Dialog.
  */
 import * as React from "react"

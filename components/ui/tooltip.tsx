@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui Tooltip primitive for hover affordances.
+ */
+
+/**
  * shadcn/ui Tooltip primitives built on Radix Tooltip.
  */
 import * as React from "react"

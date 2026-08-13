@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui Sheet (slide-over) primitive for mobile/side panels.
+ */
+
+/**
  * shadcn/ui Sheet (slide-over) primitives built on Radix Dialog.
  */
 import * as React from "react"

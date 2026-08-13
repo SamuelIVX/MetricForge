@@ -1,6 +1,10 @@
 "use client"
 
 /**
+ * shadcn/ui Checkbox primitive for multi-select filters.
+ */
+
+/**
  * shadcn/ui Checkbox built on Radix Checkbox.
  */
 import * as React from "react"
