@@ -45,6 +45,8 @@ import { Separator } from "@/components/ui/separator"
  * @param columns - column definitions.
  * @param data - historical rows.
  * @returns Table UI.
+ * @example
+ * <HistoryTable columns={columns} data={historyRows} />
  */
 export function HistoryTable<TData, TValue>({
     columns,

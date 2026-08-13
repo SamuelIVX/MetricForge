@@ -11,6 +11,8 @@ import { DeveloperMetricsProps, DeveloperStatutesProps } from "./types"
  * @param title - label.
  * @param stat - value.
  * @param color - accent.
+ * @example
+ * <DeveloperMetrics title="PRs" stat="14" color="#22c55e" />
  */
 export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps){
     return (
@@ -26,6 +28,8 @@ export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps)
  * @param title - label.
  * @param status - status text.
  * @param color - accent.
+ * @example
+ * <DeveloperStatuses title="Availability" status="Available" color="#22c55e" />
  */
 export function DeveloperStatuses({ title, status, color } : DeveloperStatutesProps){
     return (
@@ -39,6 +43,8 @@ export function DeveloperStatuses({ title, status, color } : DeveloperStatutesPr
 /**
  * Aggregated developer health card.
  * @returns Performance panel.
+ * @example
+ * <DeveloperHealthCard />
  */
 export default function DeveloperHealthCard(){
     return (

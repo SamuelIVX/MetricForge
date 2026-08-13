@@ -38,6 +38,8 @@ import TaskTableChartMetrics from "@/app/components/charts/taskTableCharts/taskI
  * @param headerActions - optional toolbar actions (e.g. add-task).
  * @param meta - TanStack table meta (reviewer change handlers, etc.).
  * @returns Table UI with toolbar.
+ * @example
+ * <TaskTable columns={columns} data={tasks} headerActions={<AddTaskDialog onAdd={...} />} />
  */
 export function TaskTable<TData, TValue>({
     columns,

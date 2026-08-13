@@ -7,6 +7,8 @@ import { ChartBarStacked } from "@/app/components/charts/[taskId]Charts/barchart
 /**
  * Layout wrapper for the wider left column on `/tasks/[taskId]`.
  * @returns Chart + service usage table stacked in a two-span column.
+ * @example
+ * <LeftColumnContent />
  */
 export default function LeftColumnContent() {
     return (

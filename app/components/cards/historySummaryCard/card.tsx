@@ -14,6 +14,8 @@ import { HistoryCardProps } from "./types";
  * @param title - Label prefix shown before the value.
  * @param value - Hardcoded metric value for the demo UI.
  * @returns A dark history summary card tile.
+ * @example
+ * <HistoryCard title="Resolved" value="12" />
  */
 export function HistoryCard({ title, value }: HistoryCardProps) {
     return (
@@ -35,6 +37,8 @@ export function HistoryCard({ title, value }: HistoryCardProps) {
 /**
  * Grid of demo history KPI cards (completed, accepted, ignored, etc.).
  * @returns Five-column history summary card layout with static values.
+ * @example
+ * <HistoryCards />
  */
 export default function HistoryCards() {
     return (

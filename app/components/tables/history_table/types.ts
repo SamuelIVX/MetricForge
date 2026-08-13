@@ -3,7 +3,6 @@
  */
 import { ColumnDef } from "@tanstack/react-table"
 
-/** Props for the generic `HistoryTable` component. */
 /**
  * Generic props for `HistoryTable`.
  * @param columns - TanStack column defs.
@@ -14,7 +13,6 @@ export interface HistoryTableProps<TData, TValue> {
     data: TData[]
 }
 
-/** Row model for a historical decision outcome. */
 /**
  * One closed/historical decision row shown in the history table.
  */

@@ -8,6 +8,8 @@ import { ChartPieLabel } from "./piechart";
 /**
  * Renders the three demo charts on the decisions history page.
  * @returns Three-column grid of history insight charts.
+ * @example
+ * <HistoryTableChartMetrics />
  */
 export default function HistoryTableChartMetrics() {
     return (

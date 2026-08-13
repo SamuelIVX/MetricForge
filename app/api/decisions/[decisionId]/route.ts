@@ -7,6 +7,8 @@ import { NextResponse } from "next/server"
 /**
  * Handle a decision by id (not implemented).
  * @returns JSON `{ message }` with HTTP 501.
+ * @example
+ * // POST /api/decisions/:decisionId → 501 { message: "Not implemented yet" }
  */
 export async function POST() {
     return NextResponse.json(

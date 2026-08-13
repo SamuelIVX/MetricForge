@@ -8,6 +8,8 @@ import { ChartPieLabel } from "./piechart";
 /**
  * Renders the three demo charts above/beside the tasks table.
  * @returns Three-column grid of task insight charts.
+ * @example
+ * <TaskTableChartMetrics />
  */
 export default function TaskTableChartMetrics() {
     return (

@@ -8,6 +8,8 @@ import RelatedTasks from "./related_tasks"
 /**
  * Layout wrapper for the narrow right column on `/tasks/[taskId]`.
  * @returns Donut chart, recommended actions, and related issues stack.
+ * @example
+ * <RightColumnContent />
  */
 export default function RightColumnContent() {
     return (

@@ -74,6 +74,8 @@ const invoices = [
 /**
  * Service usage card/table with hardcoded demo rows.
  * @returns Usage table inside a card.
+ * @example
+ * <ServiceUsageTable />
  */
 export function ServiceUsageTable() {
     return (

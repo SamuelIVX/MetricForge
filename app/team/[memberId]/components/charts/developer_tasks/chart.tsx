@@ -7,6 +7,8 @@ import { ChartPieDonutText } from "@/app/components/charts/[memberId]Charts/piec
 /**
  * Placeholder current-tasks chart for the member profile.
  * @returns Placeholder chart component for the member detail layout.
+ * @example
+ * <DeveloperCurrentTasks />
  */
 export default function DeveloperCurrentTasks() {
     return (

@@ -62,6 +62,8 @@ const items = [
 /**
  * MetricForge application sidebar using shadcn Sidebar primitives.
  * @returns Sidebar chrome with route links.
+ * @example
+ * <AppSidebar />
  */
 export function AppSidebar() {
 

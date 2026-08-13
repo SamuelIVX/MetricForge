@@ -1,7 +1,10 @@
-/*
- npm run generate-data 
- npm run mock-api
-*/
+/**
+ * Generates faker-based mock team, task, and AWS cost rows into top-level `db.json`
+ * for local `json-server` (`npm run mock-api`).
+ *
+ * Run: `npm run generate-data` (node data/generate_mock_data.js).
+ * Side effect: overwrites `db.json` in the repo root.
+ */
 import { faker } from '@faker-js/faker';
 import fs from 'fs';
 
@@ -28,6 +31,13 @@ const NUMBER_OF_MEMBERS = 15
 const NUMBER_OF_TASKS = 50
 
 const fullNames = []
+
+/**
+ * Fills `fullNames` with `[firstName, lastName]` pairs for each mock member.
+ * @returns {string[][]} The shared `fullNames` array after population.
+ * @example
+ * generateNames() // => [["Ada","Lovelace"], ...] length NUMBER_OF_MEMBERS
+ */
 function generateNames(){
    for (let i = 0; i < NUMBER_OF_MEMBERS; i++) {
       fullNames.push([faker.person.firstName(), faker.person.lastName()]);

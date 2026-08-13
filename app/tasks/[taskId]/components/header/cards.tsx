@@ -11,6 +11,8 @@ import { MetaDataProps } from "../../types"
  * @param title - label.
  * @param subcontent - value text.
  * @param color - accent color class.
+ * @example
+ * <MetaDataCard Icon={IconClock} title="Age" subcontent="2d" color="#22c55e" />
  */
 export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) {
     return (
@@ -34,6 +36,8 @@ export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) 
 /**
  * Row of static metadata cards.
  * @returns Metadata card grid.
+ * @example
+ * <MetaDataCards />
  */
 export default function MetaDataCards() {
     return (

@@ -16,6 +16,9 @@ import { Separator } from "@/components/ui/separator"
  * Member dashboard page.
  * @param params - route params promise with `memberId`.
  * @returns Member layout.
+ * @example
+ * // Route `/team/[memberId]`
+ * <Member params={Promise.resolve({ memberId: "1" })} />
  */
 export default async function Member({ params }: PageProps) {
     const { memberId } = await params;

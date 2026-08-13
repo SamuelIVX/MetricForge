@@ -11,6 +11,8 @@ import DeveloperHealthCard from "./cards/developer_performance/card"
 /**
  * Member dashboard body.
  * @returns Cards/charts composition.
+ * @example
+ * <MainContent />
  */
 export default function MainContent() {
     return (

@@ -11,7 +11,6 @@ declare module "@tanstack/react-table" {
     }
 }
 
-/** Props for the generic `TaskTable` component. */
 /**
  * Generic props for `TaskTable`.
  * @param columns - TanStack column defs.
@@ -26,7 +25,6 @@ export default interface TaskTableProps<TData, TValue> {
     }
 }
 
-/** Row model for a task/decision shown in the main table. */
 /**
  * One decision/task row in the inbox (status, priority, confidence, reviewer).
  */
