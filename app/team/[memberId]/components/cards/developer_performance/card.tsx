@@ -1,8 +1,17 @@
+/**
+ * Developer health/performance card with static metrics and statuses.
+ */
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2 } from "lucide-react"
 import { DeveloperMetricsProps, DeveloperStatutesProps } from "./types"
 
+/**
+ * Metric tile.
+ * @param title - label.
+ * @param stat - value.
+ * @param color - accent.
+ */
 export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps){
     return (
          <div className="text-center p-2 bg-[#1a1a1a] rounded border border-[#404040]">
@@ -12,6 +21,12 @@ export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps)
     )
 }
 
+/**
+ * Status tile.
+ * @param title - label.
+ * @param status - status text.
+ * @param color - accent.
+ */
 export function DeveloperStatuses({ title, status, color } : DeveloperStatutesProps){
     return (
         <div className="flex items-center justify-between text-xs p-2 bg-[#1a1a1a] rounded border border-[#404040]">
@@ -21,6 +36,10 @@ export function DeveloperStatuses({ title, status, color } : DeveloperStatutesPr
     )
 }
 
+/**
+ * Aggregated developer health card.
+ * @returns Performance panel.
+ */
 export default function DeveloperHealthCard(){
     return (
         <Card className="bg-[#0b0b0d]">

@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * Filterable/paginated history table built on TanStack Table + shadcn Table.
+ */
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -37,6 +40,12 @@ import HistoryTableChartMetrics from "../../charts/historyCharts/historyInsights
 import { Separator } from "@/components/ui/separator"
 
 
+/**
+ * History decisions table with column visibility and pagination.
+ * @param columns - column definitions.
+ * @param data - historical rows.
+ * @returns Table UI.
+ */
 export function HistoryTable<TData, TValue>({
     columns,
     data,

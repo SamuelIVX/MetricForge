@@ -1,8 +1,18 @@
+/**
+ * Hardcoded member header metric cards (tasks, reviews, etc.).
+ */
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Code, GitCommit } from "lucide-react"
 import { MemberDataCardProps } from "../../types"
 
 
+/**
+ * Single member metric tile.
+ * @param Icon - icon.
+ * @param title - label.
+ * @param subcontent - value.
+ * @param color - accent.
+ */
 export function MemberDataCard({ Icon, title, subcontent, color }: MemberDataCardProps) {
     return (
         <Card className="bg-[#0b0b0d]">
@@ -22,6 +32,10 @@ export function MemberDataCard({ Icon, title, subcontent, color }: MemberDataCar
     )
 }
 
+/**
+ * Row of static member metric cards.
+ * @returns Metric card grid.
+ */
 export default function MemberDataCards() {
     return (
 

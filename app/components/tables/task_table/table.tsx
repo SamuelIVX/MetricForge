@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * Decisions/tasks inbox table with filters, pagination, and add-task dialog hook-in.
+ */
 import * as React from "react"
 import TaskTableProps from "./types"
 
@@ -28,6 +31,14 @@ import { Separator } from "@/components/ui/separator"
 import SummaryCards from "@/app/components/cards/taskSummaryCard/card"
 import TaskTableChartMetrics from "@/app/components/charts/taskTableCharts/taskInsights"
 
+/**
+ * Primary decisions table UI.
+ * @param columns - column definitions.
+ * @param data - task rows.
+ * @param headerActions - optional toolbar actions (e.g. add-task).
+ * @param meta - TanStack table meta (reviewer change handlers, etc.).
+ * @returns Table UI with toolbar.
+ */
 export function TaskTable<TData, TValue>({
     columns,
     data,

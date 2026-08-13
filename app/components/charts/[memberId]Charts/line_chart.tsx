@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * Demo labeled line chart for member activity over time.
+ * Uses static chart config/data for the local UI demo.
+ */
 import { TrendingUp } from "lucide-react"
 import { CartesianGrid, LabelList, Line, LineChart, XAxis } from "recharts"
 
@@ -18,6 +22,10 @@ import {
     type ChartConfig,
 } from "@/components/ui/chart"
 
+/** Short Chart description string used by shadcn chart chrome. */
+/**
+ * Short chart description string used in shadcn chart examples.
+ */
 export const description = "A line chart with a label"
 
 const chartData = [
@@ -40,6 +48,10 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+/**
+ * Renders the member-page labeled line chart demo.
+ * @returns A Card-wrapped Recharts visualization with static sample data.
+ */
 export function ChartLineLabel() {
     return (
         <Card className="bg-[#0b0b0d]">

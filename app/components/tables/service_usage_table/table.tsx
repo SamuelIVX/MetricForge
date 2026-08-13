@@ -1,3 +1,6 @@
+/**
+ * Static AWS service usage table shown on task detail (mock cost/usage rows).
+ */
 import {
     Table,
     TableBody,
@@ -68,6 +71,10 @@ const invoices = [
     },
 ]
 
+/**
+ * Service usage card/table with hardcoded demo rows.
+ * @returns Usage table inside a card.
+ */
 export function ServiceUsageTable() {
     return (
 

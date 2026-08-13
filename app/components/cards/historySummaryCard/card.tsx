@@ -1,3 +1,6 @@
+/**
+ * Hardcoded KPI summary cards shown above the decisions history table.
+ */
 import {
     Card,
     CardHeader,
@@ -6,6 +9,12 @@ import {
 
 import { HistoryCardProps } from "./types";
 
+/**
+ * Renders one history KPI card with a title and value.
+ * @param title - Label prefix shown before the value.
+ * @param value - Hardcoded metric value for the demo UI.
+ * @returns A dark history summary card tile.
+ */
 export function HistoryCard({ title, value }: HistoryCardProps) {
     return (
         <Card className="bg-[#0b0b0d] w-full h-15">
@@ -23,6 +32,10 @@ export function HistoryCard({ title, value }: HistoryCardProps) {
     )
 }
 
+/**
+ * Grid of demo history KPI cards (completed, accepted, ignored, etc.).
+ * @returns Five-column history summary card layout with static values.
+ */
 export default function HistoryCards() {
     return (
         <div className="grid grid-cols-5 gap-3 p-4">

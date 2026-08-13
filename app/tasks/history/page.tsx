@@ -1,3 +1,6 @@
+/**
+ * Decision history page — summary cards, insight charts, and historical table (mock).
+ */
 import { useMemo } from "react";
 
 import { columns } from "@/app/components/tables/history_table/columns"
@@ -77,6 +80,10 @@ const initialData: HistoryDetails[] = [
     },
 ]
 
+/**
+ * History view for closed/ignored/expired decisions.
+ * @returns History page.
+ */
 export default function History() {
 
     const memoColumns = useMemo(() => columns, []);

@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * Demo stacked bar chart with legend for member productivity views.
+ * Uses static chart config/data for the local UI demo.
+ */
 import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
@@ -20,6 +24,10 @@ import {
     type ChartConfig,
 } from "@/components/ui/chart"
 
+/** Short Chart description string used by shadcn chart chrome. */
+/**
+ * Short chart description string used in shadcn chart examples.
+ */
 export const description = "A stacked bar chart with a legend"
 
 const chartData = [
@@ -42,6 +50,10 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+/**
+ * Renders the member-page stacked bar chart demo.
+ * @returns A Card-wrapped Recharts visualization with static sample data.
+ */
 export function ChartBarStacked() {
     return (
         <Card className="bg-[#0b0b0d]">

@@ -1,3 +1,6 @@
+/**
+ * Team roster page — static member cards linking to `/team/[memberId]`.
+ */
 import MemberCard from "./[memberId]/components/cards/member_card/card"
 
 // Mock Data
@@ -124,6 +127,10 @@ const teamMembers = [
   },
 ]
 
+/**
+ * Team directory grid.
+ * @returns Roster of member cards.
+ */
 export default function MainTeamPage() {
   return (
 

@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * TanStack column definitions for the decision history table.
+ */
 import { ColumnDef } from "@tanstack/react-table"
 import Link from "next/link"
 
@@ -15,6 +18,9 @@ import { Ellipsis } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { HistoryDetails } from "./types"
 
+/**
+ * Column defs for historical decisions (id, title, status, time, reviewer, actions).
+ */
 export const columns: ColumnDef<HistoryDetails>[] = [
     {
         accessorKey: "taskId",

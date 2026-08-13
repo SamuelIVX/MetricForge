@@ -1,4 +1,8 @@
 'use client'
+
+/**
+ * App sidebar — primary nav links (Home, History, Team) plus account footer.
+ */
 import {
     House,
     History,
@@ -55,6 +59,10 @@ const items = [
     },
 ]
 
+/**
+ * MetricForge application sidebar using shadcn Sidebar primitives.
+ * @returns Sidebar chrome with route links.
+ */
 export function AppSidebar() {
 
     const pathname = usePathname();

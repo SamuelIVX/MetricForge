@@ -1,3 +1,6 @@
+/**
+ * axe-core accessibility smoke tests for TaskTable and MemberCard.
+ */
 import { describe, it, expect, vi } from "vitest";
 import { render } from "@testing-library/react";
 import axe from "axe-core";

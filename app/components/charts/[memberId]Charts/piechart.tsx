@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * Demo donut chart with center text for member workload distribution.
+ * Uses static chart config/data for the local UI demo.
+ */
 import * as React from "react"
 import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
@@ -21,6 +25,10 @@ import {
     type ChartConfig,
 } from "@/components/ui/chart"
 
+/** Short Chart description string used by shadcn chart chrome. */
+/**
+ * Short chart description string used in shadcn chart examples.
+ */
 export const description = "A donut chart with text"
 
 const chartData = [
@@ -57,6 +65,10 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+/**
+ * Renders the member-page donut chart demo.
+ * @returns A Card-wrapped Recharts visualization with static sample data.
+ */
 export function ChartPieDonutText() {
     const totalVisitors = React.useMemo(() => {
         return chartData.reduce((acc, curr) => acc + curr.visitors, 0)

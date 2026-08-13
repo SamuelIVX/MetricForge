@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Dialog to add a mock decision/task row to the inbox table (client-side only).
+ */
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -30,6 +33,11 @@ import {
 import { IconSquarePlus } from "@tabler/icons-react"
 import { AddTaskDialogProps } from "./types";
 
+/**
+ * Controlled add-task dialog; builds a `TaskDetails` with a generated id.
+ * @param onAdd - called with the new task on submit.
+ * @returns Dialog trigger + form UI.
+ */
 export function AddTaskDialog({ onAdd }: AddTaskDialogProps) {
     const [form, setForm] = useState<Omit<TaskDetails, "taskId">>({
         title: "",

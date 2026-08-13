@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * Demo horizontal bar chart for the history insights strip (Recharts + shadcn Chart).
+ * Uses static chart config/data for the local UI demo.
+ */
 import { Bar, BarChart, XAxis, YAxis } from "recharts"
 
 import {
@@ -16,6 +20,10 @@ import {
     type ChartConfig,
 } from "@/components/ui/chart"
 
+/** Short Chart description string used by shadcn chart chrome. */
+/**
+ * Short chart description string used in shadcn chart examples.
+ */
 export const description = "A horizontal bar chart"
 
 const chartData = [
@@ -34,6 +42,10 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+/**
+ * Renders the history-page horizontal bar chart demo.
+ * @returns A Card-wrapped Recharts visualization with static sample data.
+ */
 export function ChartBarHorizontal() {
     return (
         <Card className="p-3 bg-[#0b0b0d]">
