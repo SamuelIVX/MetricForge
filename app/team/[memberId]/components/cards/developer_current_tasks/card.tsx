@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/badge"
  * @param status_color - color class.
  * @param issue - issue id.
  * @example
- * <CurrentTask task="TASK-1" status="Pending" status_color="#f59e0b" issue="Cost spike" />
+ * <CurrentTask task="TASK-1" status="Pending" status_color="bg-amber-500" issue="Cost spike" />
  */
 export function CurrentTask({ task, status, status_color, issue }: CurrentTaskProps) {
     return (

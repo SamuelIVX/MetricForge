@@ -84,8 +84,7 @@ const initialData: HistoryDetails[] = [
  * History view for closed/ignored/expired decisions.
  * @returns History page.
  * @example
- * // Route `/tasks/history`
- * <History />
+ * <History /> // App Router `/tasks/history`
  */
 export default function History() {
 

@@ -104,8 +104,7 @@ const initialData: TaskDetails[] = [
  * Main `/tasks` inbox view with local React state for rows.
  * @returns Inbox page.
  * @example
- * // Route `/tasks` — decisions inbox
- * <DecisionsPage />
+ * <DecisionsPage /> // App Router `/tasks`
  */
 export default function DecisionsPage() {
     const [data, setData] = useState<TaskDetails[]>(initialData);

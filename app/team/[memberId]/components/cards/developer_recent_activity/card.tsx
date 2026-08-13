@@ -16,7 +16,7 @@ import { ActivityProps } from "../../../types"
  * @param assignment - text.
  * @param time_completed - relative time label.
  * @example
- * <Activity color="#22c55e" assignment="Merged PR #42" time_completed="2h ago" />
+ * <Activity color="text-green-500" assignment="Merged PR #42" time_completed="2h ago" />
  */
 export function Activity({ color, assignment, time_completed }: ActivityProps) {
     return (

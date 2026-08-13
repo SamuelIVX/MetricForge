@@ -13,7 +13,7 @@ import { MemberDataCardProps } from "../../types"
  * @param subcontent - value.
  * @param color - accent.
  * @example
- * <MemberDataCard Icon={IconUser} title="Role" subcontent="DevOps" color="#38bdf8" />
+ * <MemberDataCard Icon={IconUser} title="Role" subcontent="DevOps" color="text-blue-500" />
  */
 export function MemberDataCard({ Icon, title, subcontent, color }: MemberDataCardProps) {
     return (

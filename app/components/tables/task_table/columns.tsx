@@ -50,7 +50,7 @@ const REVIEWERS: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smi
 /**
  * Inbox column defs: selection, id, title, status, priority, confidence, reviewer, actions.
  * @example
- * // Pass to <TaskTable columns={columns} data={rows} />
+ * <TaskTable columns={columns} data={[]} />
  */
 export const columns: ColumnDef<TaskDetails>[] = [
     {

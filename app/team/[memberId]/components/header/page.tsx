@@ -43,7 +43,7 @@ export function MemberInfo({ Icon, info } : MemberInfoProps){
  * @param id - member id.
  * @returns Header UI.
  * @example
- * <Header id="TASK-1" />
+ * <Header id="user-1" />
  */
 export default function Header({ id }: HeaderProps) {
     return (

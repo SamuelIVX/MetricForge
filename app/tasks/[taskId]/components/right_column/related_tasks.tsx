@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge"
  * @param issue - Short issue description.
  * @returns A clickable-looking related issue row.
  * @example
- * <RelatedTask task="TASK-2024-001" status="Todo" status_color="#38bdf8" issue="IAM" />
+ * <RelatedTask task="TASK-2024-001" status="Todo" status_color="bg-amber-500" issue="IAM" />
  */
 export function RelatedTask({ task, status, status_color, issue }: RelatedTaskProps) {
     return (

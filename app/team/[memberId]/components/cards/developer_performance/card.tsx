@@ -12,7 +12,7 @@ import { DeveloperMetricsProps, DeveloperStatutesProps } from "./types"
  * @param stat - value.
  * @param color - accent.
  * @example
- * <DeveloperMetrics title="PRs" stat="14" color="#22c55e" />
+ * <DeveloperMetrics title="PRs" stat="14" color="text-green-500" />
  */
 export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps){
     return (
@@ -29,7 +29,7 @@ export function DeveloperMetrics({ title, stat, color } : DeveloperMetricsProps)
  * @param status - status text.
  * @param color - accent.
  * @example
- * <DeveloperStatuses title="Availability" status="Available" color="#22c55e" />
+ * <DeveloperStatuses title="Availability" status="Available" color="text-green-500" />
  */
 export function DeveloperStatuses({ title, status, color } : DeveloperStatutesProps){
     return (

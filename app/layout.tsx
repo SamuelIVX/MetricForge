@@ -1,7 +1,6 @@
 /**
  * Root layout for MetricForge: sidebar shell, sticky nav, and query providers.
  * Reads the `siderbar_state` cookie to restore sidebar open/closed default.
- * SECURITY: cookie value only gates UI chrome (open/closed); do not store secrets here.
  */
 import "./globals.css";
 import { cookies } from "next/headers";
