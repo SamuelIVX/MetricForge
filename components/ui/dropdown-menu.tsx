@@ -1,5 +1,12 @@
 "use client"
 
+/**
+ * shadcn/ui DropdownMenu primitive for overflow actions.
+ */
+
+/**
+ * shadcn/ui DropdownMenu primitives built on Radix Dropdown Menu.
+ */
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react"

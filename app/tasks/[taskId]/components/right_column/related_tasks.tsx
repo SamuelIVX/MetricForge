@@ -1,7 +1,18 @@
+/**
+ * Hardcoded related-issue list for a decision detail view.
+ */
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { RelatedTaskProps } from "../../types"
 import { Badge } from "@/components/ui/badge"
 
+/**
+ * Renders one related task row with status badge and issue blurb.
+ * @param task - Task/decision identifier string.
+ * @param status - Display status label.
+ * @param status_color - Tailwind classes for the status badge.
+ * @param issue - Short issue description.
+ * @returns A clickable-looking related issue row.
+ */
 export function RelatedTask({ task, status, status_color, issue }: RelatedTaskProps) {
     return (
         <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040] hover:border-[#505050] cursor-pointer transition-colors">
@@ -14,6 +25,10 @@ export function RelatedTask({ task, status, status_color, issue }: RelatedTaskPr
     )
 }
 
+/**
+ * Card of demo related issues that may be connected to the current decision.
+ * @returns Related Issues card with three hardcoded rows.
+ */
 export default function RelatedTasks() {
     return (
         <Card className="bg-[#0b0b0d]">

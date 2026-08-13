@@ -1,7 +1,17 @@
+/**
+ * Hardcoded recommended remediation actions for a decision detail view.
+ * Demo-only copy — not driven by the unimplemented decision engine.
+ */
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { RecommendedActionProps } from "../../types"
 
+/**
+ * Renders one recommended action title + description row.
+ * @param action - Short action label (e.g. review policy).
+ * @param description - Supporting explanation for the action.
+ * @returns A bordered action row.
+ */
 export function RecommendedAction({ action, description }: RecommendedActionProps) {
     return (
         <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040]">
@@ -13,6 +23,10 @@ export function RecommendedAction({ action, description }: RecommendedActionProp
     )
 }
 
+/**
+ * Card listing static recommended actions plus an Apply All button.
+ * @returns Recommended Actions card with three hardcoded steps.
+ */
 export default function RecommendedActionsCard() {
     return (
         <Card className="bg-[#0b0b0d]">

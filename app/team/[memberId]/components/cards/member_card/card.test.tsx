@@ -1,3 +1,6 @@
+/**
+ * Vitest coverage for MemberCard rendering of identity and statistics.
+ */
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import MemberCard, { MemberDetails } from "./card";

@@ -1,7 +1,17 @@
+/**
+ * List of the member's current tasks (hardcoded demo rows).
+ */
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { CurrentTaskProps } from "../../../types"
 import { Badge } from "@/components/ui/badge"
 
+/**
+ * One current-task row.
+ * @param task - title.
+ * @param status - status.
+ * @param status_color - color class.
+ * @param issue - issue id.
+ */
 export function CurrentTask({ task, status, status_color, issue }: CurrentTaskProps) {
     return (
         <div className="p-3 bg-[#1a1a1a] rounded-lg border border-[#404040] hover:border-[#505050] cursor-pointer transition-colors">
@@ -14,6 +24,10 @@ export function CurrentTask({ task, status, status_color, issue }: CurrentTaskPr
     )
 }
 
+/**
+ * Card listing static current tasks.
+ * @returns Current tasks panel.
+ */
 export default function ListCurrentTasks() {
     return (
         <Card className="bg-[#0b0b0d]">

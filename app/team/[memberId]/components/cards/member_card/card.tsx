@@ -1,3 +1,6 @@
+/**
+ * Member profile card showing avatar, role, and key statistics (mock).
+ */
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
@@ -5,6 +8,12 @@ import { ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { MemberCardProps, MemberDetailsProps } from "./types"
 
+/**
+ * One statistic block in the member card.
+ * @param statistic - value.
+ * @param title - label.
+ * @param color - accent class.
+ */
 export function MemberDetails({ statistic, title, color } : MemberDetailsProps){
     return (
         <div className="text-center">
@@ -14,6 +23,11 @@ export function MemberDetails({ statistic, title, color } : MemberDetailsProps){
     )
 }
 
+/**
+ * Member summary card.
+ * @param props - member identity + stats.
+ * @returns Profile card.
+ */
 export default function MemberCard(
     {
         id,

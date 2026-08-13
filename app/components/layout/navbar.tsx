@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * Top navigation bar for the Decision Inbox: refresh control and search field.
+ * Adapts navigation menu viewport based on mobile breakpoint.
+ */
 import { useIsMobile } from "@/hooks/use-mobile"
 
 import {
@@ -12,6 +16,10 @@ import { IconRefresh, IconSearch } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
+/**
+ * Sticky header nav with inbox title, refresh button, and desktop search.
+ * @returns Navigation chrome rendered beside the sidebar trigger.
+ */
 export function NavigationBar() {
     const isMobile = useIsMobile()
 

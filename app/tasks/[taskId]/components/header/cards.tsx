@@ -1,7 +1,17 @@
+/**
+ * Hardcoded metadata cards for the task detail header (priority, status, etc.).
+ */
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Activity, Calendar, User } from "lucide-react"
 import { MetaDataProps } from "../../types"
 
+/**
+ * Single metadata tile.
+ * @param Icon - leading icon.
+ * @param title - label.
+ * @param subcontent - value text.
+ * @param color - accent color class.
+ */
 export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) {
     return (
         <Card className="bg-[#0b0b0d]">
@@ -21,6 +31,10 @@ export function MetaDataCard({ Icon, title, subcontent, color }: MetaDataProps) 
     )
 }
 
+/**
+ * Row of static metadata cards.
+ * @returns Metadata card grid.
+ */
 export default function MetaDataCards() {
     return (
 

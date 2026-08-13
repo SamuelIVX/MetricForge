@@ -1,3 +1,7 @@
+/**
+ * Global MetricForge styles: Tailwind v4 imports, design tokens, and base theme.
+ * Defines CSS variables for light/dark surfaces, charts, and sidebar chrome.
+ */
 @import "tailwindcss";
 @import "tw-animate-css";
 

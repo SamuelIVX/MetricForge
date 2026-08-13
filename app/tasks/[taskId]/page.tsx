@@ -1,3 +1,6 @@
+/**
+ * Task/decision detail route — composes header + left/right columns for a task id.
+ */
 import Header from "./components/header/page";
 import MetaDataCards from "./components/header/cards";
 import MainContent from "./components/page";
@@ -9,6 +12,11 @@ import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
+/**
+ * Decision detail page.
+ * @param params - route params promise with `taskId`.
+ * @returns Detail layout.
+ */
 export default async function DecisionId({ params }: PageProps) {
     const { taskId } = await params;
 

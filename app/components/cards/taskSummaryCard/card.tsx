@@ -1,3 +1,6 @@
+/**
+ * Hardcoded KPI summary cards shown above the tasks/decisions table.
+ */
 import {
     Card,
     CardHeader,
@@ -6,6 +9,12 @@ import {
 
 import { SummaryCardProps } from "./types";
 
+/**
+ * Renders one summary KPI card with a title and value.
+ * @param title - Label prefix shown before the value.
+ * @param value - Hardcoded metric value for the demo UI.
+ * @returns A dark summary card tile.
+ */
 export function SummaryCard({title, value}: SummaryCardProps){
     return (
     <Card className="bg-[#0b0b0d] w-full h-15">
@@ -23,6 +32,10 @@ export function SummaryCard({title, value}: SummaryCardProps){
         )
 }
 
+/**
+ * Grid of demo task-summary KPI cards (totals, severity, etc.).
+ * @returns Five-column summary card layout with static values.
+ */
 export default function SummaryCards(){
     return (
         <div className="grid grid-cols-5 gap-3 p-4">

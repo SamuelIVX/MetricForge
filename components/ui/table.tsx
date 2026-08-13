@@ -1,5 +1,12 @@
 "use client"
 
+/**
+ * shadcn/ui Table primitives used by TanStack tables.
+ */
+
+/**
+ * shadcn/ui Table primitives for data grids.
+ */
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

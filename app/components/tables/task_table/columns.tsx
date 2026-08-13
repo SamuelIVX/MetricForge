@@ -1,4 +1,8 @@
 "use client"
+
+/**
+ * TanStack column defs for the decisions inbox, including reviewer Select (HITL stub).
+ */
 import { ColumnDef } from "@tanstack/react-table"
 import Link from "next/link"
 
@@ -43,6 +47,9 @@ import { TaskDetails } from "./types"
 const SERVICES: string[] = ["S3", "EC2", "Lambda", "DynamoDB", "RDS", "VPC", "CloudFront", "SNS", "SQS", "ECS", "EKS", "CloudWatch"];
 const REVIEWERS: string[] = ["John Doe", "Alice Johnson", "Bob Brown", "Jane Smith", "Charlie Davis"];
 
+/**
+ * Inbox column defs: selection, id, title, status, priority, confidence, reviewer, actions.
+ */
 export const columns: ColumnDef<TaskDetails>[] = [
     {
         id: "select",

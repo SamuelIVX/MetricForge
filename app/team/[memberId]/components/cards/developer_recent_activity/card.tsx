@@ -1,3 +1,6 @@
+/**
+ * Recent activity feed for a member (hardcoded demo events).
+ */
 import {
     Card,
     CardContent,
@@ -7,6 +10,12 @@ import {
 } from "@/components/ui/card"
 import { ActivityProps } from "../../../types"
 
+/**
+ * One activity row.
+ * @param color - accent.
+ * @param assignment - text.
+ * @param time_completed - relative time label.
+ */
 export function Activity({ color, assignment, time_completed }: ActivityProps) {
     return (
         <div className="flex gap-4">
@@ -23,6 +32,10 @@ export function Activity({ color, assignment, time_completed }: ActivityProps) {
     )
 }
 
+/**
+ * Card of static recent activity.
+ * @returns Activity panel.
+ */
 export default function RecentActivity() {
     return (
         <Card className="bg-[#0b0b0b]">

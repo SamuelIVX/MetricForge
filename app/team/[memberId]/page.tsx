@@ -1,3 +1,6 @@
+/**
+ * Member detail route — header + dashboard content for a team member id.
+ */
 import Header from "./components/header/page";
 import MemberDataCards from "./components/header/cards";
 import MainContent from "./components/page";
@@ -9,6 +12,11 @@ import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 
+/**
+ * Member dashboard page.
+ * @param params - route params promise with `memberId`.
+ * @returns Member layout.
+ */
 export default async function Member({ params }: PageProps) {
     const { memberId } = await params;
 

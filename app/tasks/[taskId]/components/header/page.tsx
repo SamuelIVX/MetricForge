@@ -1,9 +1,17 @@
+/**
+ * Task detail header showing the task id and metadata card row.
+ */
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Trash2 } from "lucide-react"
 import { HeaderProps } from "../../types"
 
 
+/**
+ * Task detail header.
+ * @param id - task/decision id string.
+ * @returns Header section.
+ */
 export default function Header({ id }: HeaderProps) {
     return (
         <div className="flex items-start justify-between mb-6">

@@ -1,5 +1,12 @@
 "use client"
 
+/**
+ * shadcn/ui Checkbox primitive for multi-select filters.
+ */
+
+/**
+ * shadcn/ui Checkbox built on Radix Checkbox.
+ */
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import { CheckIcon } from "lucide-react"

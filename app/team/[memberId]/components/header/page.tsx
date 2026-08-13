@@ -1,3 +1,6 @@
+/**
+ * Member detail header with identity info and metric cards.
+ */
 import { 
     Trash2,
     Mail,
@@ -18,6 +21,11 @@ import { Badge } from "@/components/ui/badge"
 import { HeaderProps } from "../../types"
 import { MemberInfoProps } from "../../types"
 
+/**
+ * Member identity snippet.
+ * @param Icon - leading icon.
+ * @param info - display text.
+ */
 export function MemberInfo({ Icon, info } : MemberInfoProps){
     return (
         <span className="flex items-center gap-1">
@@ -28,6 +36,11 @@ export function MemberInfo({ Icon, info } : MemberInfoProps){
 }
 
 
+/**
+ * Member header section.
+ * @param id - member id.
+ * @returns Header UI.
+ */
 export default function Header({ id }: HeaderProps) {
     return (
         <div className="flex items-start justify-between mb-6">

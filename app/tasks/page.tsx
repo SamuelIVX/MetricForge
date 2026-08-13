@@ -1,4 +1,8 @@
 "use client"
+
+/**
+ * Decisions inbox page — summary cards, insight charts, and the task table over mock data.
+ */
 import { columns } from "../components/tables/task_table/columns"
 import { TaskTable } from "../components/tables/task_table/table"
 import { useState, useMemo } from "react"
@@ -96,6 +100,10 @@ const initialData: TaskDetails[] = [
     },
 ]
 
+/**
+ * Main `/tasks` inbox view with local React state for rows.
+ * @returns Inbox page.
+ */
 export default function DecisionsPage() {
     const [data, setData] = useState<TaskDetails[]>(initialData);
 

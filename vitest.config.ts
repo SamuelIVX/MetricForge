@@ -1,6 +1,13 @@
+/**
+ * Vitest config for MetricForge UI tests.
+ * jsdom environment, `@/` alias, UTC TZ, and setup from `vitest.setup.ts`.
+ */
 import { defineConfig } from "vitest/config";
 import path from "path";
 
+/**
+ * Vitest + Vite resolve config for app tests.
+ */
 export default defineConfig({
     test: {
         environment: "jsdom",

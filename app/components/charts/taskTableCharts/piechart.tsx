@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * Demo labeled pie chart for the tasks insights strip (Recharts + shadcn Chart).
+ * Uses static chart config/data for the local UI demo.
+ */
 import { Pie, PieChart } from "recharts"
 
 import {
@@ -16,6 +20,10 @@ import {
     type ChartConfig,
 } from "@/components/ui/chart"
 
+/** Short Chart description string used by shadcn chart chrome. */
+/**
+ * Short chart description string used in shadcn chart examples.
+ */
 export const description = "A pie chart with a label"
 
 const chartData = [
@@ -52,6 +60,10 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+/**
+ * Renders the tasks-page labeled pie chart demo.
+ * @returns A Card-wrapped Recharts visualization with static sample data.
+ */
 export function ChartPieLabel() {
     return (
         <Card className="flex flex-col p-3 bg-[#0b0b0d]">
