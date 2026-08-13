@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui Card layout primitives (header, title, content, footer).
+ */
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

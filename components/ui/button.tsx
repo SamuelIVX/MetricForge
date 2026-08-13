@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui Button with class-variance-authority variants.
+ */
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -36,6 +39,14 @@ const buttonVariants = cva(
   }
 )
 
+/**
+ * Button element with variant/size styles.
+ * @param className - extra classes.
+ * @param variant - visual variant.
+ * @param size - size token.
+ * @param asChild - render as Slot when true.
+ * @returns Styled button.
+ */
 function Button({
   className,
   variant = "default",

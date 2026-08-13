@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * shadcn/ui Recharts helpers (ChartContainer, tooltip, legend, config).
+ */
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 

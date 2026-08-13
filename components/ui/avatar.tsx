@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * shadcn/ui Avatar primitives (Radix) for profile images and fallbacks.
+ */
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 

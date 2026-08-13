@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * shadcn/ui Label for form fields (Radix Label).
+ */
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 

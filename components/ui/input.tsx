@@ -1,3 +1,6 @@
+/**
+ * shadcn/ui text Input styled for the design system.
+ */
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

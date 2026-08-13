@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * shadcn/ui Table primitives for data grids.
+ */
 import * as React from "react"
 
 import { cn } from "@/lib/utils"

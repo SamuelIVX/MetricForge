@@ -1,5 +1,8 @@
 "use client"
 
+/**
+ * shadcn/ui Dialog (modal) primitives built on Radix Dialog.
+ */
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { XIcon } from "lucide-react"
