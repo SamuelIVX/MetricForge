@@ -16,6 +16,8 @@ import { Separator } from "@/components/ui/separator"
  * Decision detail page.
  * @param params - route params promise with `taskId`.
  * @returns Detail layout.
+ * @example
+ * <DecisionId params={Promise.resolve({ taskId: "1" })} />
  */
 export default async function DecisionId({ params }: PageProps) {
     const { taskId } = await params;

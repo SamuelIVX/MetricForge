@@ -9,6 +9,9 @@ const MOBILE_BREAKPOINT = 768
 /**
  * Whether the viewport is below the mobile breakpoint (768px).
  * @returns `true` on narrow viewports; `false` during SSR / wide screens.
+ * @example
+ * const isMobile = useIsMobile()
+ * // true when viewport width < 768px
  */
 export function useIsMobile() {
   return React.useSyncExternalStore(

@@ -11,6 +11,8 @@ import { HeaderProps } from "../../types"
  * Task detail header.
  * @param id - task/decision id string.
  * @returns Header section.
+ * @example
+ * <Header id="TASK-1" />
  */
 export default function Header({ id }: HeaderProps) {
     return (

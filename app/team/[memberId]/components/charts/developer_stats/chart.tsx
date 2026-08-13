@@ -7,6 +7,8 @@ import { ChartBarStacked } from "@/app/components/charts/[memberId]Charts/stacke
 /**
  * Placeholder git-stats chart for the member profile.
  * @returns Placeholder chart component for the member detail layout.
+ * @example
+ * <DeveloperGitStats />
  */
 export default function DeveloperGitStats() {
     return (

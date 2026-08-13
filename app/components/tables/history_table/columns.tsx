@@ -20,6 +20,8 @@ import { HistoryDetails } from "./types"
 
 /**
  * Column defs for historical decisions (id, title, status, time, reviewer, actions).
+ * @example
+ * <HistoryTable columns={columns} data={[]} />
  */
 export const columns: ColumnDef<HistoryDetails>[] = [
     {

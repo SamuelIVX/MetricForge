@@ -130,6 +130,8 @@ const teamMembers = [
 /**
  * Team directory grid.
  * @returns Roster of member cards.
+ * @example
+ * <MainTeamPage /> // App Router `/team`
  */
 export default function MainTeamPage() {
   return (

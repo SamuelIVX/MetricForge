@@ -9,5 +9,8 @@ const nextConfig: NextConfig = {
 
 /**
  * Exported Next.js configuration object.
+ * @example
+ * import nextConfig from "./next.config"
+ * // Next.js loads this module; `npm run build` applies it
  */
 export default nextConfig;

@@ -11,6 +11,8 @@ import { RecommendedActionProps } from "../../types"
  * @param action - Short action label (e.g. review policy).
  * @param description - Supporting explanation for the action.
  * @returns A bordered action row.
+ * @example
+ * <RecommendedAction action="Review Bucket Policy" description="Tighten S3 ACLs" />
  */
 export function RecommendedAction({ action, description }: RecommendedActionProps) {
     return (
@@ -26,6 +28,8 @@ export function RecommendedAction({ action, description }: RecommendedActionProp
 /**
  * Card listing static recommended actions plus an Apply All button.
  * @returns Recommended Actions card with three hardcoded steps.
+ * @example
+ * <RecommendedActionsCard />
  */
 export default function RecommendedActionsCard() {
     return (

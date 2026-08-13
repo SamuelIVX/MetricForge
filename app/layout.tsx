@@ -9,7 +9,6 @@ import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/s
 import { AppSidebar } from "./components/layout/sidebar"
 import { NavigationBar } from "./components/layout/navbar";
 
-/** Site-wide HTML metadata for the MetricForge dashboard. */
 /**
  * Static document metadata for MetricForge.
  */
@@ -20,8 +19,12 @@ export const metadata = {
 
 /**
  * Async root layout that hydrates sidebar default state from cookies.
+ * SECURITY: reads `siderbar_state` via `cookies()` — preference only, never auth tokens.
  * @param children - Nested App Router pages rendered inside the shell.
  * @returns Full HTML document with sidebar + header chrome.
+ * @example
+ * // App Router root — wraps every page in sidebar + nav chrome
+ * <RootLayout>{children}</RootLayout>
  */
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 

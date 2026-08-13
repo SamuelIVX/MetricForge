@@ -13,6 +13,8 @@ import { MemberCardProps, MemberDetailsProps } from "./types"
  * @param statistic - value.
  * @param title - label.
  * @param color - accent class.
+ * @example
+ * <MemberDetails statistic={12} title="Tasks" color="text-green-500" />
  */
 export function MemberDetails({ statistic, title, color } : MemberDetailsProps){
     return (
@@ -27,6 +29,19 @@ export function MemberDetails({ statistic, title, color } : MemberDetailsProps){
  * Member summary card.
  * @param props - member identity + stats.
  * @returns Profile card.
+ * @example
+ * <MemberCard
+ *   id="user-1"
+ *   name="Ada Lovelace"
+ *   initials="AL"
+ *   role="Engineer"
+ *   activeTasks={2}
+ *   completedTasks={10}
+ *   commits={8}
+ *   status="Active"
+ *   availability="Available"
+ *   team="Backend"
+ * />
  */
 export default function MemberCard(
     {

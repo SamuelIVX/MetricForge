@@ -37,6 +37,8 @@ import { AddTaskDialogProps } from "./types";
  * Controlled add-task dialog; builds a `TaskDetails` with a generated id.
  * @param onAdd - called with the new task on submit.
  * @returns Dialog trigger + form UI.
+ * @example
+ * <AddTaskDialog onAdd={(task) => setRows((r) => [task, ...r])} />
  */
 export function AddTaskDialog({ onAdd }: AddTaskDialogProps) {
     const [form, setForm] = useState<Omit<TaskDetails, "taskId">>({

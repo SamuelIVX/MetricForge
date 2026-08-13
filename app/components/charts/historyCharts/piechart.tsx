@@ -20,7 +20,6 @@ import {
     type ChartConfig,
 } from "@/components/ui/chart"
 
-/** Short Chart description string used by shadcn chart chrome. */
 /**
  * Short chart description string used in shadcn chart examples.
  */
@@ -63,6 +62,8 @@ const chartConfig = {
 /**
  * Renders the history-page labeled pie chart demo.
  * @returns A Card-wrapped Recharts visualization with static sample data.
+ * @example
+ * <ChartPieLabel />
  */
 export function ChartPieLabel() {
     return (

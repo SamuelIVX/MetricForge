@@ -7,6 +7,8 @@ import RightColumnContent from "./right_column/page"
 /**
  * Composes left (charts/tables) and right (actions/related) detail columns.
  * @returns Responsive three-column grid (2+1 on large screens).
+ * @example
+ * <MainContent />
  */
 export default function MainContent() {
     return (

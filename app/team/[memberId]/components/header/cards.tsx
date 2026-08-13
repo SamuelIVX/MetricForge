@@ -12,6 +12,8 @@ import { MemberDataCardProps } from "../../types"
  * @param title - label.
  * @param subcontent - value.
  * @param color - accent.
+ * @example
+ * <MemberDataCard Icon={IconUser} title="Role" subcontent="DevOps" color="text-blue-500" />
  */
 export function MemberDataCard({ Icon, title, subcontent, color }: MemberDataCardProps) {
     return (
@@ -35,6 +37,8 @@ export function MemberDataCard({ Icon, title, subcontent, color }: MemberDataCar
 /**
  * Row of static member metric cards.
  * @returns Metric card grid.
+ * @example
+ * <MemberDataCards />
  */
 export default function MemberDataCards() {
     return (

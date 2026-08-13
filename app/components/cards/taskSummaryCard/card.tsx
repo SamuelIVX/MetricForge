@@ -14,6 +14,8 @@ import { SummaryCardProps } from "./types";
  * @param title - Label prefix shown before the value.
  * @param value - Hardcoded metric value for the demo UI.
  * @returns A dark summary card tile.
+ * @example
+ * <SummaryCard title="Pending" value="8" />
  */
 export function SummaryCard({title, value}: SummaryCardProps){
     return (
@@ -35,6 +37,8 @@ export function SummaryCard({title, value}: SummaryCardProps){
 /**
  * Grid of demo task-summary KPI cards (totals, severity, etc.).
  * @returns Five-column summary card layout with static values.
+ * @example
+ * <SummaryCards />
  */
 export default function SummaryCards(){
     return (

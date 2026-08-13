@@ -19,6 +19,8 @@ import { Input } from "@/components/ui/input"
 /**
  * Sticky header nav with inbox title, refresh button, and desktop search.
  * @returns Navigation chrome rendered beside the sidebar trigger.
+ * @example
+ * <NavigationBar />
  */
 export function NavigationBar() {
     const isMobile = useIsMobile()

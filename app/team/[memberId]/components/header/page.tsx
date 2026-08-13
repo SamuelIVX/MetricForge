@@ -25,6 +25,8 @@ import { MemberInfoProps } from "../../types"
  * Member identity snippet.
  * @param Icon - leading icon.
  * @param info - display text.
+ * @example
+ * <MemberInfo Icon={IconMail} info="ada@example.com" />
  */
 export function MemberInfo({ Icon, info } : MemberInfoProps){
     return (
@@ -40,6 +42,8 @@ export function MemberInfo({ Icon, info } : MemberInfoProps){
  * Member header section.
  * @param id - member id.
  * @returns Header UI.
+ * @example
+ * <Header id="user-1" />
  */
 export default function Header({ id }: HeaderProps) {
     return (
