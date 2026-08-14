@@ -1,83 +1,48 @@
 # MetricForge
 
-MetricForge is a work-in-progress analytics dashboard for teams — "Autonomous Metrics for Teams." It is a Next.js (app router) application with a mocked REST API (json-server) used for local development and data exploration.
+MetricForge is a Next.js UI dashboard shell for team analytics and task metrics — "Autonomous Metrics for Teams." It features an interactive UI frontend backed by a local mock dataset (`db.json`), fully testable with Vitest.
 
-Status: In progress — README and some infra may be incomplete. The instructions below get you running locally for development.
+## Quick Start (local development)
 
-Quick Start (local development)
+### Prerequisites
+- Node.js (v20+)
+- npm
 
-Prerequisites
-- Node.js (recommend v18+ / v20+)
-- npm (or pnpm/yarn, but commands below assume npm)
-
-Install dependencies
+### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-Generate or use seeded mock data
-
-- The repository includes a pre-seeded `db.json`. To regenerate mock data run:
-
-```bash
-npm run generate-data
-```
-
-Run the mock API
-
-This project uses json-server to serve `db.json` as a REST API used by the front-end during development.
-
-```bash
-npm run mock-api
-# json-server will start on http://localhost:3001
-```
-
-Run the Next.js app (development)
+### 2. Run the Next.js app (development)
 
 ```bash
 npm run dev
-# open http://localhost:3000 (the app redirects to /tasks)
+# open http://localhost:3000 (redirects to /tasks)
 ```
 
-Production build
+### 3. Run tests, lint, and typecheck
 
 ```bash
-npm run build
-npm run start
+npm run test      # Vitest component & accessibility tests
+npm run lint      # ESLint code hygiene
+npx tsc --noEmit  # TypeScript type checking
+npm run build     # Production Next.js build
 ```
 
-Project Layout (key folders)
+## Project Layout
 
-- app/ — Next.js app router (pages, layouts, components used by the UI)
-  - app/page.tsx — redirects to /tasks
-  - app/layout.tsx — root layout including sidebar and navbar
-  - app/providers.tsx — React Query provider
-  - app/api/ — edge/server route endpoints (examples for decisions)
-  - app/components/ — UI components, charts, tables
-- db.json — mock dataset used by json-server (teamMembers, tasks, awsCosts)
-- data/generate_mock_data.js — script that regenerates db.json
-- scripts/ — miscellaneous scripts (e.g. upload_to_s3.ts placeholder)
-- backend/, infra/ — additional backend or infra code (inspect as needed)
+- `app/` — Next.js App Router (pages, layouts, UI components, tables, dialogs)
+  - `app/page.tsx` — redirects to `/tasks`
+  - `app/layout.tsx` — root layout including navigation sidebar and header
+  - `app/tasks/` — task dashboard tables and task detail views
+  - `app/team/` — team member profiles and member card components
+  - `app/components/` — reusable UI components, tables, dialogs, accessibility tests
+- `docs/specs/` — refactoring specifications (`05-metricforge-refactor.md`)
 
-Data & Mock API
+## Tech Stack
 
-- The mock dataset (`db.json`) contains sample resources:
-  - teamMembers — developer profiles
-  - tasks — synthetic task/decision entries
-  - awsCosts — sample monthly AWS cost & usage data
-
-- Start json-server with `npm run mock-api` which watches `db.json` on port 3001.
-
-Linting, TypeScript & Style
-
-- Lint: `npm run lint` (eslint configured)
-- TypeScript: tsconfig.json is present; project uses TypeScript in parts of the codebase
-- Tailwind + PostCSS are configured (see postcss.config.mjs)
-
-Notes for contributors
-
-- This repo is a work-in-progress. If you contribute, please:
-  1. Create a branch from main with a descriptive name.
- 2. Run lint before opening a PR.
- 3. Include a concise PR description and screenshots for UI changes.
+- **Framework:** Next.js 16 (App Router) + React 19
+- **Styling:** TailwindCSS + shadcn/ui
+- **Testing:** Vitest 4 + Testing Library + axe-core
+- **Data:** Local mock JSON dataset (`db.json`)
