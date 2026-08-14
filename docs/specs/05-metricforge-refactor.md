@@ -49,7 +49,7 @@ De-scope MetricForge's JSDoc-only backend and infrastructure skeletons per Decis
 
 - `backend/` contains 13 TS files (JSDoc skeletons); `infra/` contains 6 TS files; `docker/` contains compose + init; `app/api/decisions/` contains 5 HTTP 501 stubs. [verified]
 - `package.json` has zero AWS/CDK dependencies. [verified]
-- Baseline: 13 Vitest tests pass (4 files); lint clean (0 errors, 4 warnings); `tsc --noEmit` clean; `next build` clean. [verified 2026-08-13]
+- Baseline: 13 Vitest tests pass (4 files); lint clean (0 errors, 4 warnings); `tsc --noEmit` clean; `npm run build` clean. [verified 2026-08-13]
 
 ## Tests
 

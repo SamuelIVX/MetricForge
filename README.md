@@ -1,6 +1,6 @@
 # MetricForge
 
-MetricForge is a Next.js UI dashboard shell for team analytics and task metrics — "Autonomous Metrics for Teams." It features an interactive UI frontend backed by a local mock dataset (`db.json`) generated via synthetic data scripts, fully testable with Vitest.
+MetricForge is a Next.js UI dashboard shell for team analytics and task metrics — "Autonomous Metrics for Teams." It features an interactive UI frontend backed by a local mock dataset (`db.json`), fully testable with Vitest.
 
 ## Quick Start (local development)
 
@@ -14,22 +14,14 @@ MetricForge is a Next.js UI dashboard shell for team analytics and task metrics 
 npm install
 ```
 
-### 2. Generate or use seeded mock data
-
-The repository includes pre-seeded `db.json`. To regenerate mock data, run:
-
-```bash
-node data/generate_mock_data.js
-```
-
-### 3. Run the Next.js app (development)
+### 2. Run the Next.js app (development)
 
 ```bash
 npm run dev
 # open http://localhost:3000 (redirects to /tasks)
 ```
 
-### 4. Run tests, lint, and typecheck
+### 3. Run tests, lint, and typecheck
 
 ```bash
 npm run test      # Vitest component & accessibility tests
@@ -46,8 +38,6 @@ npm run build     # Production Next.js build
   - `app/tasks/` — task dashboard tables and task detail views
   - `app/team/` — team member profiles and member card components
   - `app/components/` — reusable UI components, tables, dialogs, accessibility tests
-- `data/generate_mock_data.js` — script that regenerates `db.json`
-- `db.json` — synthetic dataset (teamMembers, tasks, metrics)
 - `docs/specs/` — refactoring specifications (`05-metricforge-refactor.md`)
 
 ## Tech Stack
